@@ -29,16 +29,15 @@ add_action( 'wp_enqueue_scripts', 'fagri_parent_css', 10 );
 /**
  * Enqueue fagri scripts
  */
-//function fagri_customizer_preview_js() {
-//	wp_enqueue_script(
-//		'fagri_customizer', trailingslashit( get_stylesheet_directory_uri() ) . 'assets/js/scripts.js', array(
-//		'jquery',
-//		'customize-preview',
-//	), FAGRI_VERSION
-//	);
-//}
-//add_action( 'customize_preview_init', 'fagri_customizer_preview_js', 10 );
-
+// function fagri_customizer_preview_js() {
+// wp_enqueue_script(
+// 'fagri_customizer', trailingslashit( get_stylesheet_directory_uri() ) . 'assets/js/scripts.js', array(
+// 'jquery',
+// 'customize-preview',
+// ), FAGRI_VERSION
+// );
+// }
+// add_action( 'customize_preview_init', 'fagri_customizer_preview_js', 10 );
 /**
  * Change default fonts.
  *
@@ -107,7 +106,7 @@ function fagri_inline_style() {
 
 	if ( ! empty( $color_accent ) ) {
 
-		//TODO: Add inline style
+		// TODO: Add inline style
 	}
 
 	wp_add_inline_style( 'fagri_parent', $custom_css );
@@ -119,44 +118,41 @@ add_action( 'wp_enqueue_scripts', 'fagri_inline_style', 10 );
  *
  * @since 1.0.0
  */
-//function fagri_remove_hestia_actions() {
+// function fagri_remove_hestia_actions() {
 //
-//	/* Remove three points from blog read more button */
-//	remove_filter( 'excerpt_more', 'hestia_excerpt_more', 10 );
+// * Remove three points from blog read more button */
+// remove_filter( 'excerpt_more', 'hestia_excerpt_more', 10 );
 //
-//}
-//add_action( 'after_setup_theme', 'fagri_remove_hestia_actions' );
-
+// }
+// add_action( 'after_setup_theme', 'fagri_remove_hestia_actions' );
 /**
  * Remove product description except from Single Product Page
  *
  * @since 1.0.0
  */
-//function fagri_remove_product_description() {
+// function fagri_remove_product_description() {
 //
-//	if ( class_exists( 'WooCommerce' ) ) {
-//		if ( ! is_product() ) {
-//			add_filter( 'woocommerce_short_description', '__return_empty_string' );
-//		}
-//	}
-//}
-//add_action( 'template_redirect', 'fagri_remove_product_description' );
-
+// if ( class_exists( 'WooCommerce' ) ) {
+// if ( ! is_product() ) {
+// add_filter( 'woocommerce_short_description', '__return_empty_string' );
+// }
+// }
+// }
+// add_action( 'template_redirect', 'fagri_remove_product_description' );
 /**
  * Replace excerpt "Read More" text with a link.
  *
  * @since 1.0.0
  */
-//function fagri_excerpt_more( $more ) {
-//	global $post;
-//	if ( ( ( 'page' === get_option( 'show_on_front' ) ) ) || is_single() || is_archive() || is_home() ) {
-//		return '<a class="moretag" href="' . esc_url( get_permalink( $post->ID ) ) . '"> ' . esc_html__( 'Read more', 'fagri' ) . '</a>';
-//	}
+// function fagri_excerpt_more( $more ) {
+// global $post;
+// if ( ( ( 'page' === get_option( 'show_on_front' ) ) ) || is_single() || is_archive() || is_home() ) {
+// return '<a class="moretag" href="' . esc_url( get_permalink( $post->ID ) ) . '"> ' . esc_html__( 'Read more', 'fagri' ) . '</a>';
+// }
 //
-//	return $more;
-//}
-//add_filter( 'excerpt_more', 'fagri_excerpt_more' );
-
+// return $more;
+// }
+// add_filter( 'excerpt_more', 'fagri_excerpt_more' );
 /**
  * Remove boxed layout control
  *
@@ -219,10 +215,10 @@ add_filter( 'hestia_about_page_filter', 'fagri_about_page_filter', 0, 3 );
 /**
  * Change About page defaults
  *
+ * * TODO update description here
+ *
  * @param string $old_value Old value beeing filtered.
  * @param string $parameter Specific parameter for filtering.
- *
- * TODO update description here
  */
 function fagri_about_page_filter( $old_value, $parameter ) {
 
