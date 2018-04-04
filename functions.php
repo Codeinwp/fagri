@@ -27,18 +27,6 @@ endif;
 add_action( 'wp_enqueue_scripts', 'fagri_parent_css', 10 );
 
 /**
- * Enqueue fagri scripts
- */
-// function fagri_customizer_preview_js() {
-// wp_enqueue_script(
-// 'fagri_customizer', trailingslashit( get_stylesheet_directory_uri() ) . 'assets/js/scripts.js', array(
-// 'jquery',
-// 'customize-preview',
-// ), FAGRI_VERSION
-// );
-// }
-// add_action( 'customize_preview_init', 'fagri_customizer_preview_js', 10 );
-/**
  * Change default fonts.
  *
  * @since 1.0.0
@@ -94,6 +82,44 @@ function fagri_gradient_color() {
 add_filter( 'hestia_header_gradient_default', 'fagri_gradient_color' );
 
 /**
+ * Add opacity to rgb.
+ *
+ * @param array $rgb RGB color.
+ * @param int   $opacity Opacity value.
+ */
+function fagri_rgb_to_rgba( $rgb, $opacity ) {
+
+	if ( ! is_array( $rgb ) ) {
+		return '';
+	}
+	// Check for opacity
+	if ( $opacity ) {
+		if ( abs( $opacity ) > 1 ) {
+			$opacity = 1.0;
+		}
+		$output = 'rgba(' . implode( ',', $rgb ) . ',' . $opacity . ')';
+	} else {
+		$output = 'rgb(' . implode( ',', $rgb ) . ')';
+	}
+
+	return $output;
+}
+
+
+/**
+ * HEX colors conversion to RGBA.
+ *
+ * @param array|string $input RGB color.
+ * @param int          $opacity Opacity value.
+ */
+function fagri_hex_rgba( $input, $opacity = false ) {
+
+	// Convert hexadeciomal color to rgb(a)
+	$rgb = hestia_hex_rgb( $input );
+	return hestia_rgb_to_rgba( $rgb, $opacity );
+}
+
+/**
  * Add color_accent on some elements
  *
  * @since 1.0.0
@@ -101,8 +127,25 @@ add_filter( 'hestia_header_gradient_default', 'fagri_gradient_color' );
 function fagri_inline_style() {
 
 	$color_accent = get_theme_mod( 'accent_color', '#f5593d' );
+	$hestia_features_repeaters = get_theme_mod( 'hestia_features_content' );
+
+	$hestia_features_content = json_decode( $hestia_features_repeaters );
 
 	$custom_css = '';
+
+	/* Feature box repeaters, icon shadow and title color, hover state included */
+	if ( ! empty ( $hestia_features_content ) ) {
+		foreach( $hestia_features_content as $index=>$value ) {
+
+			$nth_of_type = $index + 1;
+			$color_rgba = fagri_hex_rgba( $value->color, 0.3 );
+			$color_rgba_on_hover = fagri_hex_rgba( $value->color, 0.35 );
+
+			$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html($nth_of_type ) . ') .hestia-info > a .icon { box-shadow: 0 9px 30px -6px ' .  esc_html( $color_rgba ) . '; }';
+			$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html($nth_of_type ) . ') .hestia-info > a:hover .icon { box-shadow: 0 15px 35px 0 ' .  esc_html( $color_rgba_on_hover ) . '; }';
+			$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html( $nth_of_type ) . ') .hestia-info > a:hover .info-title { color: ' . esc_html( $value->color ) . '; }';
+		}
+	}
 
 	if ( ! empty( $color_accent ) ) {
 

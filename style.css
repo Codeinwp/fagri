@@ -93,4 +93,74 @@ body {
   opacity: 0.9;
 }
 
+/*--------------------------------------------------------------
+## Features section
+--------------------------------------------------------------*/
+.home .hestia-features .hestia-title {
+  color: #2c2c2c;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 42px;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+.home .hestia-features .description {
+  color: #9A9A9A;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.home .hestia-features .feature-box .hestia-info > a .icon {
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  transition: transform .4s, box-shadow .4s;
+  transition-property: transform, box-shadow;
+  transition-duration: 0.4s, 0.4s;
+  transition-timing-function: initial;
+  transition-delay: initial;
+  width: 80px;
+  height: 80px;
+  padding: 25px 0;
+  margin: 0 auto;
+}
+.home .hestia-features .feature-box .hestia-info > a .icon i {
+  font-size: 30px;
+}
+.home .hestia-features .feature-box .hestia-info > a .info-title {
+  color: #2c2c2c;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 30px;
+  padding: 0 15px;
+  margin: 25px 0 15px;
+}
+.home .hestia-features .feature-box .hestia-info > a:hover {
+  opacity: initial;
+}
+.home .hestia-features .feature-box .hestia-info > a:hover .icon {
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  transform: translate3d(0, -0.5rem, 0);
+  transition: transform .4s, box-shadow .4s;
+  transition-property: transform, box-shadow;
+  transition-duration: 0.4s, 0.4s;
+  transition-timing-function: initial;
+  transition-delay: initial;
+  opacity: initial;
+}
+.home .hestia-features .feature-box .hestia-info > a:hover .info-title {
+  opacity: initial;
+}
+.home .hestia-features .feature-box .hestia-info .description {
+  color: #888888;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+
 /*# sourceMappingURL=style.css.map */

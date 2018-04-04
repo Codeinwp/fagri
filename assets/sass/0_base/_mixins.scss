@@ -22,6 +22,7 @@
 
 /* Front page title and subtitle */
 @mixin front-page-section-title() {
+  color: #2c2c2c;
   font-size: 35px;
   font-weight: 700;
   line-height: 42px;
@@ -29,6 +30,7 @@
   margin-bottom: 30px;
 }
 @mixin front-page-section-subtitle() {
+  color: #9A9A9A;
   font-size: 21px;
   font-weight: 300;
   line-height: 30px;
