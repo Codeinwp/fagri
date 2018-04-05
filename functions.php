@@ -141,14 +141,22 @@ function fagri_inline_style() {
 			$color_rgba = fagri_hex_rgba( $value->color, 0.3 );
 			$color_rgba_on_hover = fagri_hex_rgba( $value->color, 0.35 );
 
-			if ( $value->choice == 'customizer_repeater_icon' ) {
+			/* Hestia Pro */
+			if ( isset( $value->choice ) ) {
+				if ( $value->choice == 'customizer_repeater_icon' ) {
 
+					$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html($nth_of_type ) . ') .hestia-info > a .icon { box-shadow: 0 9px 30px -6px ' .  esc_html( $color_rgba ) . '; }';
+					$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html($nth_of_type ) . ') .hestia-info > a:hover .icon { box-shadow: 0 15px 35px 0 ' .  esc_html( $color_rgba_on_hover ) . '; }';
+					$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html( $nth_of_type ) . ') .hestia-info > a:hover .info-title { color: ' . esc_html( $value->color ) . '; }';
+				} else {
+					$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html( $nth_of_type ) . ') .hestia-info > a:hover .info-title { color: ' . esc_html( $color_accent ) . '; }';
+				}
+			} else { /* Hestia Lite */
 				$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html($nth_of_type ) . ') .hestia-info > a .icon { box-shadow: 0 9px 30px -6px ' .  esc_html( $color_rgba ) . '; }';
 				$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html($nth_of_type ) . ') .hestia-info > a:hover .icon { box-shadow: 0 15px 35px 0 ' .  esc_html( $color_rgba_on_hover ) . '; }';
 				$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html( $nth_of_type ) . ') .hestia-info > a:hover .info-title { color: ' . esc_html( $value->color ) . '; }';
-			} else {
-				$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html( $nth_of_type ) . ') .hestia-info > a:hover .info-title { color: ' . esc_html( $color_accent ) . '; }';
 			}
+
 		}
 	}
 

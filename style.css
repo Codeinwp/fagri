@@ -163,4 +163,70 @@ body {
   margin-bottom: 16px;
 }
 
+/*--------------------------------------------------------------
+## Team section
+--------------------------------------------------------------*/
+.home .hestia-team .hestia-title {
+  color: #2c2c2c;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 42px;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+.home .hestia-team .description {
+  color: #9A9A9A;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.home .hestia-team .hestia-team-content .card-profile .col-md-5 .card-image {
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.3);
+}
+.home .hestia-team .hestia-team-content .card-profile .col-md-5 .card-image img {
+  filter: grayscale(100%);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.home .hestia-team .hestia-team-content .card-profile .col-md-7 .content {
+  padding: 20px 5px;
+}
+.home .hestia-team .hestia-team-content .card-profile .col-md-7 .content .card-title {
+  color: #2c2c2c;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.home .hestia-team .hestia-team-content .card-profile .col-md-7 .content .category {
+  color: #9A9A9A;
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 15px;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+.home .hestia-team .hestia-team-content .card-profile .col-md-7 .content .card-description {
+  color: #9A9A9A;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 27px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.home .hestia-team .hestia-team-content .card-profile .col-md-7 .content .footer {
+  margin-top: 8px;
+}
+.home .hestia-team .hestia-team-content .card-profile .col-md-7 .content .footer .btn-just-icon {
+  font-size: 15px;
+  padding: 9px;
+}
+.home .hestia-team .hestia-team-content .card-profile .col-md-7 .content .footer .btn-just-icon i {
+  font-size: inherit;
+}
+
 /*# sourceMappingURL=style.css.map */
