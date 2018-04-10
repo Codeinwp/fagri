@@ -310,3 +310,110 @@ function fagri_theme_setup() {
 	load_child_theme_textdomain( 'fagri', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'fagri_theme_setup' );
+
+/**
+ * Wrapping testimonials section to add background image option
+ *
+ * @since 1.0.0
+ */
+function fagri_testimonials_before() {
+
+	$fagri_testimonials_background_image = get_theme_mod( 'fagri_testimonials_background' );
+
+	echo '<div class="fagri-testimonials-wrapper" style="background-image: url(' . esc_url( $fagri_testimonials_background_image ) . ');">';
+	echo '<div class="fagri-testimonials-background-switcher"></div>';
+}
+add_action( 'hestia_before_testimonials_section_hook', 'fagri_testimonials_before' );
+
+/**
+ * The end of testimonials section wrapper
+ *
+ * @since 1.0.0
+ */
+function after_testimonials_before() {
+	echo '</div>';
+}
+add_action( 'hestia_after_testimonials_section_hook', 'after_testimonials_before' );
+
+/**
+ * Register controls for testimonials section
+ * option for background image
+ *
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ * @since 1.0.0
+ */
+function fagri_testimonials_customize_register( $wp_customize ) {
+
+	$selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
+
+	$wp_customize->add_setting(
+		'fagri_testimonials_background', array(
+			'default'           => get_stylesheet_directory_uri() . '/assets/img/testimonials4.jpg',
+			'sanitize_callback' => 'esc_url_raw',
+			'transport'         => $selective_refresh,
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize, 'fagri_testimonials_background', array(
+				'label'    => esc_html__( 'Background Image', 'fagri' ),
+				'section'  => 'hestia_testimonials',
+				'priority' => 4,
+			)
+		)
+	);
+}
+add_action( 'customize_register', 'fagri_testimonials_customize_register' );
+
+/**
+ * Selective refresh for testimonials section
+ *
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ * @since 1.0.0
+ */
+function fagri_testimonials_register_partials( $wp_customize ) {
+
+	// Abort if selective refresh is not available.
+	if ( ! isset( $wp_customize->selective_refresh ) ) {
+		return;
+	}
+
+	$wp_customize->selective_refresh->add_partial(
+		'fagri_testimonials_background', array(
+			'selector'            => '.fagri-testimonials-background-switcher',
+			'setting'             => 'fagri_testimonials_background',
+			'render_callback'     => 'fagri_testimonials_background_callback',
+			'container_inclusive' => false,
+			'fallback_refresh'    => false,
+		)
+	);
+
+}
+add_action( 'customize_register', 'fagri_testimonials_register_partials' );
+
+/**
+ * Callback function for testimonials section background image
+ *
+ * @since 1.0.0
+ */
+function fagri_testimonials_background_callback() {
+	$fagri_testimonials_bg_image = get_theme_mod( 'fagri_testimonials_background' );
+	if ( ! empty ( $fagri_testimonials_bg_image ) ) {
+	?>
+		<style class="fagri-testimonials-bg-image">
+			.fagri-testimonials-wrapper {
+				background-image: url( <?php echo esc_url( $fagri_testimonials_bg_image ); ?> ) !important;
+			}
+		</style>
+	<?php
+	} else {
+		?>
+		<style class="fagri-testimonials-bg-image">
+			.fagri-testimonials-wrapper {
+				background-image: none !important;
+			}
+		</style>
+		<?php
+	}
+}

@@ -229,4 +229,94 @@ body {
   font-size: inherit;
 }
 
+/*--------------------------------------------------------------
+## Testimonials section
+--------------------------------------------------------------*/
+.home .fagri-testimonials-wrapper {
+  background-position: top center;
+  background-size: cover;
+  background-color: #000000;
+  position: relative;
+  /* Place background image toolpick on the right side of the section */
+}
+.home .fagri-testimonials-wrapper .fagri-testimonials-background-switcher > .customize-partial-edit-shortcut {
+  top: 0;
+  right: 15px;
+}
+.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-title {
+  color: #2c2c2c;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 42px;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+.home .fagri-testimonials-wrapper .hestia-testimonials .description {
+  color: #9A9A9A;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  margin-top: 60px;
+}
+.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .card-avatar {
+  /* Images without link */
+  /* Images with link */
+}
+.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .card-avatar img {
+  filter: grayscale(100%);
+  margin: -80px auto 0;
+  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+}
+.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .card-avatar a:hover {
+  opacity: initial;
+}
+.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content {
+  padding: 0 20px 40px;
+}
+.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content .card-title {
+  color: #2c2c2c;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 26px;
+}
+.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content .category {
+  color: #9A9A9A;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content .card-description::before {
+  position: absolute;
+  content: "\f10e";
+  font-family: "FontAwesome";
+  font-size: 32px;
+  color: #f96332;
+  top: -35px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content .card-description {
+  position: relative;
+  color: #9A9A9A;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 24px;
+  margin: 60px auto 0;
+}
+
 /*# sourceMappingURL=style.css.map */
