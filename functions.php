@@ -162,7 +162,9 @@ function fagri_inline_style() {
 
 	if ( ! empty( $color_accent ) ) {
 
-		// TODO: Add inline style
+        $custom_css .= ' .home .hestia-contact .card-contact .content .contact_name_wrap .form-group.is-focused { border-color: ' . esc_html( $color_accent ) . '; }';
+        $custom_css .= ' .home .hestia-contact .card-contact .content .contact_email_wrap .form-group.is-focused { border-color: ' . esc_html( $color_accent ) . '; }';
+        $custom_css .= ' .home .hestia-contact .card-contact .content .contact_subject_wrap .form-group.is-focused { border-color: ' . esc_html( $color_accent ) . '; }';
 	}
 
 	wp_add_inline_style( 'fagri_parent', $custom_css );
