@@ -1,0 +1,17 @@
+.home .hestia-ribbon {
+
+  .hestia-title {
+    @include front-page-section-title();
+    padding: 0;
+    color: #ffffff;
+  }
+
+  .hestia-subscribe-button {
+    @include no-box-shadow();
+    @include round-button();
+  }
+  .hestia-subscribe-button:hover {
+    @include no-box-shadow();
+    @include round-button-hover();
+  }
+}

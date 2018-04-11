@@ -84,6 +84,9 @@ body {
   transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
   transition-delay: initial;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 15px 48px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -317,6 +320,343 @@ body {
   font-weight: 300;
   line-height: 24px;
   margin: 60px auto 0;
+}
+
+/*--------------------------------------------------------------
+## Ribbon section
+--------------------------------------------------------------*/
+.home .hestia-ribbon .hestia-title {
+  color: #2c2c2c;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 42px;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  padding: 0;
+  color: #ffffff;
+}
+.home .hestia-ribbon .hestia-subscribe-button {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: none;
+  padding: 11px 22px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: initial;
+}
+.home .hestia-ribbon .hestia-subscribe-button:hover {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+  opacity: 0.9;
+}
+
+/*--------------------------------------------------------------
+## Portfolio section
+--------------------------------------------------------------*/
+.home .hestia-work .hestia-title {
+  color: #2c2c2c;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 42px;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+.home .hestia-work .description {
+  color: #9A9A9A;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.home .hestia-work .hestia-portfolio-content .portfolio-item .card-title {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 31px;
+}
+
+/*--------------------------------------------------------------
+## Subscribe section
+--------------------------------------------------------------*/
+.home .hestia-subscribe .title {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 30px;
+  padding-top: 30px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.home .hestia-subscribe .subscribe-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 27px;
+  margin-bottom: 16px;
+}
+.home .hestia-subscribe .input-group:focus {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  border: 1px solid purple;
+}
+.home .hestia-subscribe .btn {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: none;
+  padding: 11px 22px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: initial;
+}
+.home .hestia-subscribe .btn:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+  opacity: 0.9;
+}
+
+/*--------------------------------------------------------------
+## Pricing section
+--------------------------------------------------------------*/
+.home .hestia-pricing {
+  background-color: #ffffff;
+}
+.home .hestia-pricing .hestia-title {
+  color: #2c2c2c;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 42px;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+.home .hestia-pricing div:first-of-type > p {
+  color: #9A9A9A;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.home .hestia-pricing .card-pricing .content {
+  padding: 20px !important;
+}
+.home .hestia-pricing .card-pricing .content .category {
+  color: #9A9A9A;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15px;
+  text-transform: capitalize;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.home .hestia-pricing .card-pricing .content .card-title {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 400;
+  padding: 30px;
+}
+.home .hestia-pricing .card-pricing .content .card-title small {
+  font-size: 15px;
+  bottom: 0;
+  top: 0;
+}
+.home .hestia-pricing .card-pricing .content ul li {
+  color: #888888;
+  font-weight: 400;
+}
+.home .hestia-pricing .card-pricing .content ul li b {
+  color: inherit;
+  font-weight: inherit;
+}
+.home .hestia-pricing .card-pricing .content .btn {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: none;
+  padding: 11px 22px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: initial;
+}
+.home .hestia-pricing .card-pricing .content .btn:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+  opacity: 0.9;
+}
+.home .hestia-pricing .card-pricing.card-raised {
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*--------------------------------------------------------------
+## Contact section
+--------------------------------------------------------------*/
+.home .hestia-contact {
+  /* End of content */
+}
+.home .hestia-contact .card-contact {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.home .hestia-contact .card-contact .header {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-color: #ffffff;
+  padding: 0;
+  margin: 0;
+}
+.home .hestia-contact .card-contact .header .card-title {
+  color: #2c2c2c;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+.home .hestia-contact .card-contact .content {
+  padding: 20px;
+  /* Name, Subject, Email fields */
+  /* Enf of input fields */
+  /* Text area */
+  /* Button */
+}
+.home .hestia-contact .card-contact .content .pirate_forms_wrap > .form-group {
+  padding: 0;
+}
+.home .hestia-contact .card-contact .content .contact_name_wrap,
+.home .hestia-contact .card-contact .content .contact_email_wrap,
+.home .hestia-contact .card-contact .content .contact_subject_wrap {
+  /* Remove bottom line from input fields */
+  /* Remove label ease-up transition */
+  /* Hide label when typing */
+}
+.home .hestia-contact .card-contact .content .contact_name_wrap .form-group.is-focused .form-control,
+.home .hestia-contact .card-contact .content .contact_name_wrap .form-group .form-control,
+.home .hestia-contact .card-contact .content .contact_email_wrap .form-group.is-focused .form-control,
+.home .hestia-contact .card-contact .content .contact_email_wrap .form-group .form-control,
+.home .hestia-contact .card-contact .content .contact_subject_wrap .form-group.is-focused .form-control,
+.home .hestia-contact .card-contact .content .contact_subject_wrap .form-group .form-control {
+  background-image: none !important;
+}
+.home .hestia-contact .card-contact .content .contact_name_wrap .form-group.label-floating.is-focused label.control-label,
+.home .hestia-contact .card-contact .content .contact_email_wrap .form-group.label-floating.is-focused label.control-label,
+.home .hestia-contact .card-contact .content .contact_subject_wrap .form-group.label-floating.is-focused label.control-label {
+  top: 0;
+  left: 30px;
+  /* Move label to make place for the icon */
+  font-size: inherit;
+  transition: none;
+  margin: 11px 0 0;
+}
+.home .hestia-contact .card-contact .content .contact_name_wrap .form-group.label-floating.is-focused:not(is-empty) label.control-label,
+.home .hestia-contact .card-contact .content .contact_email_wrap .form-group.label-floating.is-focused:not(is-empty) label.control-label,
+.home .hestia-contact .card-contact .content .contact_subject_wrap .form-group.label-floating.is-focused:not(is-empty) label.control-label {
+  display: none;
+}
+.home .hestia-contact .card-contact .content .contact_name_wrap .form-group,
+.home .hestia-contact .card-contact .content .contact_email_wrap .form-group,
+.home .hestia-contact .card-contact .content .contact_subject_wrap .form-group {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  padding-bottom: 0;
+  border: 1px solid #E3E3E3;
+  margin-bottom: 24px;
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition-property: color, border-color, background-color;
+  transition-duration: 0.3s, 0.3s, 0.3s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: initial;
+  /* Move label to make place for the icon */
+  /* Moving the cursor to right to make place for the icon */
+}
+.home .hestia-contact .card-contact .content .contact_name_wrap .form-group label.control-label,
+.home .hestia-contact .card-contact .content .contact_email_wrap .form-group label.control-label,
+.home .hestia-contact .card-contact .content .contact_subject_wrap .form-group label.control-label {
+  left: 30px;
+}
+.home .hestia-contact .card-contact .content .contact_name_wrap .form-group .form-control,
+.home .hestia-contact .card-contact .content .contact_email_wrap .form-group .form-control,
+.home .hestia-contact .card-contact .content .contact_subject_wrap .form-group .form-control {
+  padding-left: 30px;
+}
+.home .hestia-contact .card-contact .content .contact_name_wrap .form-group::before {
+  color: #555555;
+  font-family: "FontAwesome";
+  font-size: 16px;
+  position: absolute;
+  top: 17px;
+  left: 10px;
+  content: "\f007";
+}
+.home .hestia-contact .card-contact .content .contact_email_wrap .form-group::before {
+  color: #555555;
+  font-family: "FontAwesome";
+  font-size: 16px;
+  position: absolute;
+  top: 17px;
+  left: 10px;
+  content: "\f003";
+}
+.home .hestia-contact .card-contact .content .contact_subject_wrap .form-group::before {
+  color: #555555;
+  font-family: "FontAwesome";
+  font-size: 16px;
+  position: absolute;
+  top: 17px;
+  left: 10px;
+  content: "\f006";
+}
+.home .hestia-contact .card-contact .content .contact_message_wrap {
+  /* Remove label ease-up transition */
+}
+.home .hestia-contact .card-contact .content .contact_message_wrap .form-group.label-floating.is-focused label.control-label {
+  top: 0;
+  font-size: inherit;
+  transition: none;
+  margin: 11px 0 0;
+}
+.home .hestia-contact .card-contact .content .btn {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: none;
+  padding: 11px 22px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: initial;
+}
+.home .hestia-contact .card-contact .content .btn:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+  opacity: 0.9;
 }
 
 /*# sourceMappingURL=style.css.map */

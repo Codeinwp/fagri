@@ -69,7 +69,26 @@
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
   transition-delay: initial;
 }
-@mixin  round-button-hover() {
+@mixin round-button-hover() {
   box-shadow: 0 3px 8px 0 rgba( 0, 0, 0, 0.17 );
   opacity: 0.9;
+}
+@mixin small-button() {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 5px 15px;
+}
+@mixin large-button() {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 15px 48px;
+}
+
+@mixin icon-in-field-contact() {
+  color: #555555;
+  font-family: "FontAwesome";
+  font-size: 16px;
+  position: absolute;
+  top: 17px;
+  left: 10px;
 }

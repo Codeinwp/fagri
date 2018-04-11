@@ -19,6 +19,7 @@
 
   .buttons a.btn {
     @include default-button();
+    @include large-button();
     @include no-box-shadow();
   }
   .buttons a.btn:hover {
