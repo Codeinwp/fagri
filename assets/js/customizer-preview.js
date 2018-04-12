@@ -47,6 +47,20 @@
             );
         }
     );
+    /* Testimonials background-image */
+    wp.customize(
+        'fagri_testimonials_background', function( value ) {
+            value.bind(
+                function( newval ) {
+                    if ( newval.length > 0 ) {
+                        $( '.home .fagri-testimonials-wrapper' ).css( { 'background-image' : 'url(' + newval + ')' } );
+                    } else {
+                        $( '.home .fagri-testimonials-wrapper' ).css( 'background-image', 'none' ).css( 'background-color', '#000000' );
+                    }
+                }
+            );
+        }
+    );
 
 } )( jQuery );
 

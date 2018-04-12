@@ -140,7 +140,6 @@ function fagri_testimonials_before() {
 	$fagri_testimonials_background_image = get_theme_mod( 'fagri_testimonials_background' );
 
 	echo '<div class="fagri-testimonials-wrapper" style="background-image: url(' . esc_url( $fagri_testimonials_background_image ) . ');">';
-	echo '<div class="fagri-testimonials-background-switcher"></div>';
 }
 add_action( 'hestia_before_testimonials_section_hook', 'fagri_testimonials_before' );
 

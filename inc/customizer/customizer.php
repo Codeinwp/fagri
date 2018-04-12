@@ -63,13 +63,11 @@ function fagri_customize_register( $wp_customize ) {
 	);
 
 	/* Option for background image in testimonials section, old priority none */
-	$selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
-
 	$wp_customize->add_setting(
 		'fagri_testimonials_background', array(
 			'default'           => get_stylesheet_directory_uri() . '/assets/img/testimonials4.jpg',
 			'sanitize_callback' => 'esc_url_raw',
-			'transport'         => $selective_refresh,
+			'transport'         => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -81,53 +79,5 @@ function fagri_customize_register( $wp_customize ) {
 			)
 		)
 	);
-
-	/* Selective refresh for testimonials background image option, old priority none */
-	if ( isset( $wp_customize->selective_refresh ) ) {
-
-		$wp_customize->selective_refresh->add_partial(
-		'fagri_testimonials_background', array(
-			'selector'            => '.fagri-testimonials-background-switcher',
-			'setting'             => 'fagri_testimonials_background',
-			'render_callback'     => 'fagri_testimonials_background_callback',
-			'container_inclusive' => false,
-			'fallback_refresh'    => false,
-		)
-	);
-	}
-
 }
 add_action( 'customize_register', 'fagri_customize_register', 99 );
-
-/**
- * Callback function for testimonials section background image
- *
- * @since 1.0.0
- */
-function fagri_testimonials_background_callback() {
-	$fagri_testimonials_bg_image = get_theme_mod( 'fagri_testimonials_background' );
-	if ( ! empty ( $fagri_testimonials_bg_image ) ) {
-		?>
-		<style class="fagri-testimonials-bg-image">
-			.fagri-testimonials-wrapper {
-				background-image: url( <?php echo esc_url( $fagri_testimonials_bg_image ); ?> ) !important;
-			}
-		</style>
-		<?php
-	} else {
-		?>
-		<style class="fagri-testimonials-bg-image">
-			.home .fagri-testimonials-wrapper {
-				background-image: none !important;
-                background-color: #ffffff !important;
-			}
-            .fagri-testimonials-wrapper .hestia-title {
-                color: #000000 !important;
-            }
-            .fagri-testimonials-wrapper .description {
-                color: #000000 !important;
-            }
-        </style>
-		<?php
-	}
-}
