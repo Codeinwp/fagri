@@ -1,0 +1,24 @@
+.home .hestia-subscribe {
+
+  .title {
+    @include front-page-section-title();
+    color: #ffffff;
+  }
+  .subscribe-description {
+    @include front-page-section-subtitle();
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .input-group:focus {
+    @include border-radius(30px);
+  }
+
+  .btn {
+    @include no-box-shadow();
+    @include round-button();
+  }
+  .btn:hover {
+    @include round-button-hover();
+  }
+
+}

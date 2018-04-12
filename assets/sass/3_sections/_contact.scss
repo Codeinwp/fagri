@@ -94,6 +94,7 @@
       }
       /* Button */
       .btn {
+        @include no-box-shadow();
         @include round-button();
       }
       .btn:hover {
