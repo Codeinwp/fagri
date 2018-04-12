@@ -1,0 +1,102 @@
+.home .hestia-pricing {
+
+  background-color: #ffffff;
+
+  .hestia-title {
+    @include front-page-section-title();
+  }
+  div:first-of-type > p {
+    @include front-page-section-subtitle();
+  }
+
+  /* Change colors for table one */
+  .hestia-table-one {
+    .card-pricing {
+      .content {
+        .fagri-pricing-icon-wrapper {
+          background-color: #ffffff;
+        }
+        .category,
+        .card-title,
+        .card-title small,
+        ul li
+        {
+          color: #ffffff;
+        }
+        ul li {
+          border-color: #ededed;
+        }
+        .btn {
+          background-color: #ffffff !important;
+        }
+      }
+    }
+  }
+
+  .card-pricing {
+
+    .content {
+
+      padding: 20px !important;
+
+      .category {
+        color: #9A9A9A;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 15px;
+        text-transform: capitalize;
+        margin-top: 0;
+        margin-bottom: 18px;
+      }
+      .fagri-pricing-icon-wrapper {
+
+        @include border-radius(50%);
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+
+        i {
+          color: inherit;
+          font-size: 30px;
+          line-height: 80px;
+        }
+      }
+      .card-title {
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 31px;
+        margin-top: 30px;
+        margin-bottom: 12px;
+
+        small {
+          color: inherit;
+          font-size: 15px;
+          bottom: 0;
+          top: 0;
+        }
+      }
+      ul {
+        li {
+
+          color: #888888;
+          font-weight: 400;
+
+          b {
+            color: inherit;
+            font-weight: inherit;
+          }
+        }
+      }
+      .btn {
+        box-shadow: none !important;
+        @include round-button();
+      }
+      .btn:hover {
+        @include round-button-hover();
+      }
+    }
+  }
+  .card-pricing.card-raised {
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+  }
+}

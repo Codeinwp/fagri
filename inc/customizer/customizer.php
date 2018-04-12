@@ -1,4 +1,10 @@
 <?php
+/**
+ * Customizer functionality for the theme
+ *
+ * @package fagri
+ * @since 1.0.0
+ */
 
 /**
  * Customizer controls
@@ -25,15 +31,31 @@ function fagri_customize_register( $wp_customize ) {
 	require_once ( get_stylesheet_directory() . '/inc/customizer/customizer-iconpicker/class-customizer-iconpicker.php' );
 
 	$wp_customize->add_setting(
-		'fagri_icon_test', array(
-			'transport'         => 'refresh',
-			'default'           => 'fa-close',
+		'fagri_pricing_table_one_icon', array(
+			'transport'         => 'postMessage',
+			'default'           => 'fa-gift',
 		)
 	);
 	$wp_customize->add_control(
 		new Customizer_Iconpicker(
-			$wp_customize, 'fagri_icon_test', array(
-				'label'    => esc_html__( 'Label','fagri'),
+			$wp_customize, 'fagri_pricing_table_one_icon', array(
+				'label'    => esc_html__( 'Pricing Table One: Icon','fagri'),
+				'section'  => 'hestia_pricing',
+				'priority' => 10,
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'fagri_pricing_table_two_icon', array(
+			'transport'         => 'postMessage',
+			'default'           => 'fa-gift',
+		)
+	);
+	$wp_customize->add_control(
+		new Customizer_Iconpicker(
+			$wp_customize, 'fagri_pricing_table_two_icon', array(
+				'label'    => esc_html__( 'Pricing Table Two: Icon','fagri'),
 				'section'  => 'hestia_pricing',
 				'priority' => 10,
 			)
@@ -95,10 +117,17 @@ function fagri_testimonials_background_callback() {
 	} else {
 		?>
 		<style class="fagri-testimonials-bg-image">
-			.fagri-testimonials-wrapper {
+			.home .fagri-testimonials-wrapper {
 				background-image: none !important;
+                background-color: #ffffff !important;
 			}
-		</style>
+            .fagri-testimonials-wrapper .hestia-title {
+                color: #000000 !important;
+            }
+            .fagri-testimonials-wrapper .description {
+                color: #000000 !important;
+            }
+        </style>
 		<?php
 	}
 }

@@ -70,7 +70,7 @@
   transition-delay: initial;
 }
 @mixin round-button-hover() {
-  box-shadow: 0 3px 8px 0 rgba( 0, 0, 0, 0.17 );
+  box-shadow: 0 3px 8px 0 rgba( 0, 0, 0, 0.17 ) !important;
   opacity: 0.9;
 }
 @mixin small-button() {

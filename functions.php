@@ -23,13 +23,28 @@ if ( ! function_exists( 'fagri_parent_css' ) ) :
 		wp_style_add_data( 'fagri_parent', 'rtl', 'replace' );
 		wp_style_add_data( 'hestia_style', 'rtl', 'replace' );
 	}
+
 endif;
 add_action( 'wp_enqueue_scripts', 'fagri_parent_css', 10 );
+
+/**
+ * Enqueue customizer js
+ */
+function fagri_customizer_preview_js() {
+
+	wp_enqueue_script( 'fagri-customizer-preview-js', get_stylesheet_directory_uri() . '/assets/js/customizer-preview.js', array( 'jquery','customize-preview' ), FAGRI_VERSION, true  );
+}
+add_action( 'customize_preview_init', 'fagri_customizer_preview_js', 10 );
 
 /* Require files */
 $fagri_customizer_controls = get_stylesheet_directory() . '/inc/customizer/customizer.php';
 if ( file_exists( $fagri_customizer_controls ) ) {
 	require_once $fagri_customizer_controls;
+}
+
+$fagri_inline_style = get_stylesheet_directory() . '/inc/customizer/inline-style.php';
+if ( file_exists( $fagri_inline_style ) ) {
+	require_once $fagri_inline_style;
 }
 
 /**
@@ -116,60 +131,6 @@ function fagri_hex_rgba( $input, $opacity = false ) {
 }
 
 /**
- * Add color_accent on some elements
- *
- * @since 1.0.0
- */
-function fagri_inline_style() {
-
-	$color_accent = get_theme_mod( 'accent_color', '#2ca8ff' );
-	$hestia_features_repeaters = get_theme_mod( 'hestia_features_content' );
-
-	$hestia_features_content = json_decode( $hestia_features_repeaters );
-
-	$custom_css = '';
-
-	/* Feature box repeaters, icon shadow and title color, hover state included */
-	if ( ! empty ( $hestia_features_content ) ) {
-		foreach( $hestia_features_content as $index=>$value ) {
-
-			$nth_of_type = $index + 1;
-			$color_rgba = fagri_hex_rgba( $value->color, 0.3 );
-			$color_rgba_on_hover = fagri_hex_rgba( $value->color, 0.35 );
-
-			/* Hestia Pro */
-			if ( isset( $value->choice ) ) {
-				if ( $value->choice == 'customizer_repeater_icon' ) {
-
-					$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html($nth_of_type ) . ') .hestia-info > a .icon { box-shadow: 0 9px 30px -6px ' .  esc_html( $color_rgba ) . '; }';
-					$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html($nth_of_type ) . ') .hestia-info > a:hover .icon { box-shadow: 0 15px 35px 0 ' .  esc_html( $color_rgba_on_hover ) . '; }';
-					$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html( $nth_of_type ) . ') .hestia-info > a:hover .info-title { color: ' . esc_html( $value->color ) . '; }';
-				} else {
-					$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html( $nth_of_type ) . ') .hestia-info > a:hover .info-title { color: ' . esc_html( $color_accent ) . '; }';
-				}
-			} else { /* Hestia Lite */
-				$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html($nth_of_type ) . ') .hestia-info > a .icon { box-shadow: 0 9px 30px -6px ' .  esc_html( $color_rgba ) . '; }';
-				$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html($nth_of_type ) . ') .hestia-info > a:hover .icon { box-shadow: 0 15px 35px 0 ' .  esc_html( $color_rgba_on_hover ) . '; }';
-				$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html( $nth_of_type ) . ') .hestia-info > a:hover .info-title { color: ' . esc_html( $value->color ) . '; }';
-			}
-
-		}
-	}
-
-	if ( ! empty( $color_accent ) ) {
-
-		$custom_css .= ' .home .hestia-pricing .card-pricing .content .card-title { box-shadow: 0px 9px 30px -6px ' . esc_html( $color_accent ) . '; }';
-
-        $custom_css .= ' .home .hestia-contact .card-contact .content .contact_name_wrap .form-group.is-focused { border-color: ' . esc_html( $color_accent ) . '; }';
-        $custom_css .= ' .home .hestia-contact .card-contact .content .contact_email_wrap .form-group.is-focused { border-color: ' . esc_html( $color_accent ) . '; }';
-        $custom_css .= ' .home .hestia-contact .card-contact .content .contact_subject_wrap .form-group.is-focused { border-color: ' . esc_html( $color_accent ) . '; }';
-	}
-
-	wp_add_inline_style( 'fagri_parent', $custom_css );
-}
-add_action( 'wp_enqueue_scripts', 'fagri_inline_style', 10 );
-
-/**
  * Wrapping testimonials section to add background image option
  *
  * @since 1.0.0
@@ -193,6 +154,21 @@ function after_testimonials_before() {
 }
 add_action( 'hestia_after_testimonials_section_hook', 'after_testimonials_before' );
 
+function fagri_table_one_card_pricing_icon() {
+
+	$card_pricing_table_one_icon_type = get_theme_mod( 'fagri_pricing_table_one_icon', 'fa-gift' );
+
+	echo '<div class="fagri-pricing-icon-wrapper"><i class="fa ' . $card_pricing_table_one_icon_type . '"></i></div>';
+}
+add_action( 'hestia_after_title_pricing_section_table_one_content_trigger', 'fagri_table_one_card_pricing_icon' );
+
+function fagri_table_two_card_pricing_icon() {
+
+	$card_pricing_table_two_icon_type = get_theme_mod( 'fagri_pricing_table_two_icon', 'fa-gift' );
+
+	echo '<div class="fagri-pricing-icon-wrapper"><i class="fa ' . $card_pricing_table_two_icon_type . '"></i></div>';
+}
+add_action( 'hestia_after_title_pricing_section_table_two_content_trigger', 'fagri_table_two_card_pricing_icon' );
 /**
  * Remove parent theme actions
  *
