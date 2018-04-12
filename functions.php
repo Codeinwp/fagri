@@ -26,25 +26,11 @@ if ( ! function_exists( 'fagri_parent_css' ) ) :
 endif;
 add_action( 'wp_enqueue_scripts', 'fagri_parent_css', 10 );
 
-/**
- * Change default fonts.
- *
- * @since 1.0.0
- */
-function fagri_change_defaults( $wp_customize ) {
-
-	/* Change default fonts */
-	$fagri_headings_font = $wp_customize->get_setting( 'hestia_headings_font' );
-	if ( ! empty( $fagri_headings_font ) ) {
-		$fagri_headings_font->default = fagri_font_default_frontend();
-	}
-	$fagri_body_font = $wp_customize->get_setting( 'hestia_body_font' );
-	if ( ! empty( $fagri_body_font ) ) {
-		$fagri_body_font->default = fagri_font_default_frontend();
-	}
-
+/* Require files */
+$fagri_customizer_controls = get_stylesheet_directory() . '/inc/customizer/customizer.php';
+if ( file_exists( $fagri_customizer_controls ) ) {
+	require_once $fagri_customizer_controls;
 }
-add_action( 'customize_register', 'fagri_change_defaults', 99 );
 
 /**
  * Change default font family for front end display.
@@ -82,6 +68,17 @@ function fagri_gradient_color() {
 add_filter( 'hestia_header_gradient_default', 'fagri_gradient_color' );
 
 /**
+ * Change default header image in Big Title Section
+ *
+ * @since 1.0.0
+ * @return string - path to image
+ */
+function fagri_header_background_default() {
+	return get_stylesheet_directory_uri() . '/assets/img/header.jpg';
+}
+add_filter( 'hestia_big_title_background_default', 'fagri_header_background_default' );
+
+/**
  * Add opacity to rgb.
  *
  * @param array $rgb RGB color.
@@ -104,7 +101,6 @@ function fagri_rgb_to_rgba( $rgb, $opacity ) {
 
 	return $output;
 }
-
 
 /**
  * HEX colors conversion to RGBA.
@@ -162,6 +158,8 @@ function fagri_inline_style() {
 
 	if ( ! empty( $color_accent ) ) {
 
+		$custom_css .= ' .home .hestia-pricing .card-pricing .content .card-title { box-shadow: 0px 9px 30px -6px ' . esc_html( $color_accent ) . '; }';
+
         $custom_css .= ' .home .hestia-contact .card-contact .content .contact_name_wrap .form-group.is-focused { border-color: ' . esc_html( $color_accent ) . '; }';
         $custom_css .= ' .home .hestia-contact .card-contact .content .contact_email_wrap .form-group.is-focused { border-color: ' . esc_html( $color_accent ) . '; }';
         $custom_css .= ' .home .hestia-contact .card-contact .content .contact_subject_wrap .form-group.is-focused { border-color: ' . esc_html( $color_accent ) . '; }';
@@ -170,6 +168,30 @@ function fagri_inline_style() {
 	wp_add_inline_style( 'fagri_parent', $custom_css );
 }
 add_action( 'wp_enqueue_scripts', 'fagri_inline_style', 10 );
+
+/**
+ * Wrapping testimonials section to add background image option
+ *
+ * @since 1.0.0
+ */
+function fagri_testimonials_before() {
+
+	$fagri_testimonials_background_image = get_theme_mod( 'fagri_testimonials_background' );
+
+	echo '<div class="fagri-testimonials-wrapper" style="background-image: url(' . esc_url( $fagri_testimonials_background_image ) . ');">';
+	echo '<div class="fagri-testimonials-background-switcher"></div>';
+}
+add_action( 'hestia_before_testimonials_section_hook', 'fagri_testimonials_before' );
+
+/**
+ * The end of testimonials section wrapper
+ *
+ * @since 1.0.0
+ */
+function after_testimonials_before() {
+	echo '</div>';
+}
+add_action( 'hestia_after_testimonials_section_hook', 'after_testimonials_before' );
 
 /**
  * Remove parent theme actions
@@ -211,16 +233,7 @@ add_action( 'wp_enqueue_scripts', 'fagri_inline_style', 10 );
 // return $more;
 // }
 // add_filter( 'excerpt_more', 'fagri_excerpt_more' );
-/**
- * Remove boxed layout control
- *
- * @since 1.0.0
- */
-function fagri_remove_boxed_layout( $wp_customize ) {
 
-	$wp_customize->remove_control( 'hestia_general_layout' );
-}
-add_action( 'customize_register', 'fagri_remove_boxed_layout', 100 );
 
 /**
  * Import options from Hestia
@@ -238,20 +251,6 @@ function fagri_get_lite_options() {
 add_action( 'after_switch_theme', 'fagri_get_lite_options' );
 
 /**
- * Change default header image in Big Title Section
- *
- * @since 1.0.0
- * @return string - path to image
- */
-function fagri_header_background_default() {
-	return get_stylesheet_directory_uri() . '/assets/img/header.jpg';
-}
-add_filter( 'hestia_big_title_background_default', 'fagri_header_background_default' );
-
-
-add_filter( 'hestia_welcome_notice_filter', 'fagri_welcome_notice_filter' );
-
-/**
  * Change default welcome notice that appears after theme first installed
  */
 function fagri_welcome_notice_filter() {
@@ -267,8 +266,7 @@ function fagri_welcome_notice_filter() {
 
 	return $var;
 }
-
-add_filter( 'hestia_about_page_filter', 'fagri_about_page_filter', 0, 3 );
+add_filter( 'hestia_welcome_notice_filter', 'fagri_welcome_notice_filter' );
 
 /**
  * Change About page defaults
@@ -303,6 +301,7 @@ function fagri_about_page_filter( $old_value, $parameter ) {
 	}
 	return $return;
 }
+add_filter( 'hestia_about_page_filter', 'fagri_about_page_filter', 0, 3 );
 
 /**
  * Declare textdomain for this child theme.
@@ -312,110 +311,3 @@ function fagri_theme_setup() {
 	load_child_theme_textdomain( 'fagri', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'fagri_theme_setup' );
-
-/**
- * Wrapping testimonials section to add background image option
- *
- * @since 1.0.0
- */
-function fagri_testimonials_before() {
-
-	$fagri_testimonials_background_image = get_theme_mod( 'fagri_testimonials_background' );
-
-	echo '<div class="fagri-testimonials-wrapper" style="background-image: url(' . esc_url( $fagri_testimonials_background_image ) . ');">';
-	echo '<div class="fagri-testimonials-background-switcher"></div>';
-}
-add_action( 'hestia_before_testimonials_section_hook', 'fagri_testimonials_before' );
-
-/**
- * The end of testimonials section wrapper
- *
- * @since 1.0.0
- */
-function after_testimonials_before() {
-	echo '</div>';
-}
-add_action( 'hestia_after_testimonials_section_hook', 'after_testimonials_before' );
-
-/**
- * Register controls for testimonials section
- * option for background image
- *
- * @param WP_Customize_Manager $wp_customize Theme Customizer object.
- * @since 1.0.0
- */
-function fagri_testimonials_customize_register( $wp_customize ) {
-
-	$selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
-
-	$wp_customize->add_setting(
-		'fagri_testimonials_background', array(
-			'default'           => get_stylesheet_directory_uri() . '/assets/img/testimonials4.jpg',
-			'sanitize_callback' => 'esc_url_raw',
-			'transport'         => $selective_refresh,
-		)
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Image_Control(
-			$wp_customize, 'fagri_testimonials_background', array(
-				'label'    => esc_html__( 'Background Image', 'fagri' ),
-				'section'  => 'hestia_testimonials',
-				'priority' => 4,
-			)
-		)
-	);
-}
-add_action( 'customize_register', 'fagri_testimonials_customize_register' );
-
-/**
- * Selective refresh for testimonials section
- *
- * @param WP_Customize_Manager $wp_customize Theme Customizer object.
- * @since 1.0.0
- */
-function fagri_testimonials_register_partials( $wp_customize ) {
-
-	// Abort if selective refresh is not available.
-	if ( ! isset( $wp_customize->selective_refresh ) ) {
-		return;
-	}
-
-	$wp_customize->selective_refresh->add_partial(
-		'fagri_testimonials_background', array(
-			'selector'            => '.fagri-testimonials-background-switcher',
-			'setting'             => 'fagri_testimonials_background',
-			'render_callback'     => 'fagri_testimonials_background_callback',
-			'container_inclusive' => false,
-			'fallback_refresh'    => false,
-		)
-	);
-
-}
-add_action( 'customize_register', 'fagri_testimonials_register_partials' );
-
-/**
- * Callback function for testimonials section background image
- *
- * @since 1.0.0
- */
-function fagri_testimonials_background_callback() {
-	$fagri_testimonials_bg_image = get_theme_mod( 'fagri_testimonials_background' );
-	if ( ! empty ( $fagri_testimonials_bg_image ) ) {
-	?>
-		<style class="fagri-testimonials-bg-image">
-			.fagri-testimonials-wrapper {
-				background-image: url( <?php echo esc_url( $fagri_testimonials_bg_image ); ?> ) !important;
-			}
-		</style>
-	<?php
-	} else {
-		?>
-		<style class="fagri-testimonials-bg-image">
-			.fagri-testimonials-wrapper {
-				background-image: none !important;
-			}
-		</style>
-		<?php
-	}
-}
