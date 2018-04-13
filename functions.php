@@ -47,6 +47,11 @@ if ( file_exists( $fagri_inline_style ) ) {
 	require_once $fagri_inline_style;
 }
 
+$fagri_parent_theme_functions = get_stylesheet_directory() . '/inc/parent-theme-functions.php';
+if ( file_exists( $fagri_parent_theme_functions ) ) {
+	require_once $fagri_parent_theme_functions;
+}
+
 /**
  * Change default font family for front end display.
  *
@@ -173,13 +178,24 @@ add_action( 'hestia_after_title_pricing_section_table_two_content_trigger', 'fag
  *
  * @since 1.0.0
  */
-// function fagri_remove_hestia_actions() {
-//
-// * Remove three points from blog read more button */
-// remove_filter( 'excerpt_more', 'hestia_excerpt_more', 10 );
-//
-// }
-// add_action( 'after_setup_theme', 'fagri_remove_hestia_actions' );
+ function fagri_remove_hestia_actions() {
+
+ /* Remove three points from blog read more button */
+ remove_filter( 'excerpt_more', 'hestia_excerpt_more', 10 );
+
+ }
+ add_action( 'after_setup_theme', 'fagri_remove_hestia_actions' );
+
+/**
+ * Replace excerpt more button and points with nothing
+ *
+ * @return string - string to show instead of excerpt more
+ * @since 1.0.0
+ */
+ function fagri_remove_excerpt_more_points() {
+ 	return '';
+ }
+ add_filter( 'excerpt_more', 'fagri_remove_excerpt_more_points' );
 /**
  * Remove product description except from Single Product Page
  *
@@ -286,3 +302,4 @@ function fagri_theme_setup() {
 	load_child_theme_textdomain( 'fagri', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'fagri_theme_setup' );
+

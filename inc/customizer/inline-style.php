@@ -67,6 +67,15 @@ function fagri_inline_style() {
 	$custom_css .= '.home .hestia-pricing .hestia-table-one .card-pricing .content .fagri-pricing-icon-wrapper { color: ' . esc_html( $color_accent ) . '; box-shadow: 0px 9px 30px -6px ' . esc_html( $color_accent ) . ';}';
 	$custom_css .= '.home .hestia-pricing .hestia-table-one .card-pricing .content .btn { color: ' . esc_html( $color_accent ) . '; }';
 
+	/* Home Blog section, post category color */
+	$custom_css .= '.home .hestia-blogs .card-blog .content .category { color: ' . esc_html( $color_accent ) . '; }';
+	$custom_css .= '.home .hestia-blogs article:nth-child(6n+1) .category a { color: ' . esc_html( $color_accent ) . '; }';
+	$custom_css .= '.home .hestia-blogs article:nth-child(6n+2) .category a { color: ' . esc_html( $color_accent ) . '; }';
+	$custom_css .= '.home .hestia-blogs article:nth-child(6n+3) .category a { color: ' . esc_html( $color_accent ) . '; }';
+	$custom_css .= '.home .hestia-blogs article:nth-child(6n+4) .category a { color: ' . esc_html( $color_accent ) . '; }';
+	$custom_css .= '.home .hestia-blogs article:nth-child(6n+5) .category a { color: ' . esc_html( $color_accent ) . '; }';
+	$custom_css .= '.home .hestia-blogs article:nth-child(6n+6) .category a { color: ' . esc_html( $color_accent ) . '; }';
+
 	wp_add_inline_style( 'fagri_parent', $custom_css );
 }
 add_action( 'wp_enqueue_scripts', 'fagri_inline_style', 10 );

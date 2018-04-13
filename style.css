@@ -673,6 +673,9 @@ body {
   margin: 11px 0 0;
 }
 .home .hestia-contact .card-contact .content .btn {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
@@ -690,6 +693,100 @@ body {
 .home .hestia-contact .card-contact .content .btn:hover {
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
   opacity: 0.9;
+}
+
+/*--------------------------------------------------------------
+## Blog section
+--------------------------------------------------------------*/
+.home:not(.blog) .hestia-blogs {
+  background-color: #ffffff;
+}
+.home:not(.blog) .hestia-blogs .hestia-title {
+  color: #2c2c2c;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 42px;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+.home:not(.blog) .hestia-blogs .description {
+  color: #9A9A9A;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain {
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+}
+.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .card-image {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .card-image img {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .card-image + .content {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .content {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 20px;
+}
+.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .content .category {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15px;
+  text-transform: capitalize;
+  margin: 0 0 8px;
+}
+.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .content .card-title {
+  color: #2c2c2c;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .content .card-title a {
+  color: inherit;
+}
+.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .content .card-description {
+  color: #9A9A9A;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 27px;
+  margin-bottom: 16px;
+}
+.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .content .fagri-blog-section-metadata .fagri-metadata-avatar {
+  display: inline-block;
+}
+.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .content .fagri-blog-section-metadata .fagri-metadata-avatar img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .content .fagri-blog-section-metadata .fagri-metadata-autor {
+  display: inline-block;
+  color: #9A9A9A;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: capitalize;
 }
 
 /*# sourceMappingURL=style.css.map */
