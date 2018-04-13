@@ -158,21 +158,6 @@ function after_testimonials_before() {
 }
 add_action( 'hestia_after_testimonials_section_hook', 'after_testimonials_before' );
 
-function fagri_table_one_card_pricing_icon() {
-
-	$card_pricing_table_one_icon_type = get_theme_mod( 'fagri_pricing_table_one_icon', 'fa-gift' );
-
-	echo '<div class="fagri-pricing-icon-wrapper"><i class="fa ' . $card_pricing_table_one_icon_type . '"></i></div>';
-}
-add_action( 'hestia_after_title_pricing_section_table_one_content_trigger', 'fagri_table_one_card_pricing_icon' );
-
-function fagri_table_two_card_pricing_icon() {
-
-	$card_pricing_table_two_icon_type = get_theme_mod( 'fagri_pricing_table_two_icon', 'fa-gift' );
-
-	echo '<div class="fagri-pricing-icon-wrapper"><i class="fa ' . $card_pricing_table_two_icon_type . '"></i></div>';
-}
-add_action( 'hestia_after_title_pricing_section_table_two_content_trigger', 'fagri_table_two_card_pricing_icon' );
 /**
  * Remove parent theme actions
  *
