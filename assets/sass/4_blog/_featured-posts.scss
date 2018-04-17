@@ -10,8 +10,6 @@
 
         .card-body {
 
-          text-align: left;
-
           .category {
             font-size: 13px;
             font-weight: 700;
@@ -36,9 +34,6 @@
           .btn {
             @include round-button();
             @include no-box-shadow();
-            display: block;
-            max-width: 120px;
-            margin: 20px auto 0;
           }
           .btn:hover {
             @include round-button-hover();

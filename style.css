@@ -796,70 +796,10 @@ body {
 ## Blog posts
 --------------------------------------------------------------*/
 .blog {
-  /* Blog featured posts style */
   /* Regular posts style */
   /* End of card blog */
   /* Sticky post */
   /* Remove random colors from Blog post's categories */
-}
-.blog .hestia-blog-featured-posts .hestia-blog-featured-card {
-  /* Card without background image */
-  /* Card with background image */
-}
-.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card {
-  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
-}
-.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card .card-body {
-  text-align: left;
-}
-.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card .card-body .category {
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 15px;
-  text-transform: uppercase;
-}
-.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card .card-body .card-title {
-  color: #2c2c2c;
-  font-size: 21px;
-  font-weight: 400;
-  line-height: 26px;
-}
-.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card .card-body .card-title:hover {
-  text-decoration: underline;
-}
-.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card .card-body .card-description {
-  font-size: 17px;
-  font-weight: 300;
-  line-height: 27px;
-}
-.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card .card-body .btn {
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 16px;
-  text-transform: none;
-  padding: 11px 22px;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-  transition-property: color, background-color, border-color, box-shadow;
-  transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
-  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
-  transition-delay: initial;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  display: block;
-  max-width: 120px;
-  margin: 20px auto 0;
-}
-.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card .card-body .btn:hover {
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
-  opacity: 0.9;
-}
-.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card.card-background .card-body .card-title,
-.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card.card-background .card-body .card-description {
-  color: #ffffff;
 }
 .blog .card-blog .card-image {
   box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
@@ -939,5 +879,109 @@ body {
 .blog .card-blog:nth-of-type(6n+6) .category a {
   color: initial;
 }
+
+/*--------------------------------------------------------------
+## Featured posts
+--------------------------------------------------------------*/
+.blog {
+  /* Blog featured posts style */
+}
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card {
+  /* Card without background image */
+  /* Card with background image */
+}
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card {
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+}
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card .card-body .category {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card .card-body .card-title {
+  color: #2c2c2c;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 26px;
+}
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card .card-body .card-title:hover {
+  text-decoration: underline;
+}
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card .card-body .card-description {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 27px;
+}
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card .card-body .btn {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: none;
+  padding: 11px 22px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: initial;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card .card-body .btn:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
+  opacity: 0.9;
+}
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card.card-background .card-body .card-title,
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card.card-background .card-body .card-description {
+  color: #ffffff;
+}
+
+/*--------------------------------------------------------------
+## Subscribe section on Blog
+--------------------------------------------------------------*/
+.blog .subscribe-line .hestia-title {
+  color: #2c2c2c;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 42px;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+.blog .subscribe-line .description {
+  color: #9A9A9A;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.blog .subscribe-line input[type="submit"] {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: none;
+  padding: 11px 22px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: initial;
+}
+.blog .subscribe-line input[type="submit"]:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
+  opacity: 0.9;
+}
+
+/*--------------------------------------------------------------
+## Authors section on Blog
+--------------------------------------------------------------*/
+/* TODO: same as team section on front page, team section shoud be changed */
 
 /*# sourceMappingURL=style.css.map */
