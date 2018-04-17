@@ -142,6 +142,7 @@ function fagri_hex_rgba( $input, $opacity = false ) {
  */
 function fagri_testimonials_before() {
 
+	/* TODO: de adaugat imagine default ca cea de la definirea controlului */
 	$fagri_testimonials_background_image = get_theme_mod( 'fagri_testimonials_background' );
 
 	echo '<div class="fagri-testimonials-wrapper" style="background-image: url(' . esc_url( $fagri_testimonials_background_image ) . ');">';
@@ -163,13 +164,13 @@ add_action( 'hestia_after_testimonials_section_hook', 'after_testimonials_before
  *
  * @since 1.0.0
  */
- function fagri_remove_hestia_actions() {
+function fagri_remove_hestia_actions() {
 
  /* Remove three points from blog read more button */
  remove_filter( 'excerpt_more', 'hestia_excerpt_more', 10 );
 
  }
- add_action( 'after_setup_theme', 'fagri_remove_hestia_actions' );
+add_action( 'after_setup_theme', 'fagri_remove_hestia_actions' );
 
 /**
  * Replace excerpt more button and points with nothing
@@ -177,10 +178,85 @@ add_action( 'hestia_after_testimonials_section_hook', 'after_testimonials_before
  * @return string - string to show instead of excerpt more
  * @since 1.0.0
  */
- function fagri_remove_excerpt_more_points() {
- 	return '';
+function fagri_remove_excerpt_more_points() {
+
+	if ( is_archive() || is_home() ) {
+		return '<a class="moretag" href="' . esc_url( get_permalink( $post->ID ) ) . '"> ' . esc_html__( 'Read more', 'fagri' ) . '</a>';
+	} else {
+		return '';
+	}
  }
- add_filter( 'excerpt_more', 'fagri_remove_excerpt_more_points' );
+add_filter( 'excerpt_more', 'fagri_remove_excerpt_more_points' );
+
+/**
+ * Customize excerpt length on Blog page
+ *
+ * if current page is blog
+ * 15 words if sidebar is active
+ * 35 words if sidebar is hidden
+ *
+ * other pages than blog inherits the value from Hestia
+ *
+ * @param $length - initial length
+ * @since 1.0.0
+ */
+function fagri_excerpt_length( $length ) {
+
+	if ( is_archive() || is_home() ) {
+		if ( is_active_sidebar( 'sidebar-1' ) )
+			return 35;
+		return 15;
+	}
+	return $length;
+}
+add_filter( 'excerpt_length', 'fagri_excerpt_length', 1000 );
+
+/**
+ * Change metadata on Blog Post
+ *
+ * @return string - information to show on the bottom of the post
+ */
+function fagri_blog_post_metadata() {
+
+	$author_name = get_the_author_meta( 'display_name' );
+	$author_email = get_the_author_meta( 'user_email' );
+	$author_avatar = get_avatar( $author_email, 30 );
+
+	$post_categories = get_the_category_list( ' • ' );
+
+	return sprintf(
+	/* translators: %1$s is Author name wrapped, %2$s is Time */
+		esc_html__( '%1$s %2$s', 'fagri' ),
+		/* translators: %1$s is author gravatar */
+		sprintf(
+			'<span class="author-avatar">%1$s</span>',
+			$author_avatar
+		),
+		/* translators: %1$s is Author name, %2$s is author link */
+		sprintf(
+			'<a href="%2$s" title="%1$s" class="vcard author"><strong class="fn">%1$s</strong></a>',
+			esc_html( get_the_author() ),
+			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )
+		),
+		sprintf(
+			'<span class="post-categories">• %1$s</span>',
+			$post_categories
+		)
+//		sprintf(
+//		/* translators: %1$s is Time since post, %2$s is author Close tag */
+//			esc_html__( '%1$s ago %2$s', 'hestia-pro' ),
+//			sprintf(
+//			/* translators: %1$s is Time since, %2$s is Link to post */
+//				'<a href="%2$s"><time>%1$s</time>',
+//				esc_html( human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ) ),
+//				esc_url( get_permalink() )
+//			),
+//			'</a>'
+//		)
+	);
+}
+add_filter( 'hestia_blog_post_meta', 'fagri_blog_post_metadata' );
+
 /**
  * Remove product description except from Single Product Page
  *

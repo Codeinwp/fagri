@@ -76,6 +76,10 @@ function fagri_inline_style() {
 	$custom_css .= '.home .hestia-blogs article:nth-child(6n+5) .category a { color: ' . esc_html( $color_accent ) . '; }';
 	$custom_css .= '.home .hestia-blogs article:nth-child(6n+6) .category a { color: ' . esc_html( $color_accent ) . '; }';
 
+	/* Blog page, regular post's categories colors */
+	$custom_css .= '.blog .blog-posts-wrap .card-blog:nth-of-type(2n+1) .category a { color: ' . esc_html( $color_accent ) . '; }';
+	$custom_css .= '.blog .blog-posts-wrap .card-blog:nth-of-type(2n+2) .category a { color: ' . esc_html( $color_accent ) . '; }';
+
 	wp_add_inline_style( 'fagri_parent', $custom_css );
 }
 add_action( 'wp_enqueue_scripts', 'fagri_inline_style', 10 );

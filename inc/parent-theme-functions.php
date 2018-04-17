@@ -16,6 +16,7 @@ function fagri_blog_section_metadata() {
 
 	$utility_text = '<span class="fagri-metadata-avatar">%1$s</span><span class="fagri-metadata-autor">%2$s</span>';
 
+	/* translators: 1 - is author gravatar, 2 - is author name */
 	printf(
 		$utility_text,
 		$author_avatar,
