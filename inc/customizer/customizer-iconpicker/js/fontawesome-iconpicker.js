@@ -22,7 +22,7 @@
             var searchTerm = $searchField.val().toLowerCase();
             if (searchTerm.length > 0) {
                 itemsList.children().each(function () {
-                    if ($(this).filter('[title*='.concat(searchTerm)).length > 0 || searchTerm.length < 1) {
+                    if ($(this).filter('[title*='.concat(searchTerm).concat(']')).length > 0 || searchTerm.length < 1) {
                         $(this).show();
                     } else {
                         $(this).hide();
