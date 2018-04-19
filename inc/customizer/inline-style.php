@@ -59,6 +59,9 @@ function fagri_inline_style() {
 		$custom_css .= ' .home .hestia-contact .card-contact .content .contact_name_wrap .form-group.is-focused { border-color: ' . esc_html( $color_accent ) . '; }';
 		$custom_css .= ' .home .hestia-contact .card-contact .content .contact_email_wrap .form-group.is-focused { border-color: ' . esc_html( $color_accent ) . '; }';
 		$custom_css .= ' .home .hestia-contact .card-contact .content .contact_subject_wrap .form-group.is-focused { border-color: ' . esc_html( $color_accent ) . '; }';
+
+		/* Blog authors section function color */
+		$custom_css .= '.authors-on-blog .card-profile.card-plain .col-md-7 .content .category { color: ' . esc_html( $color_accent ) . '; }';
 	}
 
 	/* Card pricing icon color */

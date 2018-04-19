@@ -33,6 +33,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* Font Smooth properties */
 /* Front page title and subtitle */
 /* Buttons */
+/* Contact Form icon */
+/* Dark overlay for sections with background image option */
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -47,6 +49,72 @@ div, p, a, span, li, body {
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Social icons color
+--------------------------------------------------------------*/
+.authors-on-blog .footer a[href*="facebook.com"] {
+  color: #3b5998;
+}
+
+.authors-on-blog .footer a[href*="twitter.com"] {
+  color: #55acee;
+}
+
+.authors-on-blog .footer a[href*="pinterest.com"] {
+  color: #cc2127;
+}
+
+.authors-on-blog .footer a[href*="google.com"] {
+  color: #dd4b39;
+}
+
+.authors-on-blog .footer a[href*="linkedin.com"] {
+  color: #0976b4;
+}
+
+.authors-on-blog .footer a[href*="dribbble.com"] {
+  color: #ea4c89;
+}
+
+.authors-on-blog .footer a[href*="github.com"] {
+  color: #333;
+}
+
+.authors-on-blog .footer a[href*="youtube.com"] {
+  color: #e52d27;
+}
+
+.authors-on-blog .footer a[href*="instagram.com"] {
+  color: #125688;
+}
+
+.authors-on-blog .footer a[href*="reddit.com"] {
+  color: #ff4500;
+}
+
+.authors-on-blog .footer a[href*="tumblr.com"] {
+  color: #35465c;
+}
+
+.authors-on-blog .footer a[href*="behance.com"] {
+  color: #1769ff;
+}
+
+.authors-on-blog .footer a[href*="snapchat.com"] {
+  color: #fffc00;
+}
+
+.authors-on-blog .footer a[href*="deviantart.com"] {
+  color: #05cc47;
+}
+
+.authors-on-blog .footer a[href*="vimeo.com"] {
+  color: #1ab7ea;
 }
 
 /*--------------------------------------------------------------
@@ -169,78 +237,166 @@ body {
 /*--------------------------------------------------------------
 ## Team section
 --------------------------------------------------------------*/
-.home .hestia-team .hestia-title {
+.home .fagri-team-wrapper {
+  /* Add a dark overlay for the background image */
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+  /* Place background image toolpick on the right side of the section */
+}
+.home .fagri-team-wrapper::before {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+.home .fagri-team-wrapper .fagri-team-background-switcher > .customize-partial-edit-shortcut {
+  top: 0;
+  right: 15px;
+}
+.home .fagri-team-wrapper .hestia-team .hestia-title {
   color: #2c2c2c;
   font-size: 35px;
   font-weight: 700;
   line-height: 42px;
   padding-top: 30px;
   margin-bottom: 30px;
+  color: #ffffff;
 }
-.home .hestia-team .description {
+.home .fagri-team-wrapper .hestia-team .description {
   color: #9A9A9A;
   font-size: 21px;
   font-weight: 300;
   line-height: 30px;
   margin-top: 30px;
   margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.8);
 }
-.home .hestia-team .hestia-team-content .card-profile .col-md-5 .card-image {
-  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.3);
+.home .fagri-team-wrapper .hestia-team .card-profile.card-plain {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
 }
-.home .hestia-team .hestia-team-content .card-profile .col-md-5 .card-image img {
-  filter: grayscale(100%);
+.home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 .card-image {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.home .hestia-team .hestia-team-content .card-profile .col-md-7 .content {
-  padding: 20px 5px;
+.home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 .card-image img {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  filter: grayscale(100%);
 }
-.home .hestia-team .hestia-team-content .card-profile .col-md-7 .content .card-title {
+.home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 .content {
+  text-align: center;
+  padding: 20px;
+}
+.home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 .content .card-title {
   color: #2c2c2c;
-  font-size: 21px;
+  font-size: 25px;
   font-weight: 400;
-  line-height: 26px;
-  margin-top: 0;
+  line-height: 31px;
+  margin-top: 15px;
   margin-bottom: 12px;
 }
-.home .hestia-team .hestia-team-content .card-profile .col-md-7 .content .category {
-  color: #9A9A9A;
-  font-size: 12.5px;
+.home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 .content .category {
+  font-size: 12px;
   font-weight: 700;
   line-height: 15px;
-  text-transform: capitalize;
   margin-bottom: 8px;
 }
-.home .hestia-team .hestia-team-content .card-profile .col-md-7 .content .card-description {
+.home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 .content .card-descrption {
   color: #9A9A9A;
   font-size: 17px;
   font-weight: 300;
   line-height: 27px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.home .hestia-team .hestia-team-content .card-profile .col-md-7 .content .footer {
-  margin-top: 8px;
-}
-.home .hestia-team .hestia-team-content .card-profile .col-md-7 .content .footer .btn-just-icon {
-  font-size: 15px;
-  padding: 9px;
-}
-.home .hestia-team .hestia-team-content .card-profile .col-md-7 .content .footer .btn-just-icon i {
-  font-size: inherit;
+  padding: 0;
+  margin: 0;
 }
 
+@media (max-width: 991px) {
+  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5,
+  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 .card-image {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    height: auto;
+  }
+  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 .card-image img {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+@media (min-width: 992px) {
+  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 {
+    padding-left: 0;
+    align-self: stretch;
+    /* Case with link set */
+  }
+  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 .card-image {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 100%;
+  }
+  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 .card-image img {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    object-fit: cover;
+  }
+  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 .card-image > a {
+    height: 100%;
+  }
+  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 {
+    padding-right: 0;
+    align-self: stretch;
+    /* Case with link set */
+  }
+  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 .content {
+    height: 100%;
+  }
+  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 .content > a {
+    height: 100%;
+  }
+}
 /*--------------------------------------------------------------
 ## Testimonials section
 --------------------------------------------------------------*/
 .home .fagri-testimonials-wrapper {
+  /* Add a dark overlay for the background image */
   background-position: top center;
   background-size: cover;
   background-color: #000000;
   position: relative;
   /* Place background image toolpick on the right side of the section */
+}
+.home .fagri-testimonials-wrapper::before {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
 }
 .home .fagri-testimonials-wrapper .fagri-testimonials-background-switcher > .customize-partial-edit-shortcut {
   top: 0;
@@ -982,6 +1138,267 @@ body {
 /*--------------------------------------------------------------
 ## Authors section on Blog
 --------------------------------------------------------------*/
-/* TODO: same as team section on front page, team section shoud be changed */
+.authors-on-blog .card-profile.card-plain {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+}
+.authors-on-blog .card-profile.card-plain .col-md-5 .card-image {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.authors-on-blog .card-profile.card-plain .col-md-5 .card-image img {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.authors-on-blog .card-profile.card-plain .col-md-5 .card-image > a:hover {
+  opacity: initial;
+}
+.authors-on-blog .card-profile.card-plain .col-md-7 .content {
+  text-align: center;
+  padding: 20px;
+}
+.authors-on-blog .card-profile.card-plain .col-md-7 .content .card-title {
+  color: #2c2c2c;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 31px;
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+.authors-on-blog .card-profile.card-plain .col-md-7 .content .category {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  margin-bottom: 8px;
+}
+.authors-on-blog .card-profile.card-plain .col-md-7 .content .card-descrption {
+  color: #9A9A9A;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 27px;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .authors-on-blog .card-profile.card-plain .col-md-5,
+  .authors-on-blog .card-profile.card-plain .col-md-7 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .authors-on-blog .card-profile.card-plain .col-md-5 .card-image {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    height: auto;
+  }
+  .authors-on-blog .card-profile.card-plain .col-md-5 .card-image img {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+@media (min-width: 992px) {
+  .authors-on-blog .card-profile.card-plain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .authors-on-blog .card-profile.card-plain .col-md-5 {
+    padding-left: 0;
+    align-self: stretch;
+    /* Case with link set */
+  }
+  .authors-on-blog .card-profile.card-plain .col-md-5 .card-image {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 100%;
+  }
+  .authors-on-blog .card-profile.card-plain .col-md-5 .card-image img {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    object-fit: cover;
+  }
+  .authors-on-blog .card-profile.card-plain .col-md-5 .card-image > a {
+    height: 100%;
+  }
+  .authors-on-blog .card-profile.card-plain .col-md-7 {
+    padding-right: 0;
+    align-self: stretch;
+    /* Case with link set */
+  }
+  .authors-on-blog .card-profile.card-plain .col-md-7 .content {
+    height: 100%;
+  }
+  .authors-on-blog .card-profile.card-plain .col-md-7 .content > a {
+    height: 100%;
+  }
+}
+/*--------------------------------------------------------------
+# Single Post Page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.section.section-comments .hestia-title {
+  color: #2c2c2c;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 36px;
+}
+.section.section-comments .comment .pull-left:hover {
+  opacity: initial;
+}
+.section.section-comments .comment .pull-left .comment-author.avatar {
+  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+}
+.section.section-comments .comment .pull-left .comment-author.avatar img {
+  filter: grayscale(100%);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.section.section-comments .comment .media-body .media-heading {
+  color: #2c2c2c;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 29px;
+  margin-bottom: 15px;
+}
+.section.section-comments .comment .media-body .media-heading small {
+  color: #6c757d;
+  font-size: 60%;
+}
+.section.section-comments .comment .media-body p {
+  color: #888888;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+  margin-bottom: 16px;
+}
+.section.section-comments .comment .media-body .media-footer a {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: capitalize;
+  padding: 11px 22px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.section.section-comments .comment .media-body .media-footer a i::before {
+  content: "\f1d9";
+}
+.section.section-comments ul.children .comment-author.avatar {
+  width: 64px;
+  height: 64px;
+}
+.section.section-comments ul.children .comment-author.avatar img {
+  width: 64px;
+  height: 64px;
+}
+
+/*--------------------------------------------------------------
+## Related posts
+--------------------------------------------------------------*/
+.section.related-posts {
+  background-color: #ffffff;
+}
+.section.related-posts .hestia-title {
+  color: #2c2c2c;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 42px;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  color: #2c2c2c;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+.section.related-posts .card-blog {
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+}
+.section.related-posts .card-blog .card-image {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin: 0;
+}
+.section.related-posts .card-blog .card-image img {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.section.related-posts .card-blog .card-image + .content {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.section.related-posts .card-blog .content {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 20px;
+}
+.section.related-posts .card-blog .content .category {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15px;
+  text-transform: capitalize;
+  margin: 0 0 8px;
+}
+.section.related-posts .card-blog .content .card-title {
+  color: #2c2c2c;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+.section.related-posts .card-blog .content .card-title a {
+  color: inherit;
+}
+.section.related-posts .card-blog .content .card-description {
+  color: #9A9A9A;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 27px;
+  margin-bottom: 16px;
+}
+.section.related-posts .card-blog .content .fagri-blog-section-metadata .fagri-metadata-avatar {
+  display: inline-block;
+}
+.section.related-posts .card-blog .content .fagri-blog-section-metadata .fagri-metadata-avatar img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+.section.related-posts .card-blog .content .fagri-blog-section-metadata .fagri-metadata-autor {
+  display: inline-block;
+  color: #9A9A9A;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+@media (min-width: 769px) {
+  .section.related-posts .hestia-title {
+    font-size: 35px !important;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
