@@ -52,6 +52,11 @@ if ( file_exists( $fagri_parent_theme_functions ) ) {
 	require_once $fagri_parent_theme_functions;
 }
 
+$fagri_front_page_sections = get_stylesheet_directory() . '/inc/fp-sections.php';
+if ( file_exists( $fagri_front_page_sections ) ) {
+	require_once $fagri_front_page_sections;
+}
+
 /**
  * Change default font family for front end display.
  *
@@ -136,30 +141,6 @@ function fagri_hex_rgba( $input, $opacity = false ) {
 }
 
 /**
- * Wrapping testimonials section to add background image option
- *
- * @since 1.0.0
- */
-function fagri_testimonials_before() {
-
-	/* TODO: de adaugat imagine default ca cea de la definirea controlului */
-	$fagri_testimonials_background_image = get_theme_mod( 'fagri_testimonials_background' );
-
-	echo '<div class="fagri-testimonials-wrapper" style="background-image: url(' . esc_url( $fagri_testimonials_background_image ) . ');">';
-}
-add_action( 'hestia_before_testimonials_section_hook', 'fagri_testimonials_before' );
-
-/**
- * The end of testimonials section wrapper
- *
- * @since 1.0.0
- */
-function after_testimonials_before() {
-	echo '</div>';
-}
-add_action( 'hestia_after_testimonials_section_hook', 'after_testimonials_before' );
-
-/**
  * Remove parent theme actions
  *
  * @since 1.0.0
@@ -237,10 +218,6 @@ function fagri_blog_post_metadata() {
 			'<a href="%2$s" title="%1$s" class="vcard author"><strong class="fn">%1$s</strong></a>',
 			esc_html( get_the_author() ),
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )
-		),
-		sprintf(
-			'<span class="post-categories">• %1$s</span>',
-			$post_categories
 		)
 //		sprintf(
 //		/* translators: %1$s is Time since post, %2$s is author Close tag */

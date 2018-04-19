@@ -6,6 +6,21 @@
  */
 
 ( function( $ ) {
+
+    /* Team background-image */
+    wp.customize(
+        'fagri_team_background', function( value ) {
+            value.bind(
+                function( newval ) {
+                    if ( newval.length > 0 ) {
+                        $( '.home .fagri-team-wrapper' ).css( { 'background-image' : 'url(' + newval + ')' } );
+                    } else {
+                        $( '.home .fagri-team-wrapper' ).css( 'background-image', 'none' ).css( 'background-color', '#000000' );
+                    }
+                }
+            );
+        }
+    );
     /* === Pricing section === */
     /* Table one icon */
     wp.customize(

@@ -4,6 +4,14 @@
   -moz-border-radius: $radius;
   border-radius: $radius;
 }
+@mixin no-bottom-border-radius() {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+@mixin no-right-border-radius() {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
 @mixin no-box-shadow() {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -84,6 +92,7 @@
   padding: 15px 48px;
 }
 
+/* Contact Form icon */
 @mixin icon-in-field-contact() {
   color: #555555;
   font-family: "FontAwesome";
@@ -91,4 +100,16 @@
   position: absolute;
   top: 17px;
   left: 10px;
+}
+
+/* Dark overlay for sections with background image option */
+@mixin section-background-overlay() {
+  background-color: rgba( 0, 0, 0, 0.5 );
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
 }

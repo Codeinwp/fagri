@@ -49,6 +49,9 @@ function fagri_inline_style() {
 
 	if ( ! empty( $color_accent ) ) {
 
+		/* Team section, team member function */
+		$custom_css .= '.home .fagri-team-wrapper .hestia-team .card-profile .col-md-7 .content .category { color: ' . esc_html( $color_accent ) . ' }';
+
 		/* Testimonials quotes */
 		$custom_css .= '.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content .card-description::before { color: ' . esc_html( $color_accent ) . '; }';
 

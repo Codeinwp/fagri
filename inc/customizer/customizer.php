@@ -14,7 +14,7 @@
  */
 function fagri_customize_register( $wp_customize ) {
 
-	/* Remove boxed layout control, old priority 100 */
+	/* Remove boxed layout control */
 	$wp_customize->remove_control( 'hestia_general_layout' );
 
 	/* Change default fonts, old priority 99 */
@@ -27,7 +27,7 @@ function fagri_customize_register( $wp_customize ) {
 		$fagri_body_font->default = fagri_font_default_frontend();
 	}
 
-	/* Add Icon Picker for pricing section, old priority 99 */
+	/* Add Icon Picker for pricing section */
 	require_once ( get_stylesheet_directory() . '/inc/customizer/customizer-iconpicker/class-customizer-iconpicker.php' );
 
 	$wp_customize->add_setting(
@@ -62,7 +62,7 @@ function fagri_customize_register( $wp_customize ) {
 		)
 	);
 
-	/* Option for background image in testimonials section, old priority none */
+	/* Option for background image in testimonials section */
 	$wp_customize->add_setting(
 		'fagri_testimonials_background', array(
 			'default'           => get_stylesheet_directory_uri() . '/assets/img/testimonials4.jpg',
@@ -75,6 +75,24 @@ function fagri_customize_register( $wp_customize ) {
 			$wp_customize, 'fagri_testimonials_background', array(
 				'label'    => esc_html__( 'Background Image', 'fagri' ),
 				'section'  => 'hestia_testimonials',
+				'priority' => 4,
+			)
+		)
+	);
+
+	/* Option for background image in team section */
+	$wp_customize->add_setting(
+		'fagri_team_background', array(
+			'default'           => get_stylesheet_directory_uri() . '/assets/img/testimonials4.jpg',
+			'sanitize_callback' => 'esc_url_raw',
+			'transport'         => 'postMessage',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize, 'fagri_team_background', array(
+				'label'    => esc_html__( 'Background Image', 'fagri' ),
+				'section'  => 'hestia_team',
 				'priority' => 4,
 			)
 		)
