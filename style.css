@@ -1531,5 +1531,94 @@ body {
     font-size: 35px !important;
   }
 }
+/*--------------------------------------------------------------
+# WooCommerce
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Shop page
+--------------------------------------------------------------*/
+.woocommerce.archive {
+  /* End of .wrapper.main */
+}
+.woocommerce.archive .wrapper .main {
+  background-color: #ffffff;
+  /* End of li.product */
+}
+.woocommerce.archive .wrapper .main .product {
+  /* Remove ease up effect on hover */
+  /* End of card product */
+}
+.woocommerce.archive .wrapper .main .product:hover .card-image {
+  transform: unset;
+}
+.woocommerce.archive .wrapper .main .product .card-product {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.woocommerce.archive .wrapper .main .product .card-product .card-image {
+  box-shadow: none;
+  margin: 0;
+}
+.woocommerce.archive .wrapper .main .product .card-product .content {
+  padding: 20px 5px;
+}
+.woocommerce.archive .wrapper .main .product .card-product .content .category a {
+  font-size: 12px;
+  font-weight: 700;
+}
+.woocommerce.archive .wrapper .main .product .card-product .content .card-title a {
+  color: #444444;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+.woocommerce.archive .wrapper .main .product .card-product .content .card-title a:hover {
+  opacity: initial;
+}
+.woocommerce.archive .wrapper .main .product .card-product .content .card-description p {
+  color: #9A9A9A;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 27px;
+}
+.woocommerce.archive .wrapper .main .product .card-product .content .footer {
+  margin-top: 5px;
+}
+.woocommerce.archive .wrapper .main .product .card-product .content .footer .price h4 {
+  color: #888888;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+  margin-top: 9px;
+}
+.woocommerce.archive .wrapper .main .product .card-product .content .footer .stats a i {
+  font-size: 15px;
+}
+.woocommerce.archive .wrapper .main .product .card-product .content .footer .stats .hestia-view-cart-wrapper a {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: none;
+  padding: 11px 22px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: initial;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  color: #ffffff;
+}
+.woocommerce.archive .wrapper .main .product .card-product .content .footer .stats .hestia-view-cart-wrapper a:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+  opacity: 0.9;
+}
 
 /*# sourceMappingURL=style.css.map */
