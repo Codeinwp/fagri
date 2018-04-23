@@ -42,7 +42,7 @@ if ( file_exists( $fagri_customizer_controls ) ) {
 	require_once $fagri_customizer_controls;
 }
 
-$fagri_inline_style = get_stylesheet_directory() . '/inc/customizer/inline-style.php';
+$fagri_inline_style = get_stylesheet_directory() . '/inc/inline-style.php';
 if ( file_exists( $fagri_inline_style ) ) {
 	require_once $fagri_inline_style;
 }

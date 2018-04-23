@@ -1247,43 +1247,48 @@ body {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-.section.section-comments .hestia-title {
+.section#comments .hestia-title {
   color: #2c2c2c;
   font-size: 26px;
   font-weight: 700;
   line-height: 36px;
+  padding: 30px 0 0;
+  margin: 0 0 30px;
 }
-.section.section-comments .comment .pull-left:hover {
+.section#comments .comment .pull-left {
+  padding: 10px;
+}
+.section#comments .comment .pull-left:hover {
   opacity: initial;
 }
-.section.section-comments .comment .pull-left .comment-author.avatar {
+.section#comments .comment .pull-left .comment-author.avatar {
   box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
 }
-.section.section-comments .comment .pull-left .comment-author.avatar img {
+.section#comments .comment .pull-left .comment-author.avatar img {
   filter: grayscale(100%);
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.section.section-comments .comment .media-body .media-heading {
+.section#comments .comment .media-body .media-heading {
   color: #2c2c2c;
   font-size: 19px;
   font-weight: 400;
   line-height: 29px;
   margin-bottom: 15px;
 }
-.section.section-comments .comment .media-body .media-heading small {
+.section#comments .comment .media-body .media-heading small {
   color: #6c757d;
   font-size: 60%;
 }
-.section.section-comments .comment .media-body p {
+.section#comments .comment .media-body p {
   color: #888888;
   font-size: 16px;
   font-weight: 300;
   line-height: 25px;
   margin-bottom: 16px;
 }
-.section.section-comments .comment .media-body .media-footer a {
+.section#comments .comment .media-body .media-footer a {
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -1292,16 +1297,142 @@ body {
   margin-top: 10px;
   margin-bottom: 20px;
 }
-.section.section-comments .comment .media-body .media-footer a i::before {
+.section#comments .comment .media-body .media-footer a i::before {
   content: "\f1d9";
 }
-.section.section-comments ul.children .comment-author.avatar {
+.section#comments ul.children .comment-author.avatar {
   width: 64px;
   height: 64px;
 }
-.section.section-comments ul.children .comment-author.avatar img {
+.section#comments ul.children .comment-author.avatar img {
   width: 64px;
   height: 64px;
+}
+
+/* Leave a reply logged in */
+.logged-in #respond.comment-respond {
+  /* Title */
+  /* Author's avatar */
+  /* Logged in as - message */
+  /* What's on your mind - label */
+  /* Post comment button */
+}
+.logged-in #respond.comment-respond .hestia-title {
+  margin: 0;
+}
+.logged-in #respond.comment-respond .pull-left.author {
+  margin: 45px 20px 0 0;
+}
+.logged-in #respond.comment-respond .logged-in-as {
+  margin-bottom: 30px;
+  text-align: center;
+  transform: translateX(-8%);
+}
+.logged-in #respond.comment-respond .logged-in-as::before {
+  content: "-";
+  margin-right: 5px;
+}
+.logged-in #respond.comment-respond .logged-in-as::after {
+  content: "-";
+  margin-left: 5px;
+}
+.logged-in #respond.comment-respond .logged-in-as a {
+  color: #6c757d;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.logged-in #respond.comment-respond .form-group.label-floating label.control-label,
+.logged-in #respond.comment-respond .form-group.label-floating.is-focused label.control-label {
+  top: -28px;
+  font-size: 11px;
+  line-height: 14px;
+}
+.logged-in #respond.comment-respond .form-submit input[type="submit"] {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: none;
+  padding: 11px 22px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: initial;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.logged-in #respond.comment-respond .form-submit input[type="submit"]:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+  opacity: 0.9;
+}
+
+/* Leave a reply logged out */
+#respond.comment-respond {
+  /* Remove label ease up effect and font-size transform */
+  /* Show label when the field is empty */
+  /* Hide label if the field doesn't have the class is-empty */
+  /* Remove border-bottom and style rounded border */
+  /* Remove loading underline from the first three input fields */
+  /* Post comment button */
+}
+#respond.comment-respond .pull-left.author {
+  margin: -15px 20px 0 0;
+}
+#respond.comment-respond .pull-left.author .avatar {
+  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+}
+#respond.comment-respond .form-group.label-floating label.control-label {
+  top: -7px;
+}
+#respond.comment-respond .form-group.label-floating.is-focused label.control-label {
+  top: -7px;
+  font-size: inherit;
+  line-height: 18px;
+}
+#respond.comment-respond .col-md-4 > .form-group.is-empty label {
+  display: block;
+}
+#respond.comment-respond .col-md-4 > .form-group label {
+  display: none;
+  margin-left: 10px;
+}
+#respond.comment-respond .col-md-4 > .form-group .form-control {
+  background-image: none;
+  padding-left: 9px;
+  /* cursor left margin */
+  border: 1px solid #E3E3E3;
+  border-radius: 30px;
+  transition: background 0s ease-out;
+}
+#respond.comment-respond .col-md-4 > .form-group.is-focused .form-control {
+  background-image: none;
+}
+#respond.comment-respond .form-submit input[type="submit"] {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: none;
+  padding: 11px 22px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: initial;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+#respond.comment-respond .form-submit input[type="submit"]:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+  opacity: 0.9;
 }
 
 /*--------------------------------------------------------------
