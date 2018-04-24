@@ -1,0 +1,7 @@
+.woocommerce-page .cross-sells {
+
+  /* Style Title */
+  > h2 {
+    @include recommend-products-title();
+  }
+}

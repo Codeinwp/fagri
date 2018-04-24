@@ -1,0 +1,27 @@
+.home .hestia-shop {
+
+  background-color: #ffffff;
+
+  .hestia-title {
+    @include front-page-section-title();
+  }
+  .description {
+    @include front-page-section-subtitle();
+  }
+  .shop-item .card-image {
+    @include no-box-shadow();
+  }
+  .shop-item:hover {
+    .card-image {
+      @include no-box-shadow();
+      transform: unset;
+    }
+    .card-product .card-title a {
+      border-color: #444444;
+    }
+  }
+  .shop-item .card-product .card-title a {
+    border-bottom: 2px solid transparent;
+    transition: all 150ms ease 0s;
+  }
+}

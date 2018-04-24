@@ -88,11 +88,13 @@ function fagri_inline_style() {
 		/* Leave comment logged out */
 		$custom_css .= '#respond.comment-respond .col-md-4 > .form-group.is-focused .form-control { border-color: ' . esc_html( $color_accent ) . '; }';
 
-		/* Shop page, card-product add to cart icon */
-		$custom_css .= '.woocommerce.archive .wrapper .main .product .card-product .content .footer .stats a { color: ' . esc_html( $color_accent ) . ' ; }';
+		/* Card-product, card-product add to cart icon */
+		$custom_css .= '.shop-item .card-product .content .footer .stats a i { color: ' . esc_html( $color_accent ) . ' ; }';
+		$custom_css .= '.product .card-product .content .footer .stats a i { color: ' . esc_html( $color_accent ) . ' ; }';
 
-		/* Shop page, special price */
-		$custom_css .=  '.woocommerce.archive .wrapper .main .product .card-product .content .footer .price h4 del + .woocommerce-Price-amount { color: ' . esc_html( $color_accent ) . '; }';
+		/* Card-product, special price */
+		$custom_css .=  '.shop-item .card-product .content .footer .price h4 del + .woocommerce-Price-amount { color: ' . esc_html( $color_accent ) . '; }';
+		$custom_css .=  '.product .card-product .content .footer .price h4 del + .woocommerce-Price-amount { color: ' . esc_html( $color_accent ) . '; }';
 
 		/* Shop page, product category color */
 		$custom_css .= '.woocommerce.archive .blog-post .products li.product:nth-child(6n+1) .category a,
@@ -104,7 +106,7 @@ function fagri_inline_style() {
                             color: ' . esc_html( $color_accent ) . ';
                         }';
 
-		/**/
+		/* TODO: accent color */
 	}
 
 	wp_add_inline_style( 'fagri_parent', $custom_css );

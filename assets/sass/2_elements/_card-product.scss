@@ -1,0 +1,79 @@
+.card-product {
+
+  @include no-box-shadow();
+
+  .card-image {
+    box-shadow: none;
+    margin: 0;
+  }
+  .content {
+
+    padding: 20px 5px;
+
+    .category a {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: none;
+    }
+    .card-title a {
+      color: #444444;
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 26px;
+      margin-top: 15px;
+      margin-bottom: 12px;
+      border-bottom: 2px solid transparent;
+      transition: all 150ms ease 0s;
+
+      &:hover {
+        opacity: initial;
+      }
+    }
+    .card-description p {
+      color: #9A9A9A;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 27px;
+    }
+    .footer {
+      margin-top: 5px;
+
+      .price h4 {
+        color: #888888;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 23px;
+        margin-top: 9px;
+      }
+
+      .stats {
+        a {
+          i {
+            font-size: 15px;
+          }
+        }
+        .hestia-view-cart-wrapper a {
+          @include default-button();
+          @include no-box-shadow();
+          color: #ffffff;
+
+          &:hover {
+            @include default-button-hover();
+          }
+        }
+      }
+    }
+  }
+} /* End of card product */
+
+/* Remove image box shadow from card-product which has li.product parent */
+.product .card.card-product .card-image {
+  @include no-box-shadow();
+}
+/* Add underline effect on hover */
+.product:hover .card.card-product .card-image {
+  @include no-box-shadow();
+}
+.product:hover > .card.card-product .content .card-title a {
+  border-color: #444444;
+}

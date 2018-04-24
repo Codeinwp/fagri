@@ -4,78 +4,12 @@
     background-color: #ffffff;
 
     .product {
-
       /* Remove ease up effect on hover */
       &:hover {
         .card-image {
           transform: unset;
         }
       }
-
-      .card-product {
-
-        @include no-box-shadow();
-
-        .card-image {
-          box-shadow: none;
-          margin: 0;
-        }
-        .content {
-
-          padding: 20px 5px;
-
-          .category a {
-            font-size: 12px;
-            font-weight: 700;
-          }
-          .card-title a {
-            color: #444444;
-            font-size: 21px;
-            font-weight: 400;
-            line-height: 26px;
-            margin-top: 15px;
-            margin-bottom: 12px;
-
-            &:hover {
-              opacity: initial;
-            }
-          }
-          .card-description p {
-            color: #9A9A9A;
-            font-size: 17px;
-            font-weight: 300;
-            line-height: 27px;
-          }
-          .footer {
-            margin-top: 5px;
-
-            .price h4 {
-              color: #888888;
-              font-size: 16px;
-              font-weight: 400;
-              line-height: 23px;
-              margin-top: 9px;
-            }
-
-            .stats {
-              a {
-                i {
-                  font-size: 15px;
-                }
-              }
-              .hestia-view-cart-wrapper a {
-                @include default-button();
-                @include no-box-shadow();
-                color: #ffffff;
-
-                &:hover {
-                  @include default-button-hover();
-                }
-              }
-            }
-          }
-        }
-      } /* End of card product */
-    } /* End of li.product */
-  } /* End of .wrapper.main */
+    }
+  }
 }

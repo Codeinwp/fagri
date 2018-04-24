@@ -113,3 +113,12 @@
   height: 100%;
   content: "";
 }
+
+/* WooCommerce pages */
+
+/* related, cross-sells, upsells title */
+@mixin recommend-products-title() {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 36px;
+}
