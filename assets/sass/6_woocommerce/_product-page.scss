@@ -4,6 +4,116 @@
 
     .blog-post {
       background-color: #ffffff;
+
+      .product {
+
+        .woocommerce-breadcrumb {
+          display: none;
+        }
+        .woocommerce-product-gallery {
+
+          box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+          -webkit-border-radius: 4px;
+          -moz-border-radius: 4px;
+          border-radius: 4px;
+          margin-top: -150px;
+
+          .flex-viewport {
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+          }
+        }
+        
+        .summary {
+          .product_title {
+            color: #2c2c2c;
+            font-size: 35px;
+            font-weight: 700;
+            line-height: 42px;
+          }
+          .price span {
+            color: #2c2c2c;
+            font-size: 35px;
+            font-weight: 300;
+            line-height: 42px;
+          }
+          .woocommerce-product-details__short-description {
+            color: #2c2c2c;
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 27px;
+          }
+          .single_add_to_cart_button {
+            @include default-button();
+            @include no-box-shadow();
+          }
+          .single_add_to_cart_button:hover {
+            @include default-button-hover();
+          }
+          .cart.form-group {
+            .quantity {
+              margin-top: 3px;
+
+              input {
+                border: none;
+                border-radius: 3px;
+                color: #ffffff;
+                background-color: #888888;
+                @include no-font-smooth();
+              }
+            }
+          }
+          .variations {
+            label {
+              color: #2c2c2c;
+              font-size: 14px;
+              font-weight: 400;
+              margin-bottom: 8px;
+            }
+            select {
+              color: #ffffff;
+              background-color: #888888;
+              background-image: none;
+              border-radius: 3px;
+              padding-left: 10px;
+            }
+          }
+        }
+        .woocommerce-tabs {
+          .tabs li a {
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: capitalize;
+          }
+          .woocommerce-Tabs-panel--description {
+            color: #2c2c2c;
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 27px;
+          }
+        }
+      } /* End of product */
+      .related.products {
+        padding: 65px 60px 70px;
+      }
     }
   }
+}
+
+/* Remove product raised style */
+.woocommerce.single-product .main.main-raised .blog-post .col-md-12 > div[id^=product].product {
+  @include no-box-shadow();
+  margin: 0 !important;
+
+  /* Move sale label on the right side of the gallery */
+  .onsale {
+    @include no-font-smooth();
+    left: 50%;
+  }
+}
+
+/* Change Header height */
+/* TODO: Check different types of header option from the customizer */
+.woocommerce.single-product .site-main .page-header {
+  min-height: 300px;
 }

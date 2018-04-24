@@ -106,7 +106,13 @@ function fagri_inline_style() {
                             color: ' . esc_html( $color_accent ) . ';
                         }';
 
-		/* TODO: accent color */
+		/* Rating starts color */
+		$custom_css .= '.star-rating { color: ' . esc_html( $color_accent ) . ' !important; }';
+
+		/* Product page, reviews message */
+		$custom_css .= '.woocommerce-page #reviews #review_form_wrapper .form-group.is-focused input#author,
+						.woocommerce-page #reviews #review_form_wrapper .form-group.is-focused input#email {
+						border-color: ' . esc_html( $color_accent ) . ';} ';
 	}
 
 	wp_add_inline_style( 'fagri_parent', $custom_css );
