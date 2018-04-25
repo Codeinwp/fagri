@@ -84,12 +84,9 @@
       }
       /* Text area */
       .contact_message_wrap {
-        /* Remove label ease-up transition */
-        .form-group.label-floating.is-focused label.control-label {
-          top: 0;
-          font-size: inherit;
-          transition: none;
-          margin: 11px 0 0;
+        /* Hide label when typing */
+        .form-group.label-floating.is-focused:not(is-empty) label.control-label {
+          display: none;
         }
       }
       /* Button */
