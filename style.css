@@ -173,6 +173,41 @@ body {
 .card-product .content .footer .stats a i {
   font-size: 15px;
 }
+.card-product .content .footer .stats a .tooltip .tooltip-arrow:before {
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  top: -7px;
+  content: "";
+  border-left: 7px solid white;
+  left: -9px;
+  position: absolute;
+  display: block;
+  width: 5px;
+  height: 5px;
+  z-index: 100;
+}
+.card-product .content .footer .stats a .tooltip .tooltip-arrow {
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid rgba(0, 0, 0, 0.2);
+  top: 55px;
+  left: 30% !important;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+}
+.card-product .content .footer .stats a .tooltip .tooltip-inner {
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: 0 1px 13px rgba(0, 0, 0, 0.14), 0 0 0 1px rgba(115, 71, 38, 0.23);
+  color: #66615B;
+  max-width: 200px;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  opacity: 1;
+  transform: translate3d(-75%, 100%, 0);
+}
 .card-product .content .footer .stats .hestia-view-cart-wrapper a {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
