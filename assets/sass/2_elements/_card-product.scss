@@ -53,12 +53,12 @@
           }
         }
         .hestia-view-cart-wrapper a {
-          @include default-button();
+          @include round-button();
           @include no-box-shadow();
           color: #ffffff;
 
           &:hover {
-            @include default-button-hover();
+            @include round-button-hover();
           }
         }
       }

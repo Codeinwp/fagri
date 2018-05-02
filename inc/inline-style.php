@@ -113,6 +113,21 @@ function fagri_inline_style() {
 		$custom_css .= '.woocommerce-page #reviews #review_form_wrapper .form-group.is-focused input#author,
 						.woocommerce-page #reviews #review_form_wrapper .form-group.is-focused input#email {
 						border-color: ' . esc_html( $color_accent ) . ';} ';
+
+		/* Cart */
+		$custom_css .= '.woocommerce-cart .shop_table .button {
+			background-color: ' . esc_html( $color_accent ) . ' !important; 
+			border-color: ' . esc_html( $color_accent ) . ' !important;
+		 }';
+
+		/* Account */
+		$custom_css .= '.woocommerce-account form.woocommerce-form.woocommerce-form-login .form-group.is-focused input {
+			border-color: ' . esc_html( $color_accent ) . ';
+		}';
+
+		$custom_css .= '.woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm .form-group.is-focused input {
+			border-color: ' . esc_html( $color_accent ) . ';
+		}';
 	}
 
 	wp_add_inline_style( 'fagri_parent', $custom_css );

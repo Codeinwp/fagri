@@ -1,0 +1,45 @@
+.woocommerce-cart {
+
+  .shop_table {
+    .quantity {
+      .input-text {
+        padding-left: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+      }
+    }
+    .button {
+      @include round-button();
+      color: #ffffff !important;
+
+      &:hover {
+        @include round-button-hover();
+      }
+    }
+  }
+
+  .cart-collaterals {
+
+    .card-raised {
+      @include no-box-shadow();
+
+      .checkout-button {
+        @include round-button();
+        @include no-box-shadow();
+
+        &:hover {
+          @include round-button-hover();
+        }
+      }
+    }
+  }
+
+  .return-to-shop a.button {
+    @include round-button();
+    @include no-box-shadow();
+
+    &:hover {
+      @include round-button-hover();
+    }
+  }
+}

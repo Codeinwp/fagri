@@ -1,0 +1,21 @@
+.woocommerce-checkout {
+  .woocommerce-checkout-review-order {
+    .button {
+      @include round-button();
+      @include no-box-shadow();
+
+      &:hover {
+        @include round-button-hover();
+      }
+    }
+    #place_order {
+      @include round-button();
+      @include large-button();
+      @include no-box-shadow();
+
+      &hover {
+        @include round-button-hover();
+      }
+    }
+  }
+}

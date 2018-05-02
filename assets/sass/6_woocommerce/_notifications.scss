@@ -1,0 +1,69 @@
+/* Product Page */
+.woocommerce.single-product .woocommerce-message {
+  display: none;
+}
+
+/* Cart */
+.woocommerce-cart {
+  .woocommerce-message {
+    .restore-item {
+      color: #ffffff;
+    }
+  }
+
+  .woocommerce-message {
+    @include woocommerce-notification();
+    @include full-width-notification();
+    background-color: $success-notification;
+  }
+  .woocommerce-error {
+    @include woocommerce-notification();
+    @include full-width-notification();
+    background-color: $error-notification;
+  }
+}
+
+/* Checkout */
+.woocommerce-checkout {
+
+  .woocommerce-message {
+    @include woocommerce-notification();
+    @include full-width-notification();
+    background-color: $success-notification;
+  }
+
+  .woocommerce-error {
+    @include woocommerce-notification();
+    @include full-width-notification();
+    background-color: $error-notification;
+  }
+
+  #hestia-checkout-coupon .woocommerce-message {
+    margin-left: auto;
+    margin-right: auto;
+
+    &::before {
+      color: #ffffff;
+    }
+  }
+  #hestia-checkout-coupon .woocommerce-error {
+    margin-left: auto;
+    margin-right: auto;
+    &::before {
+      color: #ffffff;
+    }
+  }
+}
+
+/* Account */
+.woocommerce-account {
+  .woocommerce-error {
+    @include woocommerce-notification();
+    @include full-width-notification();
+    background-color: $error-notification;
+
+    a {
+      color: #ffffff;
+    }
+  }
+}
