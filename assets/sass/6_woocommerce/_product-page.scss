@@ -65,7 +65,7 @@
             @include no-box-shadow();
           }
           .single_add_to_cart_button:hover {
-            @include default-button-hover();
+            @include button-hover();
           }
           .cart.form-group {
             .quantity {

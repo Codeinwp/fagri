@@ -174,9 +174,9 @@ body {
   font-size: 15px;
 }
 .card-product .content .footer .stats .hestia-view-cart-wrapper a {
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -187,6 +187,9 @@ body {
   transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
   transition-delay: initial;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -259,7 +262,7 @@ body {
   box-shadow: none;
 }
 .home .carousel .buttons a.btn:hover {
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
   opacity: 0.9;
 }
 
@@ -593,9 +596,9 @@ body {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -606,6 +609,9 @@ body {
   transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
   transition-delay: initial;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
 }
 .home .hestia-ribbon .hestia-subscribe-button:hover {
   -webkit-box-shadow: none;
@@ -670,9 +676,9 @@ body {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -683,6 +689,9 @@ body {
   transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
   transition-delay: initial;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
 }
 .home .hestia-subscribe .btn:hover {
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
@@ -775,9 +784,9 @@ body {
 }
 .home .hestia-pricing .card-pricing .content .btn {
   box-shadow: none !important;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -788,6 +797,9 @@ body {
   transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
   transition-delay: initial;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
 }
 .home .hestia-pricing .card-pricing .content .btn:hover {
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
@@ -928,9 +940,9 @@ body {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -941,6 +953,9 @@ body {
   transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
   transition-delay: initial;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
 }
 .home .hestia-contact .card-contact .content .btn:hover {
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
@@ -1207,9 +1222,9 @@ body {
   line-height: 27px;
 }
 .blog .hestia-blog-featured-posts .hestia-blog-featured-card .card .card-body .btn {
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -1220,6 +1235,9 @@ body {
   transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
   transition-delay: initial;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -1253,9 +1271,9 @@ body {
   margin-bottom: 15px;
 }
 .blog .subscribe-line input[type="submit"] {
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -1266,6 +1284,9 @@ body {
   transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
   transition-delay: initial;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
 }
 .blog .subscribe-line input[type="submit"]:hover {
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
@@ -1510,7 +1531,7 @@ body {
   box-shadow: none;
 }
 .logged-in #respond.comment-respond .form-submit input[type="submit"]:hover {
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
   opacity: 0.9;
 }
 
@@ -1574,7 +1595,7 @@ body {
   box-shadow: none;
 }
 #respond.comment-respond .form-submit input[type="submit"]:hover {
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
   opacity: 0.9;
 }
 
@@ -1767,7 +1788,7 @@ body {
   box-shadow: none;
 }
 .woocommerce.single-product .main.main-raised .blog-post .product .summary .single_add_to_cart_button:hover {
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
   opacity: 0.9;
 }
 .woocommerce.single-product .main.main-raised .blog-post .product .summary .cart.form-group .quantity {
@@ -1904,7 +1925,7 @@ body {
   box-shadow: none;
 }
 .woocommerce #reviews #review_form_wrapper input[type="submit"]:hover {
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
   opacity: 0.9;
 }
 
@@ -1917,9 +1938,9 @@ body {
   border-radius: 30px;
 }
 .woocommerce-cart .shop_table .button {
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -1930,6 +1951,9 @@ body {
   transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
   transition-delay: initial;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
   color: #ffffff !important;
 }
 .woocommerce-cart .shop_table .button:hover {
@@ -1942,9 +1966,9 @@ body {
   box-shadow: none;
 }
 .woocommerce-cart .cart-collaterals .card-raised .checkout-button {
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -1955,6 +1979,9 @@ body {
   transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
   transition-delay: initial;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -1964,9 +1991,9 @@ body {
   opacity: 0.9;
 }
 .woocommerce-cart .return-to-shop a.button {
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -1977,6 +2004,9 @@ body {
   transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
   transition-delay: initial;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -1990,9 +2020,9 @@ body {
 ## Checkout page
 --------------------------------------------------------------*/
 .woocommerce-checkout .woocommerce-checkout-review-order .button {
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -2003,6 +2033,9 @@ body {
   transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
   transition-delay: initial;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -2012,9 +2045,9 @@ body {
   opacity: 0.9;
 }
 .woocommerce-checkout .woocommerce-checkout-review-order #place_order {
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -2025,6 +2058,9 @@ body {
   transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
   transition-delay: initial;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
   font-size: 14px;
   line-height: 18px;
   padding: 15px 48px;
@@ -2076,9 +2112,9 @@ body {
   bottom: 10px;
 }
 .woocommerce-account .button.woocommerce-Button {
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -2089,6 +2125,9 @@ body {
   transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
   transition-delay: initial;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;

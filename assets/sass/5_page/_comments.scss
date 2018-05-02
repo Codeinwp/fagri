@@ -129,7 +129,7 @@
       @include no-box-shadow();
 
       &:hover {
-        @include default-button-hover();
+        @include button-hover();
       }
     }
   }
@@ -185,7 +185,7 @@
       @include no-box-shadow();
 
       &:hover {
-        @include default-button-hover();
+        @include button-hover();
       }
     }
   }

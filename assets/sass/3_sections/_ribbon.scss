@@ -12,6 +12,6 @@
   }
   .hestia-subscribe-button:hover {
     @include no-box-shadow();
-    @include round-button-hover();
+    @include button-hover();
   }
 }

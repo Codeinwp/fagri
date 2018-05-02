@@ -23,6 +23,6 @@
     @include no-box-shadow();
   }
   .buttons a.btn:hover {
-    @include default-button-hover();
+    @include button-hover();
   }
 }

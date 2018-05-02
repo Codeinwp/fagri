@@ -10,7 +10,7 @@
       @include round-button();
     }
     input[type="submit"]:hover {
-      @include round-button-hover();
+      @include button-hover();
     }
   }
 }

@@ -46,7 +46,7 @@
     padding: 8px 22px !important;
 
     &:hover {
-      @include round-button-hover();
+      @include button-hover();
     }
   }
   #rememberme + span {

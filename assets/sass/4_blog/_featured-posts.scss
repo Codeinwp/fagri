@@ -36,7 +36,7 @@
             @include no-box-shadow();
           }
           .btn:hover {
-            @include round-button-hover();
+            @include button-hover();
           }
         }
       }

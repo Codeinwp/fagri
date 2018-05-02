@@ -58,7 +58,7 @@
           color: #ffffff;
 
           &:hover {
-            @include round-button-hover();
+            @include button-hover();
           }
         }
       }

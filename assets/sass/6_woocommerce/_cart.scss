@@ -13,7 +13,7 @@
       color: #ffffff !important;
 
       &:hover {
-        @include round-button-hover();
+        @include button-hover();
       }
     }
   }
@@ -28,7 +28,7 @@
         @include no-box-shadow();
 
         &:hover {
-          @include round-button-hover();
+          @include button-hover();
         }
       }
     }
@@ -39,7 +39,7 @@
     @include no-box-shadow();
 
     &:hover {
-      @include round-button-hover();
+      @include button-hover();
     }
   }
 }
