@@ -1,3 +1,9 @@
+/* General */
+.woocommerce-message::before,
+.woocommerce-error::before {
+  color: #ffffff !important;
+}
+
 /* Product Page */
 .woocommerce.single-product .woocommerce-message {
   display: none;
@@ -13,12 +19,10 @@
 
   .woocommerce-message {
     @include woocommerce-notification();
-    @include full-width-notification();
     background-color: $success-notification;
   }
   .woocommerce-error {
     @include woocommerce-notification();
-    @include full-width-notification();
     background-color: $error-notification;
   }
 }
@@ -28,13 +32,11 @@
 
   .woocommerce-message {
     @include woocommerce-notification();
-    @include full-width-notification();
     background-color: $success-notification;
   }
 
   .woocommerce-error {
     @include woocommerce-notification();
-    @include full-width-notification();
     background-color: $error-notification;
   }
 
@@ -57,9 +59,12 @@
 
 /* Account */
 .woocommerce-account {
+  .woocommerce-message {
+    @include woocommerce-notification();
+    background-color: $info-notification;
+  }
   .woocommerce-error {
     @include woocommerce-notification();
-    @include full-width-notification();
     background-color: $error-notification;
 
     a {

@@ -127,19 +127,12 @@
 @mixin woocommerce-notification() {
   @include no-font-smooth();
   @include border-radius(4px);
-  color: #ffffff;
+  color: #ffffff !important;
   font-family: inherit;
   font-size: 14px;
   font-weight: 300;
   line-height: 21px;
   text-align: center;
-}
-@mixin full-width-notification() {
-  margin-left: -100%;
-  margin-right: -100%;
-
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Icon on before of the input field wrapper */

@@ -2164,6 +2164,12 @@ body {
 /*--------------------------------------------------------------
 ## Notifications
 --------------------------------------------------------------*/
+/* General */
+.woocommerce-message::before,
+.woocommerce-error::before {
+  color: #ffffff !important;
+}
+
 /* Product Page */
 .woocommerce.single-product .woocommerce-message {
   display: none;
@@ -2179,16 +2185,12 @@ body {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  color: #ffffff;
+  color: #ffffff !important;
   font-family: inherit;
   font-size: 14px;
   font-weight: 300;
   line-height: 21px;
   text-align: center;
-  margin-left: -100%;
-  margin-right: -100%;
-  margin-left: auto;
-  margin-right: auto;
   background-color: rgba(24, 206, 15, 0.8);
 }
 .woocommerce-cart .woocommerce-error {
@@ -2197,16 +2199,12 @@ body {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  color: #ffffff;
+  color: #ffffff !important;
   font-family: inherit;
   font-size: 14px;
   font-weight: 300;
   line-height: 21px;
   text-align: center;
-  margin-left: -100%;
-  margin-right: -100%;
-  margin-left: auto;
-  margin-right: auto;
   background-color: rgba(255, 54, 54, 0.8);
 }
 
@@ -2217,16 +2215,12 @@ body {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  color: #ffffff;
+  color: #ffffff !important;
   font-family: inherit;
   font-size: 14px;
   font-weight: 300;
   line-height: 21px;
   text-align: center;
-  margin-left: -100%;
-  margin-right: -100%;
-  margin-left: auto;
-  margin-right: auto;
   background-color: rgba(24, 206, 15, 0.8);
 }
 .woocommerce-checkout .woocommerce-error {
@@ -2235,16 +2229,12 @@ body {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  color: #ffffff;
+  color: #ffffff !important;
   font-family: inherit;
   font-size: 14px;
   font-weight: 300;
   line-height: 21px;
   text-align: center;
-  margin-left: -100%;
-  margin-right: -100%;
-  margin-left: auto;
-  margin-right: auto;
   background-color: rgba(255, 54, 54, 0.8);
 }
 .woocommerce-checkout #hestia-checkout-coupon .woocommerce-message {
@@ -2263,22 +2253,32 @@ body {
 }
 
 /* Account */
+.woocommerce-account .woocommerce-message {
+  -moz-osx-font-smoothing: initial;
+  -webkit-font-smoothing: initial;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  color: #ffffff !important;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  text-align: center;
+  background-color: rgba(44, 168, 255, 0.8);
+}
 .woocommerce-account .woocommerce-error {
   -moz-osx-font-smoothing: initial;
   -webkit-font-smoothing: initial;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  color: #ffffff;
+  color: #ffffff !important;
   font-family: inherit;
   font-size: 14px;
   font-weight: 300;
   line-height: 21px;
   text-align: center;
-  margin-left: -100%;
-  margin-right: -100%;
-  margin-left: auto;
-  margin-right: auto;
   background-color: rgba(255, 54, 54, 0.8);
 }
 .woocommerce-account .woocommerce-error a {
