@@ -16,7 +16,6 @@
       text-transform: none;
     }
     .card-title a {
-      color: #444444;
       font-size: 21px;
       font-weight: 400;
       line-height: 26px;
@@ -109,7 +108,4 @@
 /* Add underline effect on hover */
 .product:hover .card.card-product .card-image {
   @include no-box-shadow();
-}
-.product:hover > .card.card-product .content .card-title a {
-  border-color: #444444;
 }
