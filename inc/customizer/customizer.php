@@ -28,18 +28,18 @@ function fagri_customize_register( $wp_customize ) {
 	}
 
 	/* Add Icon Picker for pricing section */
-	require_once ( get_stylesheet_directory() . '/inc/customizer/customizer-iconpicker/class-customizer-iconpicker.php' );
+	require_once( get_stylesheet_directory() . '/inc/customizer/customizer-iconpicker/class-customizer-iconpicker.php' );
 
 	$wp_customize->add_setting(
 		'fagri_pricing_table_one_icon', array(
-			'transport'         => 'postMessage',
-			'default'           => 'fa-gift',
+			'transport' => 'postMessage',
+			'default'   => 'fa-gift',
 		)
 	);
 	$wp_customize->add_control(
 		new Customizer_Iconpicker(
 			$wp_customize, 'fagri_pricing_table_one_icon', array(
-				'label'    => esc_html__( 'Pricing Table One: Icon','fagri'),
+				'label'    => esc_html__( 'Pricing Table One: Icon', 'fagri' ),
 				'section'  => 'hestia_pricing',
 				'priority' => 10,
 			)
@@ -48,14 +48,14 @@ function fagri_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting(
 		'fagri_pricing_table_two_icon', array(
-			'transport'         => 'postMessage',
-			'default'           => 'fa-gift',
+			'transport' => 'postMessage',
+			'default'   => 'fa-gift',
 		)
 	);
 	$wp_customize->add_control(
 		new Customizer_Iconpicker(
 			$wp_customize, 'fagri_pricing_table_two_icon', array(
-				'label'    => esc_html__( 'Pricing Table Two: Icon','fagri'),
+				'label'    => esc_html__( 'Pricing Table Two: Icon', 'fagri' ),
 				'section'  => 'hestia_pricing',
 				'priority' => 10,
 			)

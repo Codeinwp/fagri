@@ -1,6 +1,9 @@
 <?php
 /**
  * This file contains function related to the sections on front page
+ *
+ * @package fagri
+ * @since 1.0.0
  */
 
 /**
@@ -10,7 +13,7 @@
  */
 function fagri_testimonials_before() {
 
-	$default_background_image_path = get_stylesheet_directory_uri() . '/assets/img/testimonials4.jpg';
+	$default_background_image_path       = get_stylesheet_directory_uri() . '/assets/img/testimonials4.jpg';
 	$fagri_testimonials_background_image = get_theme_mod( 'fagri_testimonials_background', $default_background_image_path );
 
 	echo '<div class="fagri-testimonials-wrapper" style="background-image: url(' . esc_url( $fagri_testimonials_background_image ) . ');">';
@@ -35,7 +38,7 @@ add_action( 'hestia_after_testimonials_section_hook', 'fagri_testimonials_after'
 function fagri_team_before() {
 
 	$default_background_image_path = get_stylesheet_directory_uri() . '/assets/img/testimonials4.jpg';
-	$fagri_team_background_image = get_theme_mod( 'fagri_team_background', $default_background_image_path );
+	$fagri_team_background_image   = get_theme_mod( 'fagri_team_background', $default_background_image_path );
 
 	echo '<div class="fagri-team-wrapper" style="background-image: url(' . esc_url( $fagri_team_background_image ) . ');">';
 }

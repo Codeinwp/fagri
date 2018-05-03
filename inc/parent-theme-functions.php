@@ -1,6 +1,9 @@
 <?php
 /**
  * This file contains all the pluggable functions from the parent theme that are overwritten in order to extend parent theme functionality. Also, there are some functions used within the overwritten functions of the parent theme
+ *
+ * @package fagri
+ * @since 1.0.0
  */
 
 /**
@@ -10,8 +13,8 @@
  */
 function fagri_blog_section_metadata() {
 
-	$author_name = get_the_author_meta( 'display_name' );
-	$author_email = get_the_author_meta( 'user_email' );
+	$author_name   = get_the_author_meta( 'display_name' );
+	$author_email  = get_the_author_meta( 'user_email' );
 	$author_avatar = get_avatar( $author_email, 40 );
 
 	$utility_text = '<span class="fagri-metadata-avatar">%1$s</span><span class="fagri-metadata-autor">%2$s</span>';
@@ -148,10 +151,11 @@ function hestia_pricing( $is_shortcode = true ) {
 
 	$hestia_pricing_table_one_title    = get_theme_mod( 'hestia_pricing_table_one_title', esc_html__( 'Basic Package', 'hestia-pro' ) );
 	$hestia_pricing_table_one_price    = get_theme_mod( 'hestia_pricing_table_one_price', '<small>$</small>0' );
-	$default                           = sprintf( '<b>%1$s</b> %2$s', esc_html__( '1', 'hestia-pro' ), esc_html__( 'Domain', 'hestia-pro' ) ) .
-	                                     sprintf( '\n<b>%1$s</b> %2$s', esc_html__( '1GB', 'hestia-pro' ), esc_html__( 'Storage', 'hestia-pro' ) ) .
-	                                     sprintf( '\n<b>%1$s</b> %2$s', esc_html__( '100GB', 'hestia-pro' ), esc_html__( 'Bandwidth', 'hestia-pro' ) ) .
-	                                     sprintf( '\n<b>%1$s</b> %2$s', esc_html__( '2', 'hestia-pro' ), esc_html__( 'Databases', 'hestia-pro' ) );
+	$default                           =
+		sprintf( '<b>%1$s</b> %2$s', esc_html__( '1', 'hestia-pro' ), esc_html__( 'Domain', 'hestia-pro' ) ) .
+		sprintf( '\n<b>%1$s</b> %2$s', esc_html__( '1GB', 'hestia-pro' ), esc_html__( 'Storage', 'hestia-pro' ) ) .
+		sprintf( '\n<b>%1$s</b> %2$s', esc_html__( '100GB', 'hestia-pro' ), esc_html__( 'Bandwidth', 'hestia-pro' ) ) .
+		sprintf( '\n<b>%1$s</b> %2$s', esc_html__( '2', 'hestia-pro' ), esc_html__( 'Databases', 'hestia-pro' ) );
 	$hestia_pricing_table_one_features = get_theme_mod( 'hestia_pricing_table_one_features', $default );
 	if ( ! is_array( $hestia_pricing_table_one_features ) ) {
 		$hestia_pricing_table_one_features = explode( '\n', str_replace( '\r', '', wp_kses_post( force_balance_tags( $hestia_pricing_table_one_features ) ) ) );
@@ -161,10 +165,11 @@ function hestia_pricing( $is_shortcode = true ) {
 	$hestia_pricing_table_one_text     = get_theme_mod( 'hestia_pricing_table_one_text', esc_html__( 'Free Download', 'hestia-pro' ) );
 	$hestia_pricing_table_two_title    = get_theme_mod( 'hestia_pricing_table_two_title', esc_html__( 'Premium Package', 'hestia-pro' ) );
 	$hestia_pricing_table_two_price    = get_theme_mod( 'hestia_pricing_table_two_price', '<small>$</small>49' );
-	$default                           = sprintf( '<b>%1$s</b> %2$s', esc_html__( '5', 'hestia-pro' ), esc_html__( 'Domain', 'hestia-pro' ) ) .
-	                                     sprintf( ' \n<b>%1$s</b> %2$s', esc_html__( 'Unlimited', 'hestia-pro' ), esc_html__( 'Storage', 'hestia-pro' ) ) .
-	                                     sprintf( ' \n<b>%1$s</b> %2$s', esc_html__( 'Unlimited', 'hestia-pro' ), esc_html__( 'Bandwidth', 'hestia-pro' ) ) .
-	                                     sprintf( ' \n<b>%1$s</b> %2$s', esc_html__( 'Unlimited', 'hestia-pro' ), esc_html__( 'Databases', 'hestia-pro' ) );
+	$default                           =
+		sprintf( '<b>%1$s</b> %2$s', esc_html__( '5', 'hestia-pro' ), esc_html__( 'Domain', 'hestia-pro' ) ) .
+		sprintf( ' \n<b>%1$s</b> %2$s', esc_html__( 'Unlimited', 'hestia-pro' ), esc_html__( 'Storage', 'hestia-pro' ) ) .
+		sprintf( ' \n<b>%1$s</b> %2$s', esc_html__( 'Unlimited', 'hestia-pro' ), esc_html__( 'Bandwidth', 'hestia-pro' ) ) .
+		sprintf( ' \n<b>%1$s</b> %2$s', esc_html__( 'Unlimited', 'hestia-pro' ), esc_html__( 'Databases', 'hestia-pro' ) );
 	$hestia_pricing_table_two_features = get_theme_mod( 'hestia_pricing_table_two_features', $default );
 	if ( ! is_array( $hestia_pricing_table_two_features ) ) {
 		$hestia_pricing_table_two_features = explode( '\n', str_replace( '\r', '', wp_kses_post( force_balance_tags( $hestia_pricing_table_two_features ) ) ) );
@@ -178,48 +183,49 @@ function hestia_pricing( $is_shortcode = true ) {
 	$wrapper_class   = $is_shortcode === true ? 'is-shortcode' : '';
 	$container_class = $is_shortcode === true ? '' : 'container';
 
-	hestia_before_pricing_section_trigger(); ?>
-    <section class="hestia-pricing pricing section-gray <?php echo esc_attr( $wrapper_class ); ?>" id="pricing" data-sorder="hestia_pricing" <?php echo wp_kses_post( $section_style ); ?>>
+	hestia_before_pricing_section_trigger();
+	?>
+	<section class="hestia-pricing pricing section-gray <?php echo esc_attr( $wrapper_class ); ?>" id="pricing" data-sorder="hestia_pricing" <?php echo wp_kses_post( $section_style ); ?>>
 		<?php
 		hestia_before_pricing_section_content_trigger();
 		if ( $is_shortcode === false ) {
 			hestia_display_customizer_shortcut( 'hestia_pricing_hide', true );
 		}
 		?>
-        <div class="<?php echo esc_attr( $container_class ); ?>">
+		<div class="<?php echo esc_attr( $container_class ); ?>">
 			<?php hestia_top_pricing_section_content_trigger(); ?>
-            <div class="row">
-                <div class="col-md-4 col-lg-4 hestia-pricing-title-area">
+			<div class="row">
+				<div class="col-md-4 col-lg-4 hestia-pricing-title-area">
 					<?php
 					hestia_display_customizer_shortcut( 'hestia_pricing_title' );
 					if ( ! empty( $hestia_pricing_title ) || is_customize_preview() ) :
 						?>
-                        <h2 class="hestia-title"><?php echo wp_kses_post( $hestia_pricing_title ); ?></h2>
+						<h2 class="hestia-title"><?php echo wp_kses_post( $hestia_pricing_title ); ?></h2>
 					<?php endif; ?>
 					<?php if ( ! empty( $hestia_pricing_subtitle ) || is_customize_preview() ) : ?>
-                        <p class="text-gray"><?php echo wp_kses_post( $hestia_pricing_subtitle ); ?></p>
+						<p class="text-gray"><?php echo wp_kses_post( $hestia_pricing_subtitle ); ?></p>
 					<?php endif; ?>
-                </div>
-                <div class="col-md-8 col-lg-7 col-lg-offset-1">
-                    <div class="row">
-                        <div class="col-ms-6 col-sm-6 hestia-table-one" <?php echo hestia_add_animationation( 'fade-up' ); ?>>
+				</div>
+				<div class="col-md-8 col-lg-7 col-lg-offset-1">
+					<div class="row">
+						<div class="col-ms-6 col-sm-6 hestia-table-one" <?php echo hestia_add_animationation( 'fade-up' ); ?>>
 							<?php hestia_display_customizer_shortcut( 'hestia_pricing_table_one_title' ); ?>
-                            <div class="card card-pricing card-raised">
-                                <div class="content">
+							<div class="card card-pricing card-raised">
+								<div class="content">
 									<?php if ( ! empty( $hestia_pricing_table_one_title ) || is_customize_preview() ) : ?>
-                                        <h6 class="category"><?php echo esc_html( $hestia_pricing_table_one_title ); ?></h6>
+										<h6 class="category"><?php echo esc_html( $hestia_pricing_table_one_title ); ?></h6>
 									<?php endif; ?>
 									<?php do_action( 'hestia_after_title_pricing_section_table_one_content_trigger' ); ?>
 									<?php if ( ! empty( $hestia_pricing_table_one_price ) || is_customize_preview() ) : ?>
-                                        <h3 class="card-title"><?php echo wp_kses_post( $hestia_pricing_table_one_price ); ?></h3>
+										<h3 class="card-title"><?php echo wp_kses_post( $hestia_pricing_table_one_price ); ?></h3>
 									<?php endif; ?>
 
 									<?php if ( ! empty( $hestia_pricing_table_one_features ) ) : ?>
-                                        <ul>
+										<ul>
 											<?php foreach ( $hestia_pricing_table_one_features as $feature ) : ?>
-                                                <li><?php echo wp_kses_post( $feature ); ?></li>
+												<li><?php echo wp_kses_post( $feature ); ?></li>
 											<?php endforeach; ?>
-                                        </ul>
+										</ul>
 									<?php endif; ?>
 
 									<?php
@@ -234,26 +240,26 @@ function hestia_pricing( $is_shortcode = true ) {
 										echo wp_kses_post( $link_html );
 									}
 									?>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-ms-6 col-sm-6 hestia-table-two" <?php echo hestia_add_animationation( 'fade-left' ); ?>>
+								</div>
+							</div>
+						</div>
+						<div class="col-ms-6 col-sm-6 hestia-table-two" <?php echo hestia_add_animationation( 'fade-left' ); ?>>
 							<?php hestia_display_customizer_shortcut( 'hestia_pricing_table_two_title' ); ?>
-                            <div class="card card-pricing card-plain">
-                                <div class="content">
+							<div class="card card-pricing card-plain">
+								<div class="content">
 									<?php if ( ! empty( $hestia_pricing_table_two_title ) || is_customize_preview() ) : ?>
-                                        <h6 class="category"><?php echo esc_html( $hestia_pricing_table_two_title ); ?></h6>
+										<h6 class="category"><?php echo esc_html( $hestia_pricing_table_two_title ); ?></h6>
 									<?php endif; ?>
 									<?php do_action( 'hestia_after_title_pricing_section_table_two_content_trigger' ); ?>
 									<?php if ( ! empty( $hestia_pricing_table_two_price ) || is_customize_preview() ) : ?>
-                                        <h3 class="card-title"><?php echo wp_kses_post( $hestia_pricing_table_two_price ); ?></h3>
+										<h3 class="card-title"><?php echo wp_kses_post( $hestia_pricing_table_two_price ); ?></h3>
 									<?php endif; ?>
 									<?php if ( ! empty( $hestia_pricing_table_two_features ) ) : ?>
-                                        <ul>
+										<ul>
 											<?php foreach ( $hestia_pricing_table_two_features as $feature ) : ?>
-                                                <li><?php echo wp_kses_post( $feature ); ?></li>
+												<li><?php echo wp_kses_post( $feature ); ?></li>
 											<?php endforeach; ?>
-                                        </ul>
+										</ul>
 									<?php endif; ?>
 									<?php
 									if ( ( ! empty( $hestia_pricing_table_two_link ) && ! empty( $hestia_pricing_table_two_text ) ) || is_customize_preview() ) {
@@ -264,16 +270,16 @@ function hestia_pricing( $is_shortcode = true ) {
 										echo ' class="btn btn-primary">' . esc_html( $hestia_pricing_table_two_text ) . '</a>';
 									}
 									?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<?php hestia_bottom_pricing_section_content_trigger(); ?>
-        </div>
+		</div>
 		<?php hestia_after_pricing_section_content_trigger(); ?>
-    </section>
+	</section>
 	<?php
 	hestia_after_pricing_section_trigger();
 }

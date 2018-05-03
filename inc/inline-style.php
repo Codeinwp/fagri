@@ -13,8 +13,8 @@
  */
 function fagri_inline_style() {
 
-	$color_accent = get_theme_mod( 'accent_color', '#2ca8ff' );
-	$secondary_color = get_theme_mod( 'secondary_color' );
+	$color_accent              = get_theme_mod( 'accent_color', '#2ca8ff' );
+	$secondary_color           = get_theme_mod( 'secondary_color' );
 	$hestia_features_repeaters = get_theme_mod( 'hestia_features_content' );
 
 	$hestia_features_content = json_decode( $hestia_features_repeaters );
@@ -22,29 +22,28 @@ function fagri_inline_style() {
 	$custom_css = '';
 
 	/* Feature box repeaters, icon shadow and title color, hover state included */
-	if ( ! empty ( $hestia_features_content ) ) {
-		foreach( $hestia_features_content as $index=>$value ) {
+	if ( ! empty( $hestia_features_content ) ) {
+		foreach ( $hestia_features_content as $index => $value ) {
 
-			$nth_of_type = $index + 1;
-			$color_rgba = fagri_hex_rgba( $value->color, 0.3 );
+			$nth_of_type         = $index + 1;
+			$color_rgba          = fagri_hex_rgba( $value->color, 0.3 );
 			$color_rgba_on_hover = fagri_hex_rgba( $value->color, 0.35 );
 
 			/* Hestia Pro */
 			if ( isset( $value->choice ) ) {
 				if ( $value->choice == 'customizer_repeater_icon' ) {
 
-					$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html($nth_of_type ) . ') .hestia-info > a .icon { box-shadow: 0 9px 30px -6px ' .  esc_html( $color_rgba ) . '; }';
-					$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html($nth_of_type ) . ') .hestia-info > a:hover .icon { box-shadow: 0 15px 35px 0 ' .  esc_html( $color_rgba_on_hover ) . '; }';
+					$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html( $nth_of_type ) . ') .hestia-info > a .icon { box-shadow: 0 9px 30px -6px ' . esc_html( $color_rgba ) . '; }';
+					$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html( $nth_of_type ) . ') .hestia-info > a:hover .icon { box-shadow: 0 15px 35px 0 ' . esc_html( $color_rgba_on_hover ) . '; }';
 					$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html( $nth_of_type ) . ') .hestia-info > a:hover .info-title { color: ' . esc_html( $value->color ) . '; }';
 				} else {
 					$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html( $nth_of_type ) . ') .hestia-info > a:hover .info-title { color: ' . esc_html( $color_accent ) . '; }';
 				}
 			} else { /* Hestia Lite */
-				$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html($nth_of_type ) . ') .hestia-info > a .icon { box-shadow: 0 9px 30px -6px ' .  esc_html( $color_rgba ) . '; }';
-				$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html($nth_of_type ) . ') .hestia-info > a:hover .icon { box-shadow: 0 15px 35px 0 ' .  esc_html( $color_rgba_on_hover ) . '; }';
+				$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html( $nth_of_type ) . ') .hestia-info > a .icon { box-shadow: 0 9px 30px -6px ' . esc_html( $color_rgba ) . '; }';
+				$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html( $nth_of_type ) . ') .hestia-info > a:hover .icon { box-shadow: 0 15px 35px 0 ' . esc_html( $color_rgba_on_hover ) . '; }';
 				$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html( $nth_of_type ) . ') .hestia-info > a:hover .info-title { color: ' . esc_html( $value->color ) . '; }';
 			}
-
 		}
 	}
 
@@ -94,8 +93,8 @@ function fagri_inline_style() {
 		$custom_css .= '.product .card-product .content .footer .stats a i { color: ' . esc_html( $color_accent ) . ' ; }';
 
 		/* Card-product, special price */
-		$custom_css .=  '.shop-item .card-product .content .footer .price h4 del + .woocommerce-Price-amount { color: ' . esc_html( $color_accent ) . '; }';
-		$custom_css .=  '.product .card-product .content .footer .price h4 del + .woocommerce-Price-amount { color: ' . esc_html( $color_accent ) . '; }';
+		$custom_css .= '.shop-item .card-product .content .footer .price h4 del + .woocommerce-Price-amount { color: ' . esc_html( $color_accent ) . '; }';
+		$custom_css .= '.product .card-product .content .footer .price h4 del + .woocommerce-Price-amount { color: ' . esc_html( $color_accent ) . '; }';
 
 		/* Shop page, product category color */
 		$custom_css .= '.woocommerce.archive .blog-post .products li.product:nth-child(6n+1) .category a,

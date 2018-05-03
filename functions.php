@@ -32,7 +32,7 @@ add_action( 'wp_enqueue_scripts', 'fagri_parent_css', 10 );
  */
 function fagri_customizer_preview_js() {
 
-	wp_enqueue_script( 'fagri-customizer-preview-js', get_stylesheet_directory_uri() . '/assets/js/customizer-preview.js', array( 'jquery','customize-preview' ), FAGRI_VERSION, true  );
+	wp_enqueue_script( 'fagri-customizer-preview-js', get_stylesheet_directory_uri() . '/assets/js/customizer-preview.js', array( 'jquery', 'customize-preview' ), FAGRI_VERSION, true );
 }
 add_action( 'customize_preview_init', 'fagri_customizer_preview_js', 10 );
 
@@ -147,10 +147,10 @@ function fagri_hex_rgba( $input, $opacity = false ) {
  */
 function fagri_remove_hestia_actions() {
 
- /* Remove three points from blog read more button */
- remove_filter( 'excerpt_more', 'hestia_excerpt_more', 10 );
+	/* Remove three points from blog read more button */
+	remove_filter( 'excerpt_more', 'hestia_excerpt_more', 10 );
 
- }
+}
 add_action( 'after_setup_theme', 'fagri_remove_hestia_actions' );
 
 /**
@@ -166,26 +166,30 @@ function fagri_remove_excerpt_more_points() {
 	} else {
 		return '';
 	}
- }
+}
 add_filter( 'excerpt_more', 'fagri_remove_excerpt_more_points' );
 
 /**
  * Customize excerpt length on Blog page
  *
- * if current page is blog
+ * If current page is blog
  * 15 words if sidebar is active
  * 35 words if sidebar is hidden
  *
  * other pages than blog inherits the value from Hestia
  *
- * @param $length - initial length
+ * @param int $length - initial length.
+ *
+ * @return int - the new length
+ *
  * @since 1.0.0
  */
 function fagri_excerpt_length( $length ) {
 
 	if ( is_archive() || is_home() ) {
-		if ( is_active_sidebar( 'sidebar-1' ) )
+		if ( is_active_sidebar( 'sidebar-1' ) ) {
 			return 35;
+		}
 		return 15;
 	}
 	return $length;
@@ -199,14 +203,14 @@ add_filter( 'excerpt_length', 'fagri_excerpt_length', 1000 );
  */
 function fagri_blog_post_metadata() {
 
-	$author_name = get_the_author_meta( 'display_name' );
-	$author_email = get_the_author_meta( 'user_email' );
+	$author_name   = get_the_author_meta( 'display_name' );
+	$author_email  = get_the_author_meta( 'user_email' );
 	$author_avatar = get_avatar( $author_email, 30 );
 
 	$post_categories = get_the_category_list( ' • ' );
 
 	return sprintf(
-	/* translators: %1$s is Author name wrapped, %2$s is Time */
+		/* translators: %1$s is Author name wrapped, %2$s is Time */
 		esc_html__( '%1$s %2$s', 'fagri' ),
 		/* translators: %1$s is author gravatar */
 		sprintf(
@@ -219,50 +223,9 @@ function fagri_blog_post_metadata() {
 			esc_html( get_the_author() ),
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )
 		)
-//		sprintf(
-//		/* translators: %1$s is Time since post, %2$s is author Close tag */
-//			esc_html__( '%1$s ago %2$s', 'hestia-pro' ),
-//			sprintf(
-//			/* translators: %1$s is Time since, %2$s is Link to post */
-//				'<a href="%2$s"><time>%1$s</time>',
-//				esc_html( human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ) ),
-//				esc_url( get_permalink() )
-//			),
-//			'</a>'
-//		)
 	);
 }
 add_filter( 'hestia_blog_post_meta', 'fagri_blog_post_metadata' );
-
-/**
- * Remove product description except from Single Product Page
- *
- * @since 1.0.0
- */
-// function fagri_remove_product_description() {
-//
-// if ( class_exists( 'WooCommerce' ) ) {
-// if ( ! is_product() ) {
-// add_filter( 'woocommerce_short_description', '__return_empty_string' );
-// }
-// }
-// }
-// add_action( 'template_redirect', 'fagri_remove_product_description' );
-/**
- * Replace excerpt "Read More" text with a link.
- *
- * @since 1.0.0
- */
-// function fagri_excerpt_more( $more ) {
-// global $post;
-// if ( ( ( 'page' === get_option( 'show_on_front' ) ) ) || is_single() || is_archive() || is_home() ) {
-// return '<a class="moretag" href="' . esc_url( get_permalink( $post->ID ) ) . '"> ' . esc_html__( 'Read more', 'fagri' ) . '</a>';
-// }
-//
-// return $more;
-// }
-// add_filter( 'excerpt_more', 'fagri_excerpt_more' );
-
 
 /**
  * Import options from Hestia
@@ -333,7 +296,7 @@ function fagri_about_page_filter( $old_value, $parameter ) {
 add_filter( 'hestia_about_page_filter', 'fagri_about_page_filter', 0, 3 );
 
 /**
- * Declare textdomain for this child theme.
+ * Declare text domain for this child theme.
  * Translations can be filed in the /languages/ directory.
  */
 function fagri_theme_setup() {
