@@ -9,3 +9,9 @@
 .archive.woocommerce-page .main-raised {
   margin-bottom: 0;
 }
+
+@media (max-width: 480px) {
+  .archive.woocommerce-page .main.main-raised {
+    margin: 0;
+  }
+}

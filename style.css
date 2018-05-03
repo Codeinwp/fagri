@@ -29,6 +29,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
   margin-bottom: 0;
 }
 
+@media (max-width: 480px) {
+  .archive.woocommerce-page .main.main-raised {
+    margin: 0;
+  }
+}
 /* General */
 /* Font Smooth properties */
 /* Front page title and subtitle */
@@ -2049,6 +2054,11 @@ aside .widget a {
   padding: 65px 60px 70px;
 }
 
+@media (max-width: 767px) {
+  .woocommerce.single-product .main.main-raised .blog-post .product .woocommerce-product-gallery {
+    margin: 0 auto 20px;
+  }
+}
 /*--------------------------------------------------------------
 ## Recommend products
 --------------------------------------------------------------*/
@@ -2226,9 +2236,7 @@ aside .widget a {
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 .woocommerce-cart .return-to-shop a.button:hover {
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;

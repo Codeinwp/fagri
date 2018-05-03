@@ -36,7 +36,7 @@
 
   .return-to-shop a.button {
     @include round-button();
-    @include no-box-shadow();
+    box-shadow: none !important;
 
     &:hover {
       @include button-hover();

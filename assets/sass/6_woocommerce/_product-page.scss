@@ -116,3 +116,9 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .woocommerce.single-product .main.main-raised .blog-post .product .woocommerce-product-gallery {
+    margin: 0 auto 20px;
+  }
+}
