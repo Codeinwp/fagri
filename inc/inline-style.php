@@ -107,7 +107,7 @@ function fagri_inline_style() {
                         }';
 
 		/* Rating starts color */
-		$custom_css .= '.star-rating { color: ' . esc_html( $color_accent ) . ' !important; }';
+		$custom_css .= '.star-rating span { color: ' . esc_html( $color_accent ) . ' !important; }';
 
 		/* Product page, reviews message */
 		$custom_css .= '.woocommerce-page #reviews #review_form_wrapper .form-group.is-focused input#author,

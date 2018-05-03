@@ -255,6 +255,176 @@ body {
 }
 
 /*--------------------------------------------------------------
+## Widgets
+--------------------------------------------------------------*/
+/* === General === */
+/* Blog and Shop sidebar, widget titles */
+aside.blog-sidebar .widget > h5,
+aside.shop-sidebar .widget > h5 {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+/* Style search button */
+.blog-sidebar .widget.widget_search .search-form .search-submit {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-radius: 50%;
+}
+.blog-sidebar .widget.widget_search .search-form .search-submit:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
+  opacity: 0.9;
+}
+
+.shop-sidebar .widget .woocommerce-product-search button {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-radius: 50%;
+}
+.shop-sidebar .widget .woocommerce-product-search button:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
+  opacity: 0.9;
+}
+
+/* === Shop Sidebar === */
+.shop-sidebar-wrapper aside {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  /* Style buttons */
+  /* Remove box-shadow from cart widget buttons */
+  /* Remove raising effect from images on hover */
+  /* Remove box-shadow from images */
+}
+.shop-sidebar-wrapper aside .widget .button {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: none;
+  padding: 11px 22px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: initial;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.shop-sidebar-wrapper aside .widget .button:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
+  opacity: 0.9;
+}
+.shop-sidebar-wrapper aside .widget_shopping_cart .button {
+  box-shadow: none !important;
+}
+.shop-sidebar-wrapper aside .widget li:hover a img {
+  transform: none;
+}
+.shop-sidebar-wrapper aside .widget li a img {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.shop-sidebar-wrapper aside .widget li:hover a img {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* === Footer widgets === */
+/* Titles */
+.footer .widget > h5 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+/* Links */
+.footer .widget li a {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+/* Product categories links */
+.footer div[id^=woocommerce_product_categories] ul li > a {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+/* Footer menu */
+.footer-big .footer-menu li a {
+  font-weight: 400;
+}
+
+/* Search button */
+.footer .widget.widget_search .search-submit {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-radius: 50%;
+}
+.footer .widget.widget_search .search-submit:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
+  opacity: 0.9;
+}
+
+.footer .widget.widget_product_search button {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-radius: 50%;
+}
+.footer .widget.widget_product_search button:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
+  opacity: 0.9;
+}
+
+/* WooCommerce widgets buttons */
+.footer .widget .button {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: none;
+  padding: 11px 22px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: initial;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+.footer .widget .button:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
+  opacity: 0.9;
+}
+
+/* WooCommerce widgets images */
+.footer .widget.woocommerce li:hover a img {
+  transform: none;
+}
+
+/*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
