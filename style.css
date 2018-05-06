@@ -950,6 +950,106 @@ aside .widget a {
   margin-top: 30px;
   margin-bottom: 15px;
 }
+.home .hestia-pricing .card-pricing .content {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  padding: 20px 5px !important;
+}
+.home .hestia-pricing .card-pricing .content .category {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15px;
+  text-transform: capitalize;
+  padding-bottom: 8px;
+  margin: 0 auto;
+}
+.home .hestia-pricing .card-pricing .content .hestia-pricing-icon-wrapper {
+  border: none;
+}
+.home .hestia-pricing .card-pricing .content .card-title {
+  font-size: 49px;
+  font-weight: 400;
+  line-height: 62px;
+}
+.home .hestia-pricing .card-pricing .content .card-title small {
+  color: inherit;
+  font-size: 26px;
+  font-weight: 700;
+}
+.home .hestia-pricing .card-pricing .content .pricing-has-icon + .card-title {
+  color: #2c2c2c;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 33px;
+  margin-top: 30px;
+  margin-bottom: 12px;
+}
+.home .hestia-pricing .card-pricing .content .pricing-has-icon + .card-title small {
+  font-size: 60%;
+  font-weight: 400;
+}
+.home .hestia-pricing .card-pricing .content ul li {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.home .hestia-pricing .card-pricing .content .btn {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: none;
+  padding: 11px 22px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: initial;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  margin: 10px 1px;
+}
+.home .hestia-pricing .card-pricing .content .btn:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
+  opacity: 0.9;
+}
+.home .hestia-pricing .card-pricing.card-raised {
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+}
+.home .hestia-pricing .card-pricing.card-raised .content,
+.home .hestia-pricing .card-pricing.card-raised .content small,
+.home .hestia-pricing .card-pricing.card-raised .content b,
+.home .hestia-pricing .card-pricing.card-raised .content stong,
+.home .hestia-pricing .card-pricing.card-raised .content span,
+.home .hestia-pricing .card-pricing.card-raised .content p,
+.home .hestia-pricing .card-pricing.card-raised .content a,
+.home .hestia-pricing .card-pricing.card-raised .content .category,
+.home .hestia-pricing .card-pricing.card-raised .content ul li {
+  color: #ffffff;
+}
+.home .hestia-pricing .card-pricing.card-raised .content {
+  /* Reject secondary color on card title when icon is set */
+}
+.home .hestia-pricing .card-pricing.card-raised .content .pricing-has-icon + .card-title {
+  color: #ffffff;
+}
+.home .hestia-pricing .card-pricing.card-raised .content .hestia-pricing-icon-wrapper {
+  background-color: #ffffff;
+  box-shadow: 0px 9px 30px -6px #ffffff !important;
+}
+.home .hestia-pricing .card-pricing.card-raised .content .card-title small {
+  color: inherit;
+}
+.home .hestia-pricing .card-pricing.card-raised .content .btn {
+  background-color: #ffffff !important;
+}
 
 /*--------------------------------------------------------------
 ## Contact section

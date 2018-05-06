@@ -21,6 +21,20 @@
             );
         }
     );
+    /* Pricing section */
+    wp.customize(
+        'accent_color', function( value ) {
+            value.bind(
+                function( newval ) {
+                    /* card plain */
+                    $( '.home .hestia-pricing .card-pricing .content .hestia-pricing-icon-wrapper' ).css({ 'box-shadow' : '0px 9px 30px -6px ' + newval });
+                    /* card raised */
+                    $( '.home .hestia-pricing .card-pricing.card-raised' ).css( 'background-color', newval );
+                    $( '.home .hestia-pricing .card-pricing.card-raised .content .btn' ).css( 'color', newval );
+                }
+            );
+        }
+    );
     /* Testimonials background-image */
     wp.customize(
         'fagri_testimonials_background', function( value ) {

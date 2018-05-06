@@ -55,6 +55,15 @@ function fagri_inline_style() {
 		/* Testimonials quotes */
 		$custom_css .= '.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content .card-description::before { color: ' . esc_html( $color_accent ) . '; }';
 
+		/* Pricing icon wrapper box-shadow */
+		$custom_css .= '.home .hestia-pricing .card-pricing .content .hestia-pricing-icon-wrapper { 
+		    box-shadow: 0px 9px 30px -6px ' . esc_html( $color_accent ) . ';
+		 }';
+		/* Pricing colored card */
+		$custom_css .= '.home .hestia-pricing .card-pricing.card-raised { background-color: ' . esc_html( $color_accent ) . '; }';
+		/* Pricing colored card white button text */
+		$custom_css .= '.home .hestia-pricing .card-pricing.card-raised .content .btn { color: ' . esc_html( $color_accent ) . '; }';
+
 		/* Contact Form, fields border color */
 		$custom_css .= ' .home .hestia-contact .card-contact .content .contact_name_wrap .form-group.is-focused { border-color: ' . esc_html( $color_accent ) . '; }';
 		$custom_css .= ' .home .hestia-contact .card-contact .content .contact_email_wrap .form-group.is-focused { border-color: ' . esc_html( $color_accent ) . '; }';
