@@ -47,11 +47,6 @@ if ( file_exists( $fagri_inline_style ) ) {
 	require_once $fagri_inline_style;
 }
 
-$fagri_parent_theme_functions = get_stylesheet_directory() . '/inc/parent-theme-functions.php';
-if ( file_exists( $fagri_parent_theme_functions ) ) {
-	require_once $fagri_parent_theme_functions;
-}
-
 $fagri_front_page_sections = get_stylesheet_directory() . '/inc/fp-sections.php';
 if ( file_exists( $fagri_front_page_sections ) ) {
 	require_once $fagri_front_page_sections;

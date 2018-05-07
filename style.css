@@ -1276,26 +1276,6 @@ aside .widget a {
   line-height: 27px;
   margin-bottom: 16px;
 }
-.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .content .fagri-blog-section-metadata .fagri-metadata-avatar {
-  display: inline-block;
-}
-.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .content .fagri-blog-section-metadata .fagri-metadata-avatar img {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
-  width: 30px;
-  height: 30px;
-  margin-right: 8px;
-}
-.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .content .fagri-blog-section-metadata .fagri-metadata-autor {
-  display: inline-block;
-  color: #9A9A9A;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  text-transform: capitalize;
-}
 
 /*--------------------------------------------------------------
 ## Shop section
