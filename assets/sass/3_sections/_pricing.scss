@@ -9,95 +9,96 @@
     @include front-page-section-subtitle();
   }
 
-  /* Change colors for table one */
-  .hestia-table-one {
-    .card-pricing {
-      .content {
-        .fagri-pricing-icon-wrapper {
-          background-color: #ffffff;
-        }
-        .category,
-        .card-title,
-        .card-title small,
-        ul li
-        {
-          color: #ffffff;
-        }
-        ul li {
-          border-color: #ededed;
-        }
-        .btn {
-          background-color: #ffffff !important;
-        }
-      }
-    }
-  }
-
   .card-pricing {
-
     .content {
 
-      padding: 20px !important;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      padding: 20px 5px !important;
 
       .category {
-        color: #9A9A9A;
         font-size: 13px;
         font-weight: 700;
         line-height: 15px;
         text-transform: capitalize;
-        margin-top: 0;
-        margin-bottom: 18px;
-      }
-      .fagri-pricing-icon-wrapper {
-
-        @include border-radius(50%);
-        width: 80px;
-        height: 80px;
+        padding-bottom: 8px;
         margin: 0 auto;
-
-        i {
-          color: inherit;
-          font-size: 30px;
-          line-height: 80px;
-        }
+      }
+      .hestia-pricing-icon-wrapper {
+        border: none;
       }
       .card-title {
-        color: #999999;
-        font-size: 25px;
+        font-size: 49px;
         font-weight: 400;
-        line-height: 31px;
+        line-height: 62px;
+
+        small {
+          color: inherit;
+          font-size: 26px;
+          font-weight: 700;
+        }
+      }
+      .pricing-has-icon + .card-title {
+        color: #2c2c2c;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 33px;
         margin-top: 30px;
         margin-bottom: 12px;
 
         small {
-          color: inherit;
-          font-size: 15px;
-          bottom: 0;
-          top: 0;
+          font-size: 60%;
+          font-weight: 400;
         }
       }
-      ul {
-        li {
-
-          color: #888888;
-          font-weight: 400;
-
-          b {
-            color: inherit;
-            font-weight: inherit;
-          }
-        }
+      ul li {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
       }
       .btn {
-        box-shadow: none !important;
+        @include no-box-shadow();
         @include round-button();
-      }
-      .btn:hover {
-        @include button-hover();
+        margin: 10px 1px;
+
+        &:hover {
+          @include button-hover();
+        }
       }
     }
   }
   .card-pricing.card-raised {
     box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+
+    .content,
+    .content small,
+    .content b,
+    .content stong,
+    .content span,
+    .content p,
+    .content a,
+    .content .category,
+    .content ul li {
+      color: #ffffff;
+    }
+    .content {
+      /* Reject secondary color on card title when icon is set */
+      .pricing-has-icon + .card-title {
+        color: #ffffff;
+      }
+      .hestia-pricing-icon-wrapper {
+        background-color: #ffffff;
+        box-shadow: 0px 9px 30px -6px #ffffff !important;
+      }
+      .card-title {
+        small {
+          color: inherit;
+        }
+      }
+      .btn {
+        background-color: #ffffff !important;
+      }
+    }
   }
 }
