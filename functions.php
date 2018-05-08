@@ -88,6 +88,31 @@ function fagri_gradient_color() {
 add_filter( 'hestia_header_gradient_default', 'fagri_gradient_color' );
 
 /**
+ * Enable featured posts section by default, on Blog Page
+ *
+ * This function checks if there is a category Uncategorized
+ * And if it has posts in it
+ * and it shows posts from this category by default, instead of disabling section
+ */
+function fagri_enable_featured_posts_section() {
+
+	/* Check if category 1 exists */
+	if ( ! term_exists( 1 ) ) {
+		return 0;
+	}
+
+	/* Check if category 1 has posts */
+	$nb_of_posts_in_category = get_category( 1 )->count;
+	if ( is_numeric( $nb_of_posts_in_category ) && ( $nb_of_posts_in_category <= 0 ) ) {
+	}
+
+	/* Return category 0 or 1 as default */
+	return array( 1 );
+}
+add_filter( 'hestia_featured_posts_category_default', 'fagri_enable_featured_posts_section' );
+
+
+/**
  * Change default header image in Big Title Section
  *
  * @since 1.0.0
