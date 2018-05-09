@@ -45,6 +45,19 @@ function fagri_inline_style() {
 				$custom_css .= '.hestia-features-content .feature-box:nth-of-type(' . esc_html( $nth_of_type ) . ') .hestia-info > a:hover .info-title { color: ' . esc_html( $value->color ) . '; }';
 			}
 		}
+	} else { /* Default values first time when the theme is installed */
+
+		$custom_css .= '.hestia-features-content .feature-box:nth-of-type(1) .hestia-info > a .icon { box-shadow: 0 9px 30px -6px ' . esc_html( fagri_hex_rgba( '#e91e63', 0.3 ) ) . '; }';
+		$custom_css .= '.hestia-features-content .feature-box:nth-of-type(1) .hestia-info > a:hover .icon { box-shadow: 0 15px 35px 0 ' . esc_html( fagri_hex_rgba( '#e91e63', 0.35 ) ) . '; }';
+		$custom_css .= '.hestia-features-content .feature-box:nth-of-type(1) .hestia-info > a:hover .info-title { color: #e91e63; }';
+
+		$custom_css .= '.hestia-features-content .feature-box:nth-of-type(2) .hestia-info > a .icon { box-shadow: 0 9px 30px -6px ' . esc_html( fagri_hex_rgba( '#00bcd4', 0.3 ) ) . '; }';
+		$custom_css .= '.hestia-features-content .feature-box:nth-of-type(2) .hestia-info > a:hover .icon { box-shadow: 0 15px 35px 0 ' . esc_html( fagri_hex_rgba( '#00bcd4', 0.35 ) ) . '; }';
+		$custom_css .= '.hestia-features-content .feature-box:nth-of-type(2) .hestia-info > a:hover .info-title { color: #00bcd4; }';
+
+		$custom_css .= '.hestia-features-content .feature-box:nth-of-type(3) .hestia-info > a .icon { box-shadow: 0 9px 30px -6px ' . esc_html( fagri_hex_rgba( '#4caf50', 0.3 ) ) . '; }';
+		$custom_css .= '.hestia-features-content .feature-box:nth-of-type(3) .hestia-info > a:hover .icon { box-shadow: 0 15px 35px 0 ' . esc_html( fagri_hex_rgba( '#4caf50', 0.35 ) ) . '; }';
+		$custom_css .= '.hestia-features-content .feature-box:nth-of-type(3) .hestia-info > a:hover .info-title { color: #4caf50; }';
 	}
 
 	if ( ! empty( $color_accent ) ) {
