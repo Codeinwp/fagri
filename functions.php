@@ -295,8 +295,6 @@ add_filter( 'hestia_welcome_notice_filter', 'fagri_welcome_notice_filter' );
 /**
  * Change About page defaults
  *
- * * TODO update description here
- *
  * @param string $old_value Old value beeing filtered.
  * @param string $parameter Specific parameter for filtering.
  */
@@ -318,7 +316,7 @@ function fagri_about_page_filter( $old_value, $parameter ) {
 			break;
 		case 'welcome_content':
 		case 'pro_welcome_content':
-			$return = esc_html__( 'Fagri is a responsive WordPress theme with multipurpose design. It is a good fit for both small businesses and corporate businesses, as it is highly customizable via the Live Customizer. You can use Fagri for restaurants, startups, freelancer resume, creative agencies, portfolios, WooCommerce, or niches like sports, medical, blogging, fashion, lawyer sites etc. It has a one-page design, Sendinblue newsletter integration, widgetized footer, and a clean appearance. The theme is compatible with Elementor Page Builder, Photo Gallery, Flat Parallax Slider, and Travel Map; it is mobile friendly and optimized for SEO.', 'fagri' );
+			$return = esc_html__( 'Fagri is a responsive WordPress theme, built to fit all kinds of businesses. Its multipurpose design is great for small businesses, startups, corporate businesses, freelancers, portfolios, WooCommerce, creative agencies, or niche websites (medical, restaurants, sports, fashion). Fagri was created on top of Now UI Kit and displays an elegant one-page layout, complemented by the smooth parallax effect. The theme comes with a clean look, but it also provides subtle hover animations. Moreover, Fagri offers Sendinblue newsletter integration, a flexible interface via Live Customizer, a widgetized footer, full compatibility with Elementor and Beaver Builder, a full-width featured slider, and even more functionality based on the latest WordPress trends. Last but not least, the theme is lightweight and SEO-friendly.', 'fagri' );
 			break;
 		default:
 			$return = '';
