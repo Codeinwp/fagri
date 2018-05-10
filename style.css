@@ -1943,6 +1943,9 @@ aside .widget a {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
+.woocommerce.single-product .main.main-raised .blog-post .product .woocommerce-product-gallery .woocommerce-product-gallery__image {
+  border-radius: 4px;
+}
 .woocommerce.single-product .main.main-raised .blog-post .product .summary .product_title {
   color: #2c2c2c;
   font-size: 35px;
@@ -2022,7 +2025,7 @@ aside .widget a {
   padding: 65px 60px 70px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .woocommerce.single-product .main.main-raised .blog-post .product .woocommerce-product-gallery {
     margin: 0 auto 20px;
   }
@@ -2405,10 +2408,49 @@ aside .widget a {
 }
 
 /* Product Page */
-.woocommerce.single-product .woocommerce-message {
-  display: none;
+.woocommerce.single-product .woocommerce-error {
+  background-color: rgba(255, 54, 54, 0.8);
 }
 
+.woocommerce.single-product .woocommerce-message {
+  background-color: rgba(24, 206, 15, 0.8);
+}
+
+.woocommerce.single-product .woocommerce-error,
+.woocommerce.single-product .woocommerce-message {
+  float: right;
+  color: #ffffff;
+  border-radius: 4px;
+  max-width: 50%;
+}
+.woocommerce.single-product .woocommerce-error a, .woocommerce.single-product .woocommerce-error a:hover,
+.woocommerce.single-product .woocommerce-message a,
+.woocommerce.single-product .woocommerce-message a:hover {
+  color: inherit;
+}
+
+@media (max-width: 1199px) {
+  .woocommerce.single-product .woocommerce-error,
+  .woocommerce.single-product .woocommerce-message {
+    max-width: 45%;
+    margin-right: 28px;
+  }
+}
+@media (max-width: 992px) {
+  .woocommerce.single-product .woocommerce-error,
+  .woocommerce.single-product .woocommerce-message {
+    max-width: 40%;
+    margin-right: 35px;
+  }
+}
+@media (max-width: 768px) {
+  .woocommerce.single-product .woocommerce-error,
+  .woocommerce.single-product .woocommerce-message {
+    float: none;
+    max-width: 1000%;
+    margin-right: 0;
+  }
+}
 /* Cart */
 .woocommerce-cart .woocommerce-message .restore-item {
   color: #ffffff;

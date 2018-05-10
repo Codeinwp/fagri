@@ -127,6 +127,10 @@ function fagri_inline_style() {
 						.woocommerce-page #reviews #review_form_wrapper .form-group.is-focused input#email {
 						border-color: ' . esc_html( $color_accent ) . ';} ';
 
+		/* Product page, error message button */
+		$custom_css .= '.woocommerce.single-product .woocommerce-error a.button { background-color: ' . esc_html( $color_accent ) . '; }';
+		$custom_css .= '.woocommerce.single-product .woocommerce-error a.button:hover { background-color: ' . esc_html( $color_accent ) . '; }';
+
 		/* Cart */
 		$custom_css .= '.woocommerce-cart .shop_table .button {
 			background-color: ' . esc_html( $color_accent ) . ' !important; 

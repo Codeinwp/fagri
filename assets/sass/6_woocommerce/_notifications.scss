@@ -5,8 +5,44 @@
 }
 
 /* Product Page */
+.woocommerce.single-product .woocommerce-error {
+  background-color: $error-notification;
+}
 .woocommerce.single-product .woocommerce-message {
-  display: none;
+  background-color: $success-notification;
+}
+.woocommerce.single-product .woocommerce-error,
+.woocommerce.single-product .woocommerce-message {
+  float: right;
+  color: #ffffff;
+  border-radius: 4px;
+  max-width: 50%;
+
+  a, a:hover {
+    color: inherit;
+  }
+}
+@media (max-width: 1199px) {
+  .woocommerce.single-product .woocommerce-error,
+  .woocommerce.single-product .woocommerce-message {
+    max-width: 45%;
+    margin-right: 28px;
+  }
+}
+@media (max-width: 992px) {
+  .woocommerce.single-product .woocommerce-error,
+  .woocommerce.single-product .woocommerce-message {
+    max-width: 40%;
+    margin-right: 35px;
+  }
+}
+@media (max-width: 768px) {
+  .woocommerce.single-product .woocommerce-error,
+  .woocommerce.single-product .woocommerce-message {
+    float: none;
+    max-width: 1000%;
+    margin-right: 0;
+  }
 }
 
 /* Cart */

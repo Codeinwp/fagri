@@ -39,6 +39,9 @@
             border-top-left-radius: 4px;
             border-top-right-radius: 4px;
           }
+          .woocommerce-product-gallery__image {
+            border-radius: 4px;
+          }
         }
         
         .summary {
@@ -117,7 +120,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .woocommerce.single-product .main.main-raised .blog-post .product .woocommerce-product-gallery {
     margin: 0 auto 20px;
   }
