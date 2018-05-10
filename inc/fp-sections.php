@@ -19,7 +19,7 @@ function fagri_testimonials_before() {
 	if ( ! empty( $fagri_testimonials_background_image ) ) {
 		echo '<div class="fagri-testimonials-wrapper" style="background-image: url(' . esc_url( $fagri_testimonials_background_image ) . ');">';
 	} else {
-		echo '<div class="fagri-testimonials-wrapper">';
+		echo '<div class="fagri-testimonials-wrapper" style="background-color: #000000;">';
 	}
 }
 add_action( 'hestia_before_testimonials_section_hook', 'fagri_testimonials_before' );
@@ -47,7 +47,7 @@ function fagri_team_before() {
 	if ( ! empty( $fagri_team_background_image ) ) {
 		echo '<div class="fagri-team-wrapper" style="background-image: url(' . esc_url( $fagri_team_background_image ) . ');">';
 	} else {
-		echo '<div class="fagri-team-wrapper">';
+		echo '<div class="fagri-team-wrapper" style="background-color: #000000;">';
 	}
 }
 add_action( 'hestia_before_team_section_hook', 'fagri_team_before' );
