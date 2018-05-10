@@ -30,7 +30,7 @@ function fagri_customize_register( $wp_customize ) {
 	/* Option for background image in testimonials section */
 	$wp_customize->add_setting(
 		'fagri_testimonials_background', array(
-			'default'           => get_stylesheet_directory_uri() . '/assets/img/testimonials4.jpg',
+			'default'           => get_stylesheet_directory_uri() . '/assets/img/light_waves.jpg',
 			'sanitize_callback' => 'esc_url_raw',
 			'transport'         => 'postMessage',
 		)
@@ -48,7 +48,7 @@ function fagri_customize_register( $wp_customize ) {
 	/* Option for background image in team section */
 	$wp_customize->add_setting(
 		'fagri_team_background', array(
-			'default'           => get_stylesheet_directory_uri() . '/assets/img/testimonials4.jpg',
+			'default'           => get_stylesheet_directory_uri() . '/assets/img/tower.jpg',
 			'sanitize_callback' => 'esc_url_raw',
 			'transport'         => 'postMessage',
 		)
