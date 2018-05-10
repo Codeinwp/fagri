@@ -11,12 +11,10 @@
     padding: 20px 5px;
 
     .category a {
-      font-size: 12px;
       font-weight: 700;
       text-transform: none;
     }
     .card-title a {
-      font-size: 21px;
       font-weight: 400;
       line-height: 26px;
       margin-top: 15px;
@@ -30,7 +28,6 @@
     }
     .card-description p {
       color: #9A9A9A;
-      font-size: 17px;
       font-weight: 300;
       line-height: 27px;
     }
@@ -100,6 +97,20 @@
     }
   }
 } /* End of card product */
+
+.woocommerce .card-product {
+  .content {
+    .category a {
+      font-size: 12px;
+    }
+    .card-title a {
+      font-size: 21px;
+    }
+    .card-description p {
+      font-size: 17px;
+    }
+  }
+}
 
 /* Remove image box shadow from card-product which has li.product parent */
 .product .card.card-product .card-image {

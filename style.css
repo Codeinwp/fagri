@@ -142,12 +142,10 @@ body {
   padding: 20px 5px;
 }
 .card-product .content .category a {
-  font-size: 12px;
   font-weight: 700;
   text-transform: none;
 }
 .card-product .content .card-title a {
-  font-size: 21px;
   font-weight: 400;
   line-height: 26px;
   margin-top: 15px;
@@ -160,7 +158,6 @@ body {
 }
 .card-product .content .card-description p {
   color: #9A9A9A;
-  font-size: 17px;
   font-weight: 300;
   line-height: 27px;
 }
@@ -240,6 +237,16 @@ body {
 }
 
 /* End of card product */
+.woocommerce .card-product .content .category a {
+  font-size: 12px;
+}
+.woocommerce .card-product .content .card-title a {
+  font-size: 21px;
+}
+.woocommerce .card-product .content .card-description p {
+  font-size: 17px;
+}
+
 /* Remove image box shadow from card-product which has li.product parent */
 .product .card.card-product .card-image {
   -webkit-box-shadow: none;
@@ -504,7 +511,6 @@ aside .widget a {
 --------------------------------------------------------------*/
 .home .hestia-features .hestia-title {
   color: #2c2c2c;
-  font-size: 35px;
   font-weight: 700;
   line-height: 42px;
   padding-top: 30px;
@@ -512,7 +518,6 @@ aside .widget a {
 }
 .home .hestia-features .description {
   color: #9A9A9A;
-  font-size: 21px;
   font-weight: 300;
   line-height: 30px;
   margin-top: 30px;
@@ -536,7 +541,6 @@ aside .widget a {
   font-size: 30px;
 }
 .home .hestia-features .feature-box .hestia-info > a .info-title {
-  font-size: 21px;
   font-weight: 400;
   line-height: 30px;
   padding: 0 15px;
@@ -594,7 +598,6 @@ aside .widget a {
 }
 .home .fagri-team-wrapper .hestia-team .hestia-title {
   color: #2c2c2c;
-  font-size: 35px;
   font-weight: 700;
   line-height: 42px;
   padding-top: 30px;
@@ -603,7 +606,6 @@ aside .widget a {
 }
 .home .fagri-team-wrapper .hestia-team .description {
   color: #9A9A9A;
-  font-size: 21px;
   font-weight: 300;
   line-height: 30px;
   margin-top: 30px;
@@ -636,14 +638,12 @@ aside .widget a {
   padding: 20px;
 }
 .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 .content .card-title {
-  font-size: 25px;
   font-weight: 400;
   line-height: 31px;
   margin-top: 15px;
   margin-bottom: 12px;
 }
 .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 .content .category {
-  font-size: 12px;
   font-weight: 700;
   line-height: 15px;
   margin-bottom: 8px;
@@ -737,7 +737,6 @@ aside .widget a {
 }
 .home .fagri-testimonials-wrapper .hestia-testimonials .hestia-title {
   color: #2c2c2c;
-  font-size: 35px;
   font-weight: 700;
   line-height: 42px;
   padding-top: 30px;
@@ -746,7 +745,6 @@ aside .widget a {
 }
 .home .fagri-testimonials-wrapper .hestia-testimonials .description {
   color: #9A9A9A;
-  font-size: 21px;
   font-weight: 300;
   line-height: 30px;
   margin-top: 30px;
@@ -776,13 +774,11 @@ aside .widget a {
   padding: 0 20px 40px;
 }
 .home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content .card-title {
-  font-size: 21px;
   font-weight: 400;
   line-height: 26px;
 }
 .home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content .category {
   color: #9A9A9A;
-  font-size: 15px;
   font-weight: 700;
   line-height: 24px;
   text-transform: capitalize;
@@ -803,7 +799,6 @@ aside .widget a {
 .home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content .card-description {
   position: relative;
   color: #9A9A9A;
-  font-size: 15px;
   font-weight: 300;
   line-height: 24px;
   margin: 60px auto 0;
@@ -814,7 +809,6 @@ aside .widget a {
 --------------------------------------------------------------*/
 .home .hestia-ribbon .hestia-title {
   color: #2c2c2c;
-  font-size: 35px;
   font-weight: 700;
   line-height: 42px;
   padding-top: 30px;
@@ -856,7 +850,6 @@ aside .widget a {
 --------------------------------------------------------------*/
 .home .hestia-work .hestia-title {
   color: #2c2c2c;
-  font-size: 35px;
   font-weight: 700;
   line-height: 42px;
   padding-top: 30px;
@@ -864,14 +857,12 @@ aside .widget a {
 }
 .home .hestia-work .description {
   color: #9A9A9A;
-  font-size: 21px;
   font-weight: 300;
   line-height: 30px;
   margin-top: 30px;
   margin-bottom: 15px;
 }
 .home .hestia-work .hestia-portfolio-content .portfolio-item .card-title {
-  font-size: 25px;
   font-weight: 400;
   line-height: 31px;
 }
@@ -881,7 +872,6 @@ aside .widget a {
 --------------------------------------------------------------*/
 .home .hestia-subscribe .title {
   color: #2c2c2c;
-  font-size: 35px;
   font-weight: 700;
   line-height: 42px;
   padding-top: 30px;
@@ -890,7 +880,6 @@ aside .widget a {
 }
 .home .hestia-subscribe .subscribe-description {
   color: #9A9A9A;
-  font-size: 21px;
   font-weight: 300;
   line-height: 30px;
   margin-top: 30px;
@@ -936,7 +925,6 @@ aside .widget a {
 }
 .home .hestia-pricing .hestia-title {
   color: #2c2c2c;
-  font-size: 35px;
   font-weight: 700;
   line-height: 42px;
   padding-top: 30px;
@@ -944,7 +932,6 @@ aside .widget a {
 }
 .home .hestia-pricing div:first-of-type > p {
   color: #9A9A9A;
-  font-size: 21px;
   font-weight: 300;
   line-height: 30px;
   margin-top: 30px;
@@ -1212,7 +1199,6 @@ aside .widget a {
 }
 .home:not(.blog) .hestia-blogs .hestia-title {
   color: #2c2c2c;
-  font-size: 35px;
   font-weight: 700;
   line-height: 42px;
   padding-top: 30px;
@@ -1220,7 +1206,6 @@ aside .widget a {
 }
 .home:not(.blog) .hestia-blogs .description {
   color: #9A9A9A;
-  font-size: 21px;
   font-weight: 300;
   line-height: 30px;
   margin-top: 30px;
@@ -1253,14 +1238,12 @@ aside .widget a {
   padding: 20px;
 }
 .home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .content .category {
-  font-size: 13px;
   font-weight: 700;
   line-height: 15px;
   text-transform: capitalize;
   margin: 0 0 8px;
 }
 .home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .content .card-title {
-  font-size: 18px;
   font-weight: 400;
   line-height: 22px;
   margin-top: 15px;
@@ -1271,7 +1254,6 @@ aside .widget a {
 }
 .home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .content .card-description {
   color: #9A9A9A;
-  font-size: 17px;
   font-weight: 300;
   line-height: 27px;
   margin-bottom: 16px;
@@ -1285,7 +1267,6 @@ aside .widget a {
 }
 .home .hestia-shop .hestia-title {
   color: #2c2c2c;
-  font-size: 35px;
   font-weight: 700;
   line-height: 42px;
   padding-top: 30px;
@@ -1293,7 +1274,6 @@ aside .widget a {
 }
 .home .hestia-shop .description {
   color: #9A9A9A;
-  font-size: 21px;
   font-weight: 300;
   line-height: 30px;
   margin-top: 30px;
@@ -1471,7 +1451,6 @@ aside .widget a {
 --------------------------------------------------------------*/
 .blog .subscribe-line .hestia-title {
   color: #2c2c2c;
-  font-size: 35px;
   font-weight: 700;
   line-height: 42px;
   padding-top: 30px;
@@ -1479,7 +1458,6 @@ aside .widget a {
 }
 .blog .subscribe-line .description {
   color: #9A9A9A;
-  font-size: 21px;
   font-weight: 300;
   line-height: 30px;
   margin-top: 30px;
@@ -1822,7 +1800,6 @@ aside .widget a {
 }
 .section.related-posts .hestia-title {
   color: #2c2c2c;
-  font-size: 35px;
   font-weight: 700;
   line-height: 42px;
   padding-top: 30px;
