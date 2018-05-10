@@ -125,30 +125,6 @@ function fagri_header_background_default() {
 add_filter( 'hestia_big_title_background_default', 'fagri_header_background_default' );
 
 /**
- * Add opacity to rgb.
- *
- * @param array $rgb RGB color.
- * @param int   $opacity Opacity value.
- */
-function fagri_rgb_to_rgba( $rgb, $opacity ) {
-
-	if ( ! is_array( $rgb ) ) {
-		return '';
-	}
-	// Check for opacity
-	if ( $opacity ) {
-		if ( abs( $opacity ) > 1 ) {
-			$opacity = 1.0;
-		}
-		$output = 'rgba(' . implode( ',', $rgb ) . ',' . $opacity . ')';
-	} else {
-		$output = 'rgb(' . implode( ',', $rgb ) . ')';
-	}
-
-	return $output;
-}
-
-/**
  * HEX colors conversion to RGBA.
  *
  * @param array|string $input RGB color.
@@ -224,11 +200,8 @@ add_filter( 'excerpt_length', 'fagri_excerpt_length', 1000 );
  */
 function fagri_blog_post_metadata() {
 
-	$author_name   = get_the_author_meta( 'display_name' );
 	$author_email  = get_the_author_meta( 'user_email' );
 	$author_avatar = get_avatar( $author_email, 30 );
-
-	$post_categories = get_the_category_list( ' • ' );
 
 	return sprintf(
 		/* translators: %1$s is Author name wrapped, %2$s is Time */
@@ -303,16 +276,16 @@ function fagri_about_page_filter( $old_value, $parameter ) {
 	switch ( $parameter ) {
 		case 'menu_name':
 		case 'pro_menu_name':
-			$return = esc_html__( 'About fagri', 'fagri' );
+			$return = esc_html__( 'About Fagri', 'fagri' );
 			break;
 		case 'page_name':
 		case 'pro_page_name':
-			$return = esc_html__( 'About fagri', 'fagri' );
+			$return = esc_html__( 'About Fagri', 'fagri' );
 			break;
 		case 'welcome_title':
 		case 'pro_welcome_title':
 			/* translators: s - theme name */
-			$return = sprintf( esc_html__( 'Welcome to %s! - Version ', 'fagri' ), 'fagri' );
+			$return = sprintf( esc_html__( 'Welcome to %s! - Version ', 'fagri' ), 'Fagri' );
 			break;
 		case 'welcome_content':
 		case 'pro_welcome_content':
