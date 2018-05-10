@@ -11,6 +11,9 @@
     .button {
       @include round-button();
       color: #ffffff !important;
+      font-size: 12px !important;
+      padding: 11px 22px !important;
+      border: none !important;
 
       &:hover {
         @include button-hover();

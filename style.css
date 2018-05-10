@@ -2155,6 +2155,9 @@ aside .widget a {
   -moz-border-radius: 30px;
   border-radius: 30px;
   color: #ffffff !important;
+  font-size: 12px !important;
+  padding: 11px 22px !important;
+  border: none !important;
 }
 .woocommerce-cart .shop_table .button:hover {
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;

@@ -98,13 +98,13 @@ function fagri_enable_featured_posts_section() {
 
 	/* Check if category 1 exists */
 	if ( ! term_exists( 1 ) ) {
-		return 0;
+		return array( 0 );
 	}
 
 	/* Check if category 1 has posts */
 	$nb_of_posts_in_category = get_category( 1 )->count;
 	if ( is_numeric( $nb_of_posts_in_category ) && ( $nb_of_posts_in_category <= 0 ) ) {
-		return 0;
+		return array( 0 );
 	}
 
 	/* Return category 0 or 1 as default */
