@@ -15,25 +15,6 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
 */
-.main-raised {
-  margin: 0;
-  box-shadow: none;
-  border-radius: 0;
-}
-
-.single-post .main-raised {
-  margin-bottom: 0;
-}
-
-.archive.woocommerce-page .main-raised {
-  margin-bottom: 0;
-}
-
-@media (max-width: 480px) {
-  .archive.woocommerce-page .main.main-raised {
-    margin: 0;
-  }
-}
 /* General */
 /* Font Smooth properties */
 /* Front page title and subtitle */
@@ -1925,46 +1906,50 @@ aside .widget a {
   min-height: 300px;
 }
 
-.woocommerce.single-product .main.main-raised .blog-post {
+.woocommerce.single-product .main .blog-post {
   background-color: #ffffff;
   /* End of product */
 }
-.woocommerce.single-product .main.main-raised .blog-post .product .woocommerce-breadcrumb {
+.woocommerce.single-product .main .blog-post .product {
+  box-shadow: none !important;
+  margin-top: 0 !important;
+}
+.woocommerce.single-product .main .blog-post .product .woocommerce-breadcrumb {
   display: none;
 }
-.woocommerce.single-product .main.main-raised .blog-post .product .woocommerce-product-gallery {
+.woocommerce.single-product .main .blog-post .product .woocommerce-product-gallery {
   box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
   margin-top: -150px;
 }
-.woocommerce.single-product .main.main-raised .blog-post .product .woocommerce-product-gallery .flex-viewport {
+.woocommerce.single-product .main .blog-post .product .woocommerce-product-gallery .flex-viewport {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-.woocommerce.single-product .main.main-raised .blog-post .product .woocommerce-product-gallery .woocommerce-product-gallery__image {
+.woocommerce.single-product .main .blog-post .product .woocommerce-product-gallery .woocommerce-product-gallery__image {
   border-radius: 4px;
 }
-.woocommerce.single-product .main.main-raised .blog-post .product .summary .product_title {
+.woocommerce.single-product .main .blog-post .product .summary .product_title {
   color: #2c2c2c;
   font-size: 35px;
   font-weight: 700;
   line-height: 42px;
 }
-.woocommerce.single-product .main.main-raised .blog-post .product .summary .price span {
+.woocommerce.single-product .main .blog-post .product .summary .price span {
   color: #2c2c2c;
   font-size: 35px;
   font-weight: 300;
   line-height: 42px;
 }
-.woocommerce.single-product .main.main-raised .blog-post .product .summary .woocommerce-product-details__short-description {
+.woocommerce.single-product .main .blog-post .product .summary .woocommerce-product-details__short-description {
   color: #2c2c2c;
   font-size: 17px;
   font-weight: 300;
   line-height: 27px;
 }
-.woocommerce.single-product .main.main-raised .blog-post .product .summary .single_add_to_cart_button {
+.woocommerce.single-product .main .blog-post .product .summary .single_add_to_cart_button {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -1982,14 +1967,14 @@ aside .widget a {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.woocommerce.single-product .main.main-raised .blog-post .product .summary .single_add_to_cart_button:hover {
+.woocommerce.single-product .main .blog-post .product .summary .single_add_to_cart_button:hover {
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
   opacity: 0.9;
 }
-.woocommerce.single-product .main.main-raised .blog-post .product .summary .cart.form-group .quantity {
+.woocommerce.single-product .main .blog-post .product .summary .cart.form-group .quantity {
   margin-top: 3px;
 }
-.woocommerce.single-product .main.main-raised .blog-post .product .summary .cart.form-group .quantity input {
+.woocommerce.single-product .main .blog-post .product .summary .cart.form-group .quantity input {
   border: none;
   border-radius: 3px;
   color: #ffffff;
@@ -1997,37 +1982,40 @@ aside .widget a {
   -moz-osx-font-smoothing: initial;
   -webkit-font-smoothing: initial;
 }
-.woocommerce.single-product .main.main-raised .blog-post .product .summary .variations label {
+.woocommerce.single-product .main .blog-post .product .summary .variations label {
   color: #2c2c2c;
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 8px;
 }
-.woocommerce.single-product .main.main-raised .blog-post .product .summary .variations select {
+.woocommerce.single-product .main .blog-post .product .summary .variations select {
   color: #ffffff;
   background-color: #888888;
   background-image: none;
   border-radius: 3px;
   padding-left: 10px;
 }
-.woocommerce.single-product .main.main-raised .blog-post .product .woocommerce-tabs .tabs li a {
+.woocommerce.single-product .main .blog-post .product .woocommerce-tabs .tabs li a {
   font-size: 14px;
   font-weight: 400;
   text-transform: capitalize;
 }
-.woocommerce.single-product .main.main-raised .blog-post .product .woocommerce-tabs .woocommerce-Tabs-panel--description {
+.woocommerce.single-product .main .blog-post .product .woocommerce-tabs .woocommerce-Tabs-panel--description {
   color: #2c2c2c;
   font-size: 17px;
   font-weight: 300;
   line-height: 27px;
 }
-.woocommerce.single-product .main.main-raised .blog-post .related.products {
+.woocommerce.single-product .main .blog-post .related.products {
   padding: 65px 60px 70px;
 }
 
 @media (max-width: 768px) {
-  .woocommerce.single-product .main.main-raised .blog-post .product .woocommerce-product-gallery {
-    margin: 0 auto 20px;
+  .woocommerce.single-product .main .blog-post .product .woocommerce-product-gallery {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    margin: 0 auto 50px;
   }
 }
 /*--------------------------------------------------------------

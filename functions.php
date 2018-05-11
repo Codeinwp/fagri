@@ -125,6 +125,16 @@ function fagri_header_background_default() {
 add_filter( 'hestia_big_title_background_default', 'fagri_header_background_default' );
 
 /**
+ * Change default boxed layout option to unboxed
+ *
+ * @since 1.0.0
+ */
+function fagri_remove_boxed_layout_option() {
+	set_theme_mod( 'hestia_general_layout', 0 );
+}
+add_action( 'after_switch_theme', 'fagri_remove_boxed_layout_option' );
+
+/**
  * HEX colors conversion to RGBA.
  *
  * @param array|string $input RGB color.
@@ -152,6 +162,10 @@ add_action( 'after_setup_theme', 'fagri_remove_hestia_actions' );
 
 /**
  * Replace excerpt more button and points with nothing
+ *
+ * On Blog page and Archive pages, the excerpt more is the Read More link
+ * On front page, and other pages than above, there is no excerpt more
+ * This function returns an empty string on the second case because by default there will be three points with a link ...
  *
  * @return string - string to show instead of excerpt more
  * @since 1.0.0

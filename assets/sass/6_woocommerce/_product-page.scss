@@ -17,12 +17,15 @@
 
 .woocommerce.single-product {
 
-  .main.main-raised {
+  .main {
 
     .blog-post {
       background-color: #ffffff;
 
       .product {
+
+        box-shadow: none !important;
+        margin-top: 0 !important;
 
         .woocommerce-breadcrumb {
           display: none;
@@ -121,7 +124,8 @@
 }
 
 @media (max-width: 768px) {
-  .woocommerce.single-product .main.main-raised .blog-post .product .woocommerce-product-gallery {
-    margin: 0 auto 20px;
+  .woocommerce.single-product .main .blog-post .product .woocommerce-product-gallery {
+    @include no-box-shadow();
+    margin: 0 auto 50px;
   }
 }
