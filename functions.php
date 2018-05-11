@@ -120,7 +120,7 @@ add_filter( 'hestia_featured_posts_category_default', 'fagri_enable_featured_pos
  * @return string - path to image
  */
 function fagri_header_background_default() {
-	return get_stylesheet_directory_uri() . '/assets/img/header.jpg';
+	return get_stylesheet_directory_uri() . '/assets/img/glass_building.jpg';
 }
 add_filter( 'hestia_big_title_background_default', 'fagri_header_background_default' );
 
