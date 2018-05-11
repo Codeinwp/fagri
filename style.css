@@ -1353,6 +1353,9 @@ aside .widget a {
 .blog .card-blog.sticky {
   box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
 }
+.blog .card-blog.sticky .card-image {
+  margin-top: 0;
+}
 .blog .card-blog.sticky .card-title::before {
   content: "";
 }
