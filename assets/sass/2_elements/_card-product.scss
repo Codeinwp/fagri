@@ -85,8 +85,7 @@
           }
         }
         .hestia-view-cart-wrapper a {
-          @include round-button();
-          @include no-box-shadow();
+          @include default-button();
           color: #ffffff;
 
           &:hover {

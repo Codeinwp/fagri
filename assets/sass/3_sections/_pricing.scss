@@ -57,13 +57,7 @@
         line-height: 21px;
       }
       .btn {
-        @include no-box-shadow();
-        @include round-button();
         margin: 10px 1px;
-
-        &:hover {
-          @include button-hover();
-        }
       }
     }
   }

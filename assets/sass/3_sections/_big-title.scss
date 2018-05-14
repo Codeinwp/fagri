@@ -16,13 +16,4 @@
     margin-top: 10px;
     margin-bottom: 15px;
   }
-
-  .buttons a.btn {
-    @include default-button();
-    @include large-button();
-    @include no-box-shadow();
-  }
-  .buttons a.btn:hover {
-    @include button-hover();
-  }
 }

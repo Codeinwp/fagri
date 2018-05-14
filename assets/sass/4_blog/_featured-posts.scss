@@ -30,13 +30,6 @@
             font-weight: 300;
             line-height: 27px;
           }
-          .btn {
-            @include round-button();
-            @include no-box-shadow();
-          }
-          .btn:hover {
-            @include button-hover();
-          }
         }
       }
       /* Card with background image */

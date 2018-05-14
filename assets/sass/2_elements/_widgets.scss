@@ -30,23 +30,6 @@ aside.shop-sidebar .widget > h5 {
 .shop-sidebar-wrapper aside {
   @include no-box-shadow();
 
-  /* Style buttons */
-  .widget .button {
-    @include round-button();
-    @include no-box-shadow();
-
-    &:hover {
-      @include button-hover();
-    }
-  }
-
-  /* Remove box-shadow from cart widget buttons */
-  .widget_shopping_cart {
-    .button {
-      box-shadow: none !important;
-    }
-  }
-
   /* Remove raising effect from images on hover */
   .widget li:hover a img {
     transform: none;
@@ -94,21 +77,7 @@ aside.shop-sidebar .widget > h5 {
   }
 }
 .footer .widget.widget_product_search button {
-  @include no-box-shadow();
   border-radius: 50%;
-
-  &:hover {
-    @include button-hover();
-  }
-}
-/* WooCommerce widgets buttons */
-.footer .widget .button {
-  @include no-box-shadow();
-  @include round-button();
-
-  &:hover {
-    @include button-hover();
-  }
 }
 /* WooCommerce widgets images */
 .footer .widget.woocommerce li:hover a img {

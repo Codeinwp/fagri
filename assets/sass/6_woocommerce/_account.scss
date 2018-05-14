@@ -40,15 +40,6 @@
     }
   }
 
-  .button.woocommerce-Button {
-    @include round-button();
-    @include no-box-shadow();
-    padding: 8px 22px !important;
-
-    &:hover {
-      @include button-hover();
-    }
-  }
   #rememberme + span {
     font-weight: 400;
   }

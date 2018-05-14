@@ -12,13 +12,4 @@
   .input-group:focus {
     @include border-radius(30px);
   }
-
-  .btn {
-    @include no-box-shadow();
-    @include round-button();
-  }
-  .btn:hover {
-    @include button-hover();
-  }
-
 }

@@ -6,11 +6,5 @@
     .description {
       @include front-page-section-subtitle();
     }
-    input[type="submit"] {
-      @include round-button();
-    }
-    input[type="submit"]:hover {
-      @include button-hover();
-    }
   }
 }

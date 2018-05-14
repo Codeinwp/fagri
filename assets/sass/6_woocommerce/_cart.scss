@@ -9,15 +9,7 @@
       }
     }
     .button {
-      @include round-button();
       color: #ffffff !important;
-      font-size: 12px !important;
-      padding: 11px 22px !important;
-      border: none !important;
-
-      &:hover {
-        @include button-hover();
-      }
     }
   }
 
@@ -25,24 +17,6 @@
 
     .card-raised {
       @include no-box-shadow();
-
-      .checkout-button {
-        @include round-button();
-        @include no-box-shadow();
-
-        &:hover {
-          @include button-hover();
-        }
-      }
-    }
-  }
-
-  .return-to-shop a.button {
-    @include round-button();
-    box-shadow: none !important;
-
-    &:hover {
-      @include button-hover();
     }
   }
 }
