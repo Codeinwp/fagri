@@ -400,6 +400,14 @@ input[type="submit"]:hover {
   border-radius: 30px;
 }
 
+/* Contact form */
+.btn,
+.button,
+button,
+input[type="submit"] {
+  border-radius: 30px;
+}
+
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
@@ -909,56 +917,15 @@ input[type="submit"]:hover {
   padding: 20px;
   /* Name, Subject, Email fields */
   /* Enf of input fields */
-  /* Text area */
-  /* Button */
-}
-.home .hestia-contact .card-contact .content .pirate_forms_wrap > .form-group {
-  padding: 0;
-}
-.home .hestia-contact .card-contact .content .contact_name_wrap,
-.home .hestia-contact .card-contact .content .contact_email_wrap,
-.home .hestia-contact .card-contact .content .contact_subject_wrap {
-  /* Remove bottom line from input fields */
+  /* Remove bottom loading line animation */
   /* Remove label ease-up transition */
   /* Hide label when typing */
-}
-.home .hestia-contact .card-contact .content .contact_name_wrap .form-group.is-focused .form-control,
-.home .hestia-contact .card-contact .content .contact_name_wrap .form-group .form-control,
-.home .hestia-contact .card-contact .content .contact_email_wrap .form-group.is-focused .form-control,
-.home .hestia-contact .card-contact .content .contact_email_wrap .form-group .form-control,
-.home .hestia-contact .card-contact .content .contact_subject_wrap .form-group.is-focused .form-control,
-.home .hestia-contact .card-contact .content .contact_subject_wrap .form-group .form-control {
-  background-image: none !important;
-}
-.home .hestia-contact .card-contact .content .contact_name_wrap .form-group.label-floating.is-focused label.control-label,
-.home .hestia-contact .card-contact .content .contact_email_wrap .form-group.label-floating.is-focused label.control-label,
-.home .hestia-contact .card-contact .content .contact_subject_wrap .form-group.label-floating.is-focused label.control-label {
-  top: 0;
-  right: 30px;
-  /* Move label to make place for the icon */
-  font-size: inherit;
-  transition: none;
-  margin: 11px 0 0;
-}
-.home .hestia-contact .card-contact .content .contact_name_wrap .form-group.label-floating.is-focused:not(is-empty) label.control-label,
-.home .hestia-contact .card-contact .content .contact_email_wrap .form-group.label-floating.is-focused:not(is-empty) label.control-label,
-.home .hestia-contact .card-contact .content .contact_subject_wrap .form-group.label-floating.is-focused:not(is-empty) label.control-label {
-  display: none;
+  /* Text area */
+  /* End of textarea */
 }
 .home .hestia-contact .card-contact .content .contact_name_wrap .form-group,
 .home .hestia-contact .card-contact .content .contact_email_wrap .form-group,
 .home .hestia-contact .card-contact .content .contact_subject_wrap .form-group {
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-  padding-bottom: 0;
-  border: 1px solid #E3E3E3;
-  margin-bottom: 24px;
-  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  transition-property: color, border-color, background-color;
-  transition-duration: 0.3s, 0.3s, 0.3s;
-  transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
-  transition-delay: initial;
   /* Move label to make place for the icon */
   /* Moving the cursor to right to make place for the icon */
 }
@@ -998,6 +965,34 @@ input[type="submit"]:hover {
   top: 17px;
   right: 10px;
   content: "\f006";
+}
+.home .hestia-contact .card-contact .content .form-control:not(textarea):not([type="file"]):not(select) {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  padding-top: 0;
+  padding-right: 10px;
+  padding-bottom: 0;
+  border: 1px solid #E3E3E3;
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition-property: color, border-color, background-color;
+  transition-duration: 0.3s, 0.3s, 0.3s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: initial;
+}
+.home .hestia-contact .card-contact .content .form-control:not(textarea):not(select):not([type="file"]) {
+  background-image: none !important;
+}
+.home .hestia-contact .card-contact .content .form-group.label-floating.is-focused label.control-label {
+  top: 0;
+  right: 30px;
+  /* Move label to make place for the icon */
+  font-size: inherit;
+  transition: none;
+  margin: 11px 0 0;
+}
+.home .hestia-contact .card-contact .content .form-group.label-floating.is-focused:not(is-empty) label.control-label {
+  display: none;
 }
 .home .hestia-contact .card-contact .content .contact_message_wrap {
   /* Hide label when typing */

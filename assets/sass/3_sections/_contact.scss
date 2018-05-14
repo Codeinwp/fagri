@@ -23,43 +23,11 @@
 
       padding: 20px;
 
-      .pirate_forms_wrap > .form-group {
-        padding: 0;
-      }
-
       /* Name, Subject, Email fields */
       .contact_name_wrap,
       .contact_email_wrap,
       .contact_subject_wrap {
-        /* Remove bottom line from input fields */
-        .form-group.is-focused .form-control,
-        .form-group .form-control {
-          background-image: none !important;
-        }
-        /* Remove label ease-up transition */
-        .form-group.label-floating.is-focused label.control-label {
-          top: 0;
-          left: 30px;/* Move label to make place for the icon */
-          font-size: inherit;
-          transition: none;
-          margin: 11px 0 0;
-        }
-        /* Hide label when typing */
-        .form-group.label-floating.is-focused:not(is-empty) label.control-label {
-          display: none;
-        }
-
         .form-group {
-          @include border-radius(30px);
-          padding-bottom: 0;
-          border: 1px solid #E3E3E3;
-          margin-bottom: 24px;
-          transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-          transition-property: color, border-color, background-color;
-          transition-duration: 0.3s, 0.3s, 0.3s;
-          transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
-          transition-delay: initial;
-
           /* Move label to make place for the icon */
           label.control-label {
             left: 30px;
@@ -82,14 +50,42 @@
         @include icon-in-field-contact();
         content: "\f006";
       }
+
+      .form-control:not(textarea):not([type="file"]):not(select) {
+        @include border-radius(30px);
+        padding-top: 0;
+        padding-left: 10px;
+        padding-bottom: 0;
+        border: 1px solid #E3E3E3;
+        transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        transition-property: color, border-color, background-color;
+        transition-duration: 0.3s, 0.3s, 0.3s;
+        transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+        transition-delay: initial;
+      }
+      /* Remove bottom loading line animation */
+      .form-control:not(textarea):not(select):not([type="file"]) {
+        background-image: none !important;
+      }
+      /* Remove label ease-up transition */
+      .form-group.label-floating.is-focused label.control-label {
+        top: 0;
+        left: 30px;/* Move label to make place for the icon */
+        font-size: inherit;
+        transition: none;
+        margin: 11px 0 0;
+      }
+      /* Hide label when typing */
+      .form-group.label-floating.is-focused:not(is-empty) label.control-label {
+        display: none;
+      }
       /* Text area */
       .contact_message_wrap {
         /* Hide label when typing */
         .form-group.label-floating.is-focused:not(is-empty) label.control-label {
           display: none;
         }
-      }
-      /* Button */
+      } /* End of textarea */
     }
   } /* End of content */
 }

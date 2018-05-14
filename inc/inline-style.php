@@ -78,9 +78,7 @@ function fagri_inline_style() {
 		$custom_css .= '.home .hestia-pricing .card-pricing.card-raised .content .btn { color: ' . esc_html( $color_accent ) . '; }';
 
 		/* Contact Form, fields border color */
-		$custom_css .= ' .home .hestia-contact .card-contact .content .contact_name_wrap .form-group.is-focused { border-color: ' . esc_html( $color_accent ) . '; }';
-		$custom_css .= ' .home .hestia-contact .card-contact .content .contact_email_wrap .form-group.is-focused { border-color: ' . esc_html( $color_accent ) . '; }';
-		$custom_css .= ' .home .hestia-contact .card-contact .content .contact_subject_wrap .form-group.is-focused { border-color: ' . esc_html( $color_accent ) . '; }';
+		$custom_css .= ' .home .hestia-contact .card-contact .content .form-group.is-focused .form-control:not(textarea):not(select):not([type="file"]):not([type="checkbox"]) { border-color: ' . esc_html( $color_accent ) . '; }';
 
 		/* Blog authors section function color */
 		$custom_css .= '.authors-on-blog .card-profile.card-plain .col-md-7 .content .category { color: ' . esc_html( $color_accent ) . '; }';
