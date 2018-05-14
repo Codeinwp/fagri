@@ -393,6 +393,13 @@ input[type="submit"]:hover {
   opacity: 0.9;
 }
 
+/* Pricing section */
+.hestia-pricing .btn,
+.hestia-pricing .button,
+.hestia-pricing button {
+  border-radius: 30px;
+}
+
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
