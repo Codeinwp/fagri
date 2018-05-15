@@ -401,10 +401,10 @@ input[type="submit"]:hover {
 }
 
 /* Contact form */
-.btn,
-.button,
-button,
-input[type="submit"] {
+.hestia-contact .btn,
+.hestia-contact .button,
+.hestia-contact button,
+.hestia-contact input[type="submit"] {
   border-radius: 30px;
 }
 
@@ -414,14 +414,14 @@ input[type="submit"] {
 /*--------------------------------------------------------------
 ## Big Title Section
 --------------------------------------------------------------*/
-.home .carousel .hestia-title {
+.carousel .hestia-title {
   font-size: 49px;
   font-weight: 700;
   line-height: 56px;
   padding-top: 30px;
   margin-bottom: 15px;
 }
-.home .carousel .sub-title {
+.carousel .sub-title {
   font-size: 21px;
   font-weight: 400;
   line-height: 30px;
@@ -433,21 +433,21 @@ input[type="submit"] {
 /*--------------------------------------------------------------
 ## Features section
 --------------------------------------------------------------*/
-.home .hestia-features .hestia-title {
+.hestia-features .hestia-title {
   color: #2c2c2c;
   font-weight: 700;
   line-height: 42px;
   padding-top: 30px;
   margin-bottom: 30px;
 }
-.home .hestia-features .description {
+.hestia-features .description {
   color: #9A9A9A;
   font-weight: 300;
   line-height: 30px;
   margin-top: 30px;
   margin-bottom: 15px;
 }
-.home .hestia-features .feature-box .hestia-info > a .icon {
+.hestia-features .feature-box .hestia-info > a .icon {
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 50px;
@@ -461,19 +461,19 @@ input[type="submit"] {
   padding: 25px 0;
   margin: 0 auto;
 }
-.home .hestia-features .feature-box .hestia-info > a .icon i {
+.hestia-features .feature-box .hestia-info > a .icon i {
   font-size: 30px;
 }
-.home .hestia-features .feature-box .hestia-info > a .info-title {
+.hestia-features .feature-box .hestia-info > a .info-title {
   font-weight: 400;
   line-height: 30px;
   padding: 0 15px;
   margin: 25px 0 15px;
 }
-.home .hestia-features .feature-box .hestia-info > a:hover {
+.hestia-features .feature-box .hestia-info > a:hover {
   opacity: initial;
 }
-.home .hestia-features .feature-box .hestia-info > a:hover .icon {
+.hestia-features .feature-box .hestia-info > a:hover .icon {
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 50px;
@@ -485,10 +485,10 @@ input[type="submit"] {
   transition-delay: initial;
   opacity: initial;
 }
-.home .hestia-features .feature-box .hestia-info > a:hover .info-title {
+.hestia-features .feature-box .hestia-info > a:hover .info-title {
   opacity: initial;
 }
-.home .hestia-features .feature-box .hestia-info .description {
+.hestia-features .feature-box .hestia-info .description {
   color: #888888;
   font-size: 15px;
   font-weight: 300;
@@ -499,14 +499,14 @@ input[type="submit"] {
 /*--------------------------------------------------------------
 ## Team section
 --------------------------------------------------------------*/
-.home .fagri-team-wrapper {
+.fagri-team-wrapper {
   /* Add a dark overlay for the background image */
   background-position: top center;
   background-size: cover;
   position: relative;
   /* Place background image toolpick on the right side of the section */
 }
-.home .fagri-team-wrapper::before {
+.fagri-team-wrapper::before {
   background-color: rgba(0, 0, 0, 0.5);
   display: block;
   position: absolute;
@@ -516,11 +516,11 @@ input[type="submit"] {
   height: 100%;
   content: "";
 }
-.home .fagri-team-wrapper .fagri-team-background-switcher > .customize-partial-edit-shortcut {
+.fagri-team-wrapper .fagri-team-background-switcher > .customize-partial-edit-shortcut {
   top: 0;
   left: 15px;
 }
-.home .fagri-team-wrapper .hestia-team .hestia-title {
+.fagri-team-wrapper .hestia-team .hestia-title {
   color: #2c2c2c;
   font-weight: 700;
   line-height: 42px;
@@ -528,7 +528,7 @@ input[type="submit"] {
   margin-bottom: 30px;
   color: #ffffff;
 }
-.home .fagri-team-wrapper .hestia-team .description {
+.fagri-team-wrapper .hestia-team .description {
   color: #9A9A9A;
   font-weight: 300;
   line-height: 30px;
@@ -536,14 +536,14 @@ input[type="submit"] {
   margin-bottom: 15px;
   color: rgba(255, 255, 255, 0.8);
 }
-.home .fagri-team-wrapper .hestia-team .card-profile.card-plain {
+.fagri-team-wrapper .hestia-team .card-profile.card-plain {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
   background-color: #ffffff;
   box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
 }
-.home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 .card-image {
+.fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 .card-image {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -551,28 +551,28 @@ input[type="submit"] {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 .card-image img {
+.fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 .card-image img {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
   filter: grayscale(100%);
 }
-.home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 .content {
+.fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 .content {
   text-align: center;
   padding: 20px;
 }
-.home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 .content .card-title {
+.fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 .content .card-title {
   font-weight: 400;
   line-height: 31px;
   margin-top: 15px;
   margin-bottom: 12px;
 }
-.home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 .content .category {
+.fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 .content .category {
   font-weight: 700;
   line-height: 15px;
   margin-bottom: 8px;
 }
-.home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 .content .card-descrption {
+.fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 .content .card-descrption {
   color: #9A9A9A;
   font-size: 17px;
   font-weight: 300;
@@ -582,62 +582,62 @@ input[type="submit"] {
 }
 
 @media (max-width: 991px) {
-  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5,
-  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 {
+  .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5,
+  .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 {
     padding-right: 0;
     padding-left: 0;
   }
-  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 .card-image {
+  .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 .card-image {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     width: 100%;
     height: auto;
   }
-  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 .card-image img {
+  .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 .card-image img {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
 }
 @media (min-width: 992px) {
-  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain {
+  .fagri-team-wrapper .hestia-team .card-profile.card-plain {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 {
+  .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 {
     padding-right: 0;
     align-self: stretch;
     /* Case with link set */
   }
-  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 .card-image {
+  .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 .card-image {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     height: 100%;
   }
-  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 .card-image img {
+  .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 .card-image img {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     object-fit: cover;
   }
-  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 .card-image > a {
+  .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-5 .card-image > a {
     height: 100%;
   }
-  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 {
+  .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 {
     padding-left: 0;
     align-self: stretch;
     /* Case with link set */
   }
-  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 .content {
+  .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 .content {
     height: 100%;
   }
-  .home .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 .content > a {
+  .fagri-team-wrapper .hestia-team .card-profile.card-plain .col-md-7 .content > a {
     height: 100%;
   }
 }
 /*--------------------------------------------------------------
 ## Testimonials section
 --------------------------------------------------------------*/
-.home .fagri-testimonials-wrapper {
+.fagri-testimonials-wrapper {
   /* Add a dark overlay for the background image */
   background-position: top center;
   background-size: cover;
@@ -645,7 +645,7 @@ input[type="submit"] {
   position: relative;
   /* Place background image toolpick on the right side of the section */
 }
-.home .fagri-testimonials-wrapper::before {
+.fagri-testimonials-wrapper::before {
   background-color: rgba(0, 0, 0, 0.5);
   display: block;
   position: absolute;
@@ -655,11 +655,11 @@ input[type="submit"] {
   height: 100%;
   content: "";
 }
-.home .fagri-testimonials-wrapper .fagri-testimonials-background-switcher > .customize-partial-edit-shortcut {
+.fagri-testimonials-wrapper .fagri-testimonials-background-switcher > .customize-partial-edit-shortcut {
   top: 0;
   left: 15px;
 }
-.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-title {
+.fagri-testimonials-wrapper .hestia-testimonials .hestia-title {
   color: #2c2c2c;
   font-weight: 700;
   line-height: 42px;
@@ -667,7 +667,7 @@ input[type="submit"] {
   margin-bottom: 30px;
   color: #ffffff;
 }
-.home .fagri-testimonials-wrapper .hestia-testimonials .description {
+.fagri-testimonials-wrapper .hestia-testimonials .description {
   color: #9A9A9A;
   font-weight: 300;
   line-height: 30px;
@@ -675,39 +675,39 @@ input[type="submit"] {
   margin-bottom: 15px;
   color: rgba(255, 255, 255, 0.8);
 }
-.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial {
+.fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
   background-color: #ffffff;
   margin-top: 60px;
 }
-.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .card-avatar {
+.fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .card-avatar {
   /* Images without link */
   /* Images with link */
 }
-.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .card-avatar img {
+.fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .card-avatar img {
   filter: grayscale(100%);
   margin: -80px auto 0;
   box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
 }
-.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .card-avatar a:hover {
+.fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .card-avatar a:hover {
   opacity: initial;
 }
-.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content {
+.fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content {
   padding: 0 20px 40px;
 }
-.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content .card-title {
+.fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content .card-title {
   font-weight: 400;
   line-height: 26px;
 }
-.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content .category {
+.fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content .category {
   color: #9A9A9A;
   font-weight: 700;
   line-height: 24px;
   text-transform: capitalize;
 }
-.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content .card-description::before {
+.fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content .card-description::before {
   position: absolute;
   content: "\f10e";
   font-family: "FontAwesome";
@@ -720,7 +720,7 @@ input[type="submit"] {
   -o-transform: translateX(50%);
   transform: translateX(50%);
 }
-.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content .card-description {
+.fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content .card-description {
   position: relative;
   color: #9A9A9A;
   font-weight: 300;
@@ -731,7 +731,7 @@ input[type="submit"] {
 /*--------------------------------------------------------------
 ## Ribbon section
 --------------------------------------------------------------*/
-.home .hestia-ribbon .hestia-title {
+.hestia-ribbon .hestia-title {
   color: #2c2c2c;
   font-weight: 700;
   line-height: 42px;
@@ -744,21 +744,21 @@ input[type="submit"] {
 /*--------------------------------------------------------------
 ## Portfolio section
 --------------------------------------------------------------*/
-.home .hestia-work .hestia-title {
+.hestia-work .hestia-title {
   color: #2c2c2c;
   font-weight: 700;
   line-height: 42px;
   padding-top: 30px;
   margin-bottom: 30px;
 }
-.home .hestia-work .description {
+.hestia-work .description {
   color: #9A9A9A;
   font-weight: 300;
   line-height: 30px;
   margin-top: 30px;
   margin-bottom: 15px;
 }
-.home .hestia-work .hestia-portfolio-content .portfolio-item .card-title {
+.hestia-work .hestia-portfolio-content .portfolio-item .card-title {
   font-weight: 400;
   line-height: 31px;
 }
@@ -766,7 +766,7 @@ input[type="submit"] {
 /*--------------------------------------------------------------
 ## Subscribe section
 --------------------------------------------------------------*/
-.home .hestia-subscribe .title {
+.hestia-subscribe .title {
   color: #2c2c2c;
   font-weight: 700;
   line-height: 42px;
@@ -774,7 +774,7 @@ input[type="submit"] {
   margin-bottom: 30px;
   color: #ffffff;
 }
-.home .hestia-subscribe .subscribe-description {
+.hestia-subscribe .subscribe-description {
   color: #9A9A9A;
   font-weight: 300;
   line-height: 30px;
@@ -782,39 +782,34 @@ input[type="submit"] {
   margin-bottom: 15px;
   color: rgba(255, 255, 255, 0.8);
 }
-.home .hestia-subscribe .input-group:focus {
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-}
 
 /*--------------------------------------------------------------
 ## Pricing section
 --------------------------------------------------------------*/
-.home .hestia-pricing {
+.hestia-pricing {
   background-color: #ffffff;
 }
-.home .hestia-pricing .hestia-title {
+.hestia-pricing .hestia-title {
   color: #2c2c2c;
   font-weight: 700;
   line-height: 42px;
   padding-top: 30px;
   margin-bottom: 30px;
 }
-.home .hestia-pricing div:first-of-type > p {
+.hestia-pricing div:first-of-type > p {
   color: #9A9A9A;
   font-weight: 300;
   line-height: 30px;
   margin-top: 30px;
   margin-bottom: 15px;
 }
-.home .hestia-pricing .card-pricing .content {
+.hestia-pricing .card-pricing .content {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
   padding: 20px 5px !important;
 }
-.home .hestia-pricing .card-pricing .content .category {
+.hestia-pricing .card-pricing .content .category {
   font-size: 13px;
   font-weight: 700;
   line-height: 15px;
@@ -822,20 +817,20 @@ input[type="submit"] {
   padding-bottom: 8px;
   margin: 0 auto;
 }
-.home .hestia-pricing .card-pricing .content .hestia-pricing-icon-wrapper {
+.hestia-pricing .card-pricing .content .hestia-pricing-icon-wrapper {
   border: none;
 }
-.home .hestia-pricing .card-pricing .content .card-title {
+.hestia-pricing .card-pricing .content .card-title {
   font-size: 49px;
   font-weight: 400;
   line-height: 62px;
 }
-.home .hestia-pricing .card-pricing .content .card-title small {
+.hestia-pricing .card-pricing .content .card-title small {
   color: inherit;
   font-size: 26px;
   font-weight: 700;
 }
-.home .hestia-pricing .card-pricing .content .pricing-has-icon + .card-title {
+.hestia-pricing .card-pricing .content .pricing-has-icon + .card-title {
   color: #2c2c2c;
   font-size: 26px;
   font-weight: 400;
@@ -843,61 +838,61 @@ input[type="submit"] {
   margin-top: 30px;
   margin-bottom: 12px;
 }
-.home .hestia-pricing .card-pricing .content .pricing-has-icon + .card-title small {
+.hestia-pricing .card-pricing .content .pricing-has-icon + .card-title small {
   font-size: 60%;
   font-weight: 400;
 }
-.home .hestia-pricing .card-pricing .content ul li {
+.hestia-pricing .card-pricing .content ul li {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
 }
-.home .hestia-pricing .card-pricing .content .btn {
+.hestia-pricing .card-pricing .content .btn {
   margin: 10px 1px;
 }
-.home .hestia-pricing .card-pricing.card-raised {
+.hestia-pricing .card-pricing.card-raised {
   box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
 }
-.home .hestia-pricing .card-pricing.card-raised .content,
-.home .hestia-pricing .card-pricing.card-raised .content small,
-.home .hestia-pricing .card-pricing.card-raised .content b,
-.home .hestia-pricing .card-pricing.card-raised .content stong,
-.home .hestia-pricing .card-pricing.card-raised .content span,
-.home .hestia-pricing .card-pricing.card-raised .content p,
-.home .hestia-pricing .card-pricing.card-raised .content a,
-.home .hestia-pricing .card-pricing.card-raised .content .category,
-.home .hestia-pricing .card-pricing.card-raised .content ul li {
+.hestia-pricing .card-pricing.card-raised .content,
+.hestia-pricing .card-pricing.card-raised .content small,
+.hestia-pricing .card-pricing.card-raised .content b,
+.hestia-pricing .card-pricing.card-raised .content stong,
+.hestia-pricing .card-pricing.card-raised .content span,
+.hestia-pricing .card-pricing.card-raised .content p,
+.hestia-pricing .card-pricing.card-raised .content a,
+.hestia-pricing .card-pricing.card-raised .content .category,
+.hestia-pricing .card-pricing.card-raised .content ul li {
   color: #ffffff;
 }
-.home .hestia-pricing .card-pricing.card-raised .content {
+.hestia-pricing .card-pricing.card-raised .content {
   /* Reject secondary color on card title when icon is set */
 }
-.home .hestia-pricing .card-pricing.card-raised .content .pricing-has-icon + .card-title {
+.hestia-pricing .card-pricing.card-raised .content .pricing-has-icon + .card-title {
   color: #ffffff;
 }
-.home .hestia-pricing .card-pricing.card-raised .content .hestia-pricing-icon-wrapper {
+.hestia-pricing .card-pricing.card-raised .content .hestia-pricing-icon-wrapper {
   background-color: #ffffff;
   box-shadow: 0px 9px 30px -6px #ffffff !important;
 }
-.home .hestia-pricing .card-pricing.card-raised .content .card-title small {
+.hestia-pricing .card-pricing.card-raised .content .card-title small {
   color: inherit;
 }
-.home .hestia-pricing .card-pricing.card-raised .content .btn {
+.hestia-pricing .card-pricing.card-raised .content .btn {
   background-color: #ffffff !important;
 }
 
 /*--------------------------------------------------------------
 ## Contact section
 --------------------------------------------------------------*/
-.home .hestia-contact {
+.hestia-contact {
   /* End of content */
 }
-.home .hestia-contact .card-contact {
+.hestia-contact .card-contact {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
-.home .hestia-contact .card-contact .header {
+.hestia-contact .card-contact .header {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -905,7 +900,7 @@ input[type="submit"] {
   padding: 0;
   margin: 0;
 }
-.home .hestia-contact .card-contact .header .card-title {
+.hestia-contact .card-contact .header .card-title {
   color: #2c2c2c;
   font-size: 21px;
   font-weight: 400;
@@ -913,7 +908,7 @@ input[type="submit"] {
   margin-top: 15px;
   margin-bottom: 12px;
 }
-.home .hestia-contact .card-contact .content {
+.hestia-contact .card-contact .content {
   padding: 20px;
   /* Name, Subject, Email fields */
   /* Enf of input fields */
@@ -923,23 +918,23 @@ input[type="submit"] {
   /* Text area */
   /* End of textarea */
 }
-.home .hestia-contact .card-contact .content .contact_name_wrap .form-group,
-.home .hestia-contact .card-contact .content .contact_email_wrap .form-group,
-.home .hestia-contact .card-contact .content .contact_subject_wrap .form-group {
+.hestia-contact .card-contact .content .contact_name_wrap .form-group,
+.hestia-contact .card-contact .content .contact_email_wrap .form-group,
+.hestia-contact .card-contact .content .contact_subject_wrap .form-group {
   /* Move label to make place for the icon */
   /* Moving the cursor to right to make place for the icon */
 }
-.home .hestia-contact .card-contact .content .contact_name_wrap .form-group label.control-label,
-.home .hestia-contact .card-contact .content .contact_email_wrap .form-group label.control-label,
-.home .hestia-contact .card-contact .content .contact_subject_wrap .form-group label.control-label {
+.hestia-contact .card-contact .content .contact_name_wrap .form-group label.control-label,
+.hestia-contact .card-contact .content .contact_email_wrap .form-group label.control-label,
+.hestia-contact .card-contact .content .contact_subject_wrap .form-group label.control-label {
   right: 30px;
 }
-.home .hestia-contact .card-contact .content .contact_name_wrap .form-group .form-control,
-.home .hestia-contact .card-contact .content .contact_email_wrap .form-group .form-control,
-.home .hestia-contact .card-contact .content .contact_subject_wrap .form-group .form-control {
+.hestia-contact .card-contact .content .contact_name_wrap .form-group .form-control,
+.hestia-contact .card-contact .content .contact_email_wrap .form-group .form-control,
+.hestia-contact .card-contact .content .contact_subject_wrap .form-group .form-control {
   padding-right: 30px;
 }
-.home .hestia-contact .card-contact .content .contact_name_wrap .form-group::before {
+.hestia-contact .card-contact .content .contact_name_wrap .form-group::before {
   color: #555555;
   font-family: "FontAwesome";
   font-size: 16px;
@@ -948,7 +943,7 @@ input[type="submit"] {
   right: 10px;
   content: "\f007";
 }
-.home .hestia-contact .card-contact .content .contact_email_wrap .form-group::before {
+.hestia-contact .card-contact .content .contact_email_wrap .form-group::before {
   color: #555555;
   font-family: "FontAwesome";
   font-size: 16px;
@@ -957,7 +952,7 @@ input[type="submit"] {
   right: 10px;
   content: "\f003";
 }
-.home .hestia-contact .card-contact .content .contact_subject_wrap .form-group::before {
+.hestia-contact .card-contact .content .contact_subject_wrap .form-group::before {
   color: #555555;
   font-family: "FontAwesome";
   font-size: 16px;
@@ -966,7 +961,7 @@ input[type="submit"] {
   right: 10px;
   content: "\f006";
 }
-.home .hestia-contact .card-contact .content .form-control:not(textarea):not([type="file"]):not(select) {
+.hestia-contact .card-contact .content .form-control:not(textarea):not([type="file"]):not(select) {
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
@@ -980,10 +975,10 @@ input[type="submit"] {
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
   transition-delay: initial;
 }
-.home .hestia-contact .card-contact .content .form-control:not(textarea):not(select):not([type="file"]) {
+.hestia-contact .card-contact .content .form-control:not(textarea):not(select):not([type="file"]) {
   background-image: none !important;
 }
-.home .hestia-contact .card-contact .content .form-group.label-floating.is-focused label.control-label {
+.hestia-contact .card-contact .content .form-group.label-floating.is-focused label.control-label {
   top: 0;
   right: 30px;
   /* Move label to make place for the icon */
@@ -991,78 +986,78 @@ input[type="submit"] {
   transition: none;
   margin: 11px 0 0;
 }
-.home .hestia-contact .card-contact .content .form-group.label-floating.is-focused:not(is-empty) label.control-label {
+.hestia-contact .card-contact .content .form-group.label-floating.is-focused:not(is-empty) label.control-label {
   display: none;
 }
-.home .hestia-contact .card-contact .content .contact_message_wrap {
+.hestia-contact .card-contact .content .contact_message_wrap {
   /* Hide label when typing */
 }
-.home .hestia-contact .card-contact .content .contact_message_wrap .form-group.label-floating.is-focused:not(is-empty) label.control-label {
+.hestia-contact .card-contact .content .contact_message_wrap .form-group.label-floating.is-focused:not(is-empty) label.control-label {
   display: none;
 }
 
 /*--------------------------------------------------------------
 ## Blog section
 --------------------------------------------------------------*/
-.home:not(.blog) .hestia-blogs {
+.hestia-blogs {
   background-color: #ffffff;
 }
-.home:not(.blog) .hestia-blogs .hestia-title {
+.hestia-blogs .hestia-title {
   color: #2c2c2c;
   font-weight: 700;
   line-height: 42px;
   padding-top: 30px;
   margin-bottom: 30px;
 }
-.home:not(.blog) .hestia-blogs .description {
+.hestia-blogs .description {
   color: #9A9A9A;
   font-weight: 300;
   line-height: 30px;
   margin-top: 30px;
   margin-bottom: 15px;
 }
-.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain {
+.hestia-blogs .hestia-blog-content .card-blog.card-plain {
   box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
 }
-.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .card-image {
+.hestia-blogs .hestia-blog-content .card-blog.card-plain .card-image {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .card-image img {
+.hestia-blogs .hestia-blog-content .card-blog.card-plain .card-image img {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
 }
-.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .card-image + .content {
+.hestia-blogs .hestia-blog-content .card-blog.card-plain .card-image + .content {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
-.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .content {
+.hestia-blogs .hestia-blog-content .card-blog.card-plain .content {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
   background-color: #ffffff;
   padding: 20px;
 }
-.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .content .category {
+.hestia-blogs .hestia-blog-content .card-blog.card-plain .content .category {
   font-weight: 700;
   line-height: 15px;
   text-transform: capitalize;
   margin: 0 0 8px;
 }
-.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .content .card-title {
+.hestia-blogs .hestia-blog-content .card-blog.card-plain .content .card-title {
   font-weight: 400;
   line-height: 22px;
   margin-top: 15px;
   margin-bottom: 12px;
 }
-.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .content .card-title a {
+.hestia-blogs .hestia-blog-content .card-blog.card-plain .content .card-title a {
   color: inherit;
 }
-.home:not(.blog) .hestia-blogs .hestia-blog-content .card-blog.card-plain .content .card-description {
+.hestia-blogs .hestia-blog-content .card-blog.card-plain .content .card-description {
   color: #9A9A9A;
   font-weight: 300;
   line-height: 27px;
@@ -1072,35 +1067,35 @@ input[type="submit"] {
 /*--------------------------------------------------------------
 ## Shop section
 --------------------------------------------------------------*/
-.home .hestia-shop {
+.hestia-shop.products {
   background-color: #ffffff;
 }
-.home .hestia-shop .hestia-title {
+.hestia-shop.products .hestia-title {
   color: #2c2c2c;
   font-weight: 700;
   line-height: 42px;
   padding-top: 30px;
   margin-bottom: 30px;
 }
-.home .hestia-shop .description {
+.hestia-shop.products .description {
   color: #9A9A9A;
   font-weight: 300;
   line-height: 30px;
   margin-top: 30px;
   margin-bottom: 15px;
 }
-.home .hestia-shop .shop-item .card-image {
+.hestia-shop.products .shop-item .card-image {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.home .hestia-shop .shop-item:hover .card-image {
+.hestia-shop.products .shop-item:hover .card-image {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
   transform: unset;
 }
-.home .hestia-shop .shop-item .card-product .card-title a {
+.hestia-shop.products .shop-item .card-product .card-title a {
   border-bottom: 2px solid transparent;
   transition: all 150ms ease 0s;
 }
@@ -1284,25 +1279,13 @@ input[type="submit"] {
 }
 .authors-on-blog .card-profile.card-plain .col-md-7 .content .card-title {
   color: #2c2c2c;
-  font-size: 25px;
   font-weight: 400;
-  line-height: 31px;
-  margin-top: 15px;
-  margin-bottom: 12px;
 }
 .authors-on-blog .card-profile.card-plain .col-md-7 .content .category {
-  font-size: 12px;
   font-weight: 700;
-  line-height: 15px;
-  margin-bottom: 8px;
 }
-.authors-on-blog .card-profile.card-plain .col-md-7 .content .card-descrption {
-  color: #9A9A9A;
-  font-size: 17px;
+.authors-on-blog .card-profile.card-plain .col-md-7 .content .card-description {
   font-weight: 300;
-  line-height: 27px;
-  padding: 0;
-  margin: 0;
 }
 
 @media (max-width: 991px) {

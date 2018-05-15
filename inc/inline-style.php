@@ -63,34 +63,34 @@ function fagri_inline_style() {
 	if ( ! empty( $color_accent ) ) {
 
 		/* Team section, team member function */
-		$custom_css .= '.home .fagri-team-wrapper .hestia-team .card-profile .col-md-7 .content .category { color: ' . esc_html( $color_accent ) . ' }';
+		$custom_css .= '.fagri-team-wrapper .hestia-team .card-profile .col-md-7 .content .category { color: ' . esc_html( $color_accent ) . ' }';
 
 		/* Testimonials quotes */
-		$custom_css .= '.home .fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content .card-description::before { color: ' . esc_html( $color_accent ) . '; }';
+		$custom_css .= '.fagri-testimonials-wrapper .hestia-testimonials .hestia-testimonials-content .card-testimonial .content .card-description::before { color: ' . esc_html( $color_accent ) . '; }';
 
 		/* Pricing icon wrapper box-shadow */
-		$custom_css .= '.home .hestia-pricing .card-pricing .content .hestia-pricing-icon-wrapper { 
+		$custom_css .= '.hestia-pricing .card-pricing .content .hestia-pricing-icon-wrapper { 
 		    box-shadow: 0px 9px 30px -6px ' . esc_html( $color_accent ) . ';
 		 }';
 		/* Pricing colored card */
-		$custom_css .= '.home .hestia-pricing .card-pricing.card-raised { background-color: ' . esc_html( $color_accent ) . '; }';
+		$custom_css .= '.hestia-pricing .card-pricing.card-raised { background-color: ' . esc_html( $color_accent ) . '; }';
 		/* Pricing colored card white button text */
-		$custom_css .= '.home .hestia-pricing .card-pricing.card-raised .content .btn { color: ' . esc_html( $color_accent ) . '; }';
+		$custom_css .= '.hestia-pricing .card-pricing.card-raised .content .btn { color: ' . esc_html( $color_accent ) . '; }';
 
 		/* Contact Form, fields border color */
-		$custom_css .= ' .home .hestia-contact .card-contact .content .form-group.is-focused .form-control:not(textarea):not(select):not([type="file"]):not([type="checkbox"]) { border-color: ' . esc_html( $color_accent ) . '; }';
+		$custom_css .= '.hestia-contact .card-contact .content .form-group.is-focused .form-control:not(textarea):not(select):not([type="file"]):not([type="checkbox"]) { border-color: ' . esc_html( $color_accent ) . '; }';
 
 		/* Blog authors section function color */
 		$custom_css .= '.authors-on-blog .card-profile.card-plain .col-md-7 .content .category { color: ' . esc_html( $color_accent ) . '; }';
 
 		/* Home Blog section, post category color */
-		$custom_css .= '.home .hestia-blogs .card-blog .content .category { color: ' . esc_html( $color_accent ) . '; }';
-		$custom_css .= '.home .hestia-blogs article:nth-child(6n+1) .category a { color: ' . esc_html( $color_accent ) . '; }';
-		$custom_css .= '.home .hestia-blogs article:nth-child(6n+2) .category a { color: ' . esc_html( $color_accent ) . '; }';
-		$custom_css .= '.home .hestia-blogs article:nth-child(6n+3) .category a { color: ' . esc_html( $color_accent ) . '; }';
-		$custom_css .= '.home .hestia-blogs article:nth-child(6n+4) .category a { color: ' . esc_html( $color_accent ) . '; }';
-		$custom_css .= '.home .hestia-blogs article:nth-child(6n+5) .category a { color: ' . esc_html( $color_accent ) . '; }';
-		$custom_css .= '.home .hestia-blogs article:nth-child(6n+6) .category a { color: ' . esc_html( $color_accent ) . '; }';
+		$custom_css .= '.hestia-blogs .card-blog .content .category { color: ' . esc_html( $color_accent ) . '; }';
+		$custom_css .= '.hestia-blogs article:nth-child(6n+1) .category a { color: ' . esc_html( $color_accent ) . '; }';
+		$custom_css .= '.hestia-blogs article:nth-child(6n+2) .category a { color: ' . esc_html( $color_accent ) . '; }';
+		$custom_css .= '.hestia-blogs article:nth-child(6n+3) .category a { color: ' . esc_html( $color_accent ) . '; }';
+		$custom_css .= '.hestia-blogs article:nth-child(6n+4) .category a { color: ' . esc_html( $color_accent ) . '; }';
+		$custom_css .= '.hestia-blogs article:nth-child(6n+5) .category a { color: ' . esc_html( $color_accent ) . '; }';
+		$custom_css .= '.hestia-blogs article:nth-child(6n+6) .category a { color: ' . esc_html( $color_accent ) . '; }';
 
 		/* Blog page, regular post's categories colors */
 		$custom_css .= '.blog .blog-posts-wrap .card-blog:nth-of-type(2n+1) .category a { color: ' . esc_html( $color_accent ) . '; }';
@@ -165,7 +165,7 @@ function fagri_inline_style() {
 			border-color: ' . esc_html( $secondary_color ) . ';
 		}';
 		/* card product on front page - title border color */
-		$custom_css .= '.home .hestia-shop .shop-item:hover .card-product .card-title a {
+		$custom_css .= '.hestia-shop .shop-item:hover .card-product .card-title a {
 			border-color: ' . esc_html( $secondary_color ) . ';
 		}';
 
@@ -176,7 +176,7 @@ function fagri_inline_style() {
 	} else {
 		$custom_css .= '
 			.product:hover > .card.card-product .content .card-title a,
-			.home .hestia-shop .shop-item:hover .card-product .card-title a,
+			.hestia-shop .shop-item:hover .card-product .card-title a,
 			.blog .card-blog .card-title a:hover {
 				border-color: #2c2c2c;
 			}';

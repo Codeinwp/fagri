@@ -1,4 +1,4 @@
-.home .hestia-subscribe {
+.hestia-subscribe {
 
   .title {
     @include front-page-section-title();
@@ -7,9 +7,5 @@
   .subscribe-description {
     @include front-page-section-subtitle();
     color: rgba(255, 255, 255, 0.8);
-  }
-
-  .input-group:focus {
-    @include border-radius(30px);
   }
 }

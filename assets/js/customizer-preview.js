@@ -13,9 +13,9 @@
             value.bind(
                 function ( newval ) {
                     if ( newval.length > 0 ) {
-                        $( '.home .fagri-team-wrapper' ).css( { 'background-image' : 'url(' + newval + ')' } );
+                        $( '.fagri-team-wrapper' ).css( { 'background-image' : 'url(' + newval + ')' } );
                     } else {
-                        $( '.home .fagri-team-wrapper' ).css( 'background-image', 'none' ).css( 'background-color', '#000000' );
+                        $( '.fagri-team-wrapper' ).css( 'background-image', 'none' ).css( 'background-color', '#000000' );
                     }
                 }
             );
@@ -27,10 +27,10 @@
             value.bind(
                 function ( newval ) {
                     /* card plain */
-                    $( '.home .hestia-pricing .card-pricing .content .hestia-pricing-icon-wrapper' ).css( { 'box-shadow' : '0px 9px 30px -6px ' + newval } );
+                    $( '.hestia-pricing .card-pricing .content .hestia-pricing-icon-wrapper' ).css( { 'box-shadow' : '0px 9px 30px -6px ' + newval } );
                     /* card raised */
-                    $( '.home .hestia-pricing .card-pricing.card-raised' ).css( 'background-color', newval );
-                    $( '.home .hestia-pricing .card-pricing.card-raised .content .btn' ).css( 'color', newval );
+                    $( '.hestia-pricing .card-pricing.card-raised' ).css( 'background-color', newval );
+                    $( '.hestia-pricing .card-pricing.card-raised .content .btn' ).css( 'color', newval );
                 }
             );
         }
@@ -54,8 +54,8 @@
 
                                     var boxNumber = i + 1;
 
-                                    var boxShadowSelector = '.home .hestia-features .hestia-features-content .feature-box:nth-of-type(' + boxNumber + ') .hestia-info > a .icon';
-                                    var titleHoverSelector = '.home .hestia-features .hestia-features-content .feature-box:nth-of-type(' + boxNumber + ') .hestia-info > a:hover .info-title';
+                                    var boxShadowSelector = '.hestia-features .hestia-features-content .feature-box:nth-of-type(' + boxNumber + ') .hestia-info > a .icon';
+                                    var titleHoverSelector = '.hestia-features .hestia-features-content .feature-box:nth-of-type(' + boxNumber + ') .hestia-info > a:hover .info-title';
 
                                     if ( featureBoxes[ i ].color ) {
                                         $( boxShadowSelector ).css( { 'box-shadow' : '0 9px 30px -6px ' + featureBoxes[ i ].color } );
@@ -84,9 +84,9 @@
             value.bind(
                 function ( newval ) {
                     if ( newval.length > 0 ) {
-                        $( '.home .fagri-testimonials-wrapper' ).css( { 'background-image' : 'url(' + newval + ')' } );
+                        $( '.fagri-testimonials-wrapper' ).css( { 'background-image' : 'url(' + newval + ')' } );
                     } else {
-                        $( '.home .fagri-testimonials-wrapper' ).css( 'background-image', 'none' ).css( 'background-color', '#000000' );
+                        $( '.fagri-testimonials-wrapper' ).css( 'background-image', 'none' ).css( 'background-color', '#000000' );
                     }
                 }
             );

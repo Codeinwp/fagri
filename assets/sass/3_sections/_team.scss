@@ -1,4 +1,4 @@
-.home .fagri-team-wrapper {
+.fagri-team-wrapper {
 
   /* Add a dark overlay for the background image */
   &::before {
@@ -76,7 +76,7 @@
   }
 }
 @media ( max-width: 991px ) {
-  .home .fagri-team-wrapper {
+  .fagri-team-wrapper {
     .hestia-team {
       .card-profile.card-plain {
         .col-md-5,
@@ -102,7 +102,7 @@
 }
 @media ( min-width: 992px ) {
 
-  .home .fagri-team-wrapper {
+  .fagri-team-wrapper {
     .hestia-team {
       .card-profile.card-plain {
 
