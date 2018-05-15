@@ -23,7 +23,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* Dark overlay for sections with background image option */
 /* WooCommerce pages */
 /* related, cross-sells, upsells title */
-/* WooCommerce Notification */
 /* Icon on before of the input field wrapper */
 /*--------------------------------------------------------------
 # Typography
@@ -1986,26 +1985,93 @@ input[type="submit"]:hover {
 /*--------------------------------------------------------------
 ## Notifications
 --------------------------------------------------------------*/
-/* General */
-.woocommerce-message::before,
-.woocommerce-error::before {
+/* Notification style */
+.woocommerce-page .woocommerce-message,
+.woocommerce-page .woocommerce-success,
+.woocommerce-page .woocommerce-error,
+.woocommerce-page .woocommerce-info,
+.woocommerce-page .woocommerce-warning {
+  -moz-osx-font-smoothing: initial;
+  -webkit-font-smoothing: initial;
+  color: #ffffff;
+  border-radius: 4px;
+  /* Buttons within the notifications */
+}
+.woocommerce-page .woocommerce-message button,
+.woocommerce-page .woocommerce-message .btn,
+.woocommerce-page .woocommerce-message .button,
+.woocommerce-page .woocommerce-success button,
+.woocommerce-page .woocommerce-success .btn,
+.woocommerce-page .woocommerce-success .button,
+.woocommerce-page .woocommerce-error button,
+.woocommerce-page .woocommerce-error .btn,
+.woocommerce-page .woocommerce-error .button,
+.woocommerce-page .woocommerce-info button,
+.woocommerce-page .woocommerce-info .btn,
+.woocommerce-page .woocommerce-info .button,
+.woocommerce-page .woocommerce-warning button,
+.woocommerce-page .woocommerce-warning .btn,
+.woocommerce-page .woocommerce-warning .button {
+  color: #ffffff;
+  background-color: transparent;
+}
+.woocommerce-page .woocommerce-message button:hover,
+.woocommerce-page .woocommerce-message .btn:hover,
+.woocommerce-page .woocommerce-message .button:hover,
+.woocommerce-page .woocommerce-success button:hover,
+.woocommerce-page .woocommerce-success .btn:hover,
+.woocommerce-page .woocommerce-success .button:hover,
+.woocommerce-page .woocommerce-error button:hover,
+.woocommerce-page .woocommerce-error .btn:hover,
+.woocommerce-page .woocommerce-error .button:hover,
+.woocommerce-page .woocommerce-info button:hover,
+.woocommerce-page .woocommerce-info .btn:hover,
+.woocommerce-page .woocommerce-info .button:hover,
+.woocommerce-page .woocommerce-warning button:hover,
+.woocommerce-page .woocommerce-warning .btn:hover,
+.woocommerce-page .woocommerce-warning .button:hover {
+  color: #ffffff;
+  background-color: transparent;
+  box-shadow: none !important;
+}
+.woocommerce-page .woocommerce-message a,
+.woocommerce-page .woocommerce-success a,
+.woocommerce-page .woocommerce-error a,
+.woocommerce-page .woocommerce-info a,
+.woocommerce-page .woocommerce-warning a {
   color: #ffffff !important;
 }
 
-/* Product Page */
-.woocommerce.single-product .woocommerce-error {
-  background-color: rgba(255, 54, 54, 0.8);
+.woocommerce-page .woocommerce-message::before,
+.woocommerce-page .woocommerce-success::before,
+.woocommerce-page .woocommerce-error::before,
+.woocommerce-page .woocommerce-info::before,
+.woocommerce-page .woocommerce-warning::before {
+  color: #ffffff;
 }
 
-.woocommerce.single-product .woocommerce-message {
+/* Notification background color based on notification type */
+.woocommerce-page .woocommerce-message,
+.woocommerce-page .woocommerce-success {
   background-color: rgba(24, 206, 15, 0.8);
 }
 
+.woocommerce-page .woocommerce-error {
+  background-color: rgba(255, 54, 54, 0.8);
+}
+
+.woocommerce-page .woocommerce-info {
+  background-color: rgba(44, 168, 255, 0.8);
+}
+
+.woocommerce-page .woocommerce-warning {
+  background-color: rgba(255, 178, 54, 0.8);
+}
+
+/* Product Page */
 .woocommerce.single-product .woocommerce-error,
 .woocommerce.single-product .woocommerce-message {
   float: right;
-  color: #ffffff;
-  border-radius: 4px;
   max-width: 50%;
 }
 .woocommerce.single-product .woocommerce-error a, .woocommerce.single-product .woocommerce-error a:hover,
@@ -2035,115 +2101,6 @@ input[type="submit"]:hover {
     max-width: 1000%;
     margin-right: 0;
   }
-}
-/* Cart */
-.woocommerce-cart .woocommerce-message .restore-item {
-  color: #ffffff;
-}
-.woocommerce-cart .woocommerce-message {
-  -moz-osx-font-smoothing: initial;
-  -webkit-font-smoothing: initial;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  color: #ffffff !important;
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 21px;
-  text-align: center;
-  background-color: rgba(24, 206, 15, 0.8);
-}
-.woocommerce-cart .woocommerce-error {
-  -moz-osx-font-smoothing: initial;
-  -webkit-font-smoothing: initial;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  color: #ffffff !important;
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 21px;
-  text-align: center;
-  background-color: rgba(255, 54, 54, 0.8);
-}
-
-/* Checkout */
-.woocommerce-checkout .woocommerce-message {
-  -moz-osx-font-smoothing: initial;
-  -webkit-font-smoothing: initial;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  color: #ffffff !important;
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 21px;
-  text-align: center;
-  background-color: rgba(24, 206, 15, 0.8);
-}
-.woocommerce-checkout .woocommerce-error {
-  -moz-osx-font-smoothing: initial;
-  -webkit-font-smoothing: initial;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  color: #ffffff !important;
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 21px;
-  text-align: center;
-  background-color: rgba(255, 54, 54, 0.8);
-}
-.woocommerce-checkout #hestia-checkout-coupon .woocommerce-message {
-  margin-left: auto;
-  margin-right: auto;
-}
-.woocommerce-checkout #hestia-checkout-coupon .woocommerce-message::before {
-  color: #ffffff;
-}
-.woocommerce-checkout #hestia-checkout-coupon .woocommerce-error {
-  margin-left: auto;
-  margin-right: auto;
-}
-.woocommerce-checkout #hestia-checkout-coupon .woocommerce-error::before {
-  color: #ffffff;
-}
-
-/* Account */
-.woocommerce-account .woocommerce-message {
-  -moz-osx-font-smoothing: initial;
-  -webkit-font-smoothing: initial;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  color: #ffffff !important;
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 21px;
-  text-align: center;
-  background-color: rgba(44, 168, 255, 0.8);
-}
-.woocommerce-account .woocommerce-error {
-  -moz-osx-font-smoothing: initial;
-  -webkit-font-smoothing: initial;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  color: #ffffff !important;
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 21px;
-  text-align: center;
-  background-color: rgba(255, 54, 54, 0.8);
-}
-.woocommerce-account .woocommerce-error a {
-  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */
