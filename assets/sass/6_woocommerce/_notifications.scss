@@ -5,8 +5,8 @@
 .woocommerce-page .woocommerce-info,
 .woocommerce-page .woocommerce-warning {
   @include no-font-smooth();
+  @include border-radius(4px);
   color: #ffffff;
-  border-radius: 4px;
 
   /* Buttons within the notifications */
   button,

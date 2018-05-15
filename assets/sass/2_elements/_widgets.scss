@@ -11,7 +11,7 @@ aside.shop-sidebar .widget > h5 {
 /* Style search button */
 .blog-sidebar .widget.widget_search .search-form .search-submit {
   @include no-box-shadow();
-  border-radius: 50%;
+  @include border-radius(50%);
 
   &:hover {
     @include button-hover();
@@ -19,7 +19,7 @@ aside.shop-sidebar .widget > h5 {
 }
 .shop-sidebar .widget .woocommerce-product-search button {
   @include no-box-shadow();
-  border-radius: 50%;
+  @include border-radius(50%);
 
   &:hover {
     @include button-hover();
@@ -70,14 +70,14 @@ aside.shop-sidebar .widget > h5 {
 /* Search button */
 .footer .widget.widget_search .search-submit {
   @include no-box-shadow();
-  border-radius: 50%;
+  @include border-radius(50%);
 
   &:hover {
     @include button-hover();
   }
 }
 .footer .widget.widget_product_search button {
-  border-radius: 50%;
+  @include border-radius(50%);
 }
 /* WooCommerce widgets images */
 .footer .widget.woocommerce li:hover a img {

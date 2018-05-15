@@ -178,8 +178,10 @@ body {
   height: 5px;
 }
 .card-product .content .footer .stats a .tooltip .tooltip-inner {
-  background-color: #FFFFFF;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
   border-radius: 4px;
+  background-color: #FFFFFF;
   box-shadow: 0 1px 13px rgba(0, 0, 0, 0.14), 0 0 0 1px rgba(115, 71, 38, 0.23);
   color: #66615B;
   max-width: 200px;
@@ -248,6 +250,8 @@ aside.shop-sidebar .widget > h5 {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
 }
 .blog-sidebar .widget.widget_search .search-form .search-submit:hover {
@@ -259,6 +263,8 @@ aside.shop-sidebar .widget > h5 {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
 }
 .shop-sidebar .widget .woocommerce-product-search button:hover {
@@ -320,6 +326,8 @@ aside.shop-sidebar .widget > h5 {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
 }
 .footer .widget.widget_search .search-submit:hover {
@@ -328,6 +336,8 @@ aside.shop-sidebar .widget > h5 {
 }
 
 .footer .widget.widget_product_search button {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
 }
 
@@ -435,14 +445,12 @@ input[type="submit"]:hover {
 .hestia-features .hestia-title {
   color: #2c2c2c;
   font-weight: 700;
-  line-height: 42px;
   padding-top: 30px;
   margin-bottom: 30px;
 }
 .hestia-features .description {
   color: #9A9A9A;
   font-weight: 300;
-  line-height: 30px;
   margin-top: 30px;
   margin-bottom: 15px;
 }
@@ -522,7 +530,6 @@ input[type="submit"]:hover {
 .fagri-team-wrapper .hestia-team .hestia-title {
   color: #2c2c2c;
   font-weight: 700;
-  line-height: 42px;
   padding-top: 30px;
   margin-bottom: 30px;
   color: #ffffff;
@@ -530,7 +537,6 @@ input[type="submit"]:hover {
 .fagri-team-wrapper .hestia-team .description {
   color: #9A9A9A;
   font-weight: 300;
-  line-height: 30px;
   margin-top: 30px;
   margin-bottom: 15px;
   color: rgba(255, 255, 255, 0.8);
@@ -661,7 +667,6 @@ input[type="submit"]:hover {
 .fagri-testimonials-wrapper .hestia-testimonials .hestia-title {
   color: #2c2c2c;
   font-weight: 700;
-  line-height: 42px;
   padding-top: 30px;
   margin-bottom: 30px;
   color: #ffffff;
@@ -669,7 +674,6 @@ input[type="submit"]:hover {
 .fagri-testimonials-wrapper .hestia-testimonials .description {
   color: #9A9A9A;
   font-weight: 300;
-  line-height: 30px;
   margin-top: 30px;
   margin-bottom: 15px;
   color: rgba(255, 255, 255, 0.8);
@@ -733,7 +737,6 @@ input[type="submit"]:hover {
 .hestia-ribbon .hestia-title {
   color: #2c2c2c;
   font-weight: 700;
-  line-height: 42px;
   padding-top: 30px;
   margin-bottom: 30px;
   padding: 0;
@@ -746,14 +749,12 @@ input[type="submit"]:hover {
 .hestia-work .hestia-title {
   color: #2c2c2c;
   font-weight: 700;
-  line-height: 42px;
   padding-top: 30px;
   margin-bottom: 30px;
 }
 .hestia-work .description {
   color: #9A9A9A;
   font-weight: 300;
-  line-height: 30px;
   margin-top: 30px;
   margin-bottom: 15px;
 }
@@ -768,7 +769,6 @@ input[type="submit"]:hover {
 .hestia-subscribe .title {
   color: #2c2c2c;
   font-weight: 700;
-  line-height: 42px;
   padding-top: 30px;
   margin-bottom: 30px;
   color: #ffffff;
@@ -776,7 +776,6 @@ input[type="submit"]:hover {
 .hestia-subscribe .subscribe-description {
   color: #9A9A9A;
   font-weight: 300;
-  line-height: 30px;
   margin-top: 30px;
   margin-bottom: 15px;
   color: rgba(255, 255, 255, 0.8);
@@ -791,14 +790,12 @@ input[type="submit"]:hover {
 .hestia-pricing .hestia-title {
   color: #2c2c2c;
   font-weight: 700;
-  line-height: 42px;
   padding-top: 30px;
   margin-bottom: 30px;
 }
 .hestia-pricing div:first-of-type > p {
   color: #9A9A9A;
   font-weight: 300;
-  line-height: 30px;
   margin-top: 30px;
   margin-bottom: 15px;
 }
@@ -1004,14 +1001,12 @@ input[type="submit"]:hover {
 .hestia-blogs .hestia-title {
   color: #2c2c2c;
   font-weight: 700;
-  line-height: 42px;
   padding-top: 30px;
   margin-bottom: 30px;
 }
 .hestia-blogs .description {
   color: #9A9A9A;
   font-weight: 300;
-  line-height: 30px;
   margin-top: 30px;
   margin-bottom: 15px;
 }
@@ -1072,14 +1067,12 @@ input[type="submit"]:hover {
 .hestia-shop.products .hestia-title {
   color: #2c2c2c;
   font-weight: 700;
-  line-height: 42px;
   padding-top: 30px;
   margin-bottom: 30px;
 }
 .hestia-shop.products .description {
   color: #9A9A9A;
   font-weight: 300;
-  line-height: 30px;
   margin-top: 30px;
   margin-bottom: 15px;
 }
@@ -1234,14 +1227,12 @@ input[type="submit"]:hover {
 .blog .subscribe-line .hestia-title {
   color: #2c2c2c;
   font-weight: 700;
-  line-height: 42px;
   padding-top: 30px;
   margin-bottom: 30px;
 }
 .blog .subscribe-line .description {
   color: #9A9A9A;
   font-weight: 300;
-  line-height: 30px;
   margin-top: 30px;
   margin-bottom: 15px;
 }
@@ -1539,7 +1530,6 @@ input[type="submit"]:hover {
 .section.related-posts .hestia-title {
   color: #2c2c2c;
   font-weight: 700;
-  line-height: 42px;
   padding-top: 30px;
   margin-bottom: 30px;
   color: #2c2c2c;
@@ -1675,10 +1665,10 @@ input[type="submit"]:hover {
   display: none;
 }
 .woocommerce.single-product .main .blog-post .product .woocommerce-product-gallery {
-  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
   margin-top: -150px;
 }
 .woocommerce.single-product .main .blog-post .product .woocommerce-product-gallery .flex-viewport {
@@ -1686,6 +1676,8 @@ input[type="submit"]:hover {
   border-top-left-radius: 4px;
 }
 .woocommerce.single-product .main .blog-post .product .woocommerce-product-gallery .woocommerce-product-gallery__image {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
   border-radius: 4px;
 }
 .woocommerce.single-product .main .blog-post .product .summary .product_title {
@@ -1727,8 +1719,10 @@ input[type="submit"]:hover {
   margin-top: 3px;
 }
 .woocommerce.single-product .main .blog-post .product .summary .cart.form-group .quantity input {
-  border: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
   border-radius: 3px;
+  border: none;
   color: #ffffff;
   background-color: #888888;
   -moz-osx-font-smoothing: initial;
@@ -1741,10 +1735,12 @@ input[type="submit"]:hover {
   margin-bottom: 8px;
 }
 .woocommerce.single-product .main .blog-post .product .summary .variations select {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
   color: #ffffff;
   background-color: #888888;
   background-image: none;
-  border-radius: 3px;
   padding-right: 10px;
 }
 .woocommerce.single-product .main .blog-post .product .woocommerce-tabs .tabs li a {
@@ -1841,10 +1837,12 @@ input[type="submit"]:hover {
 }
 .woocommerce #reviews #review_form_wrapper input#author,
 .woocommerce #reviews #review_form_wrapper input#email {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
   background-image: none;
   padding-right: 10px;
   border: 1px solid #E3E3E3;
-  border-radius: 30px;
 }
 .woocommerce #reviews #review_form_wrapper input[type="submit"] {
   -webkit-box-shadow: none;
@@ -1868,9 +1866,11 @@ input[type="submit"]:hover {
 ## Cart page
 --------------------------------------------------------------*/
 .woocommerce-cart .shop_table .quantity .input-text {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
   padding-right: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 30px;
 }
 .woocommerce-cart .shop_table .button {
   color: #ffffff !important;
@@ -1993,8 +1993,10 @@ input[type="submit"]:hover {
 .woocommerce-page .woocommerce-warning {
   -moz-osx-font-smoothing: initial;
   -webkit-font-smoothing: initial;
-  color: #ffffff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
   border-radius: 4px;
+  color: #ffffff;
   /* Buttons within the notifications */
 }
 .woocommerce-page .woocommerce-message button,

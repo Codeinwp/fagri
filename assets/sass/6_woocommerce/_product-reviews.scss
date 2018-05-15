@@ -37,10 +37,10 @@
     }
     input#author,
     input#email {
+      @include border-radius(30px);
       background-image: none;
       padding-left: 10px;
       border: 1px solid #E3E3E3;
-      border-radius: 30px;
     }
     input[type="submit"] {
       @include default-button();

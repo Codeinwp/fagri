@@ -32,10 +32,8 @@
         }
         .woocommerce-product-gallery {
 
+          @include border-radius(4px);
           box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
-          -webkit-border-radius: 4px;
-          -moz-border-radius: 4px;
-          border-radius: 4px;
           margin-top: -150px;
 
           .flex-viewport {
@@ -43,7 +41,7 @@
             border-top-right-radius: 4px;
           }
           .woocommerce-product-gallery__image {
-            border-radius: 4px;
+            @include border-radius(4px);
           }
         }
         
@@ -78,8 +76,8 @@
               margin-top: 3px;
 
               input {
+                @include border-radius(3px);
                 border: none;
-                border-radius: 3px;
                 color: #ffffff;
                 background-color: #888888;
                 @include no-font-smooth();
@@ -94,10 +92,10 @@
               margin-bottom: 8px;
             }
             select {
+              @include border-radius(4px);
               color: #ffffff;
               background-color: #888888;
               background-image: none;
-              border-radius: 3px;
               padding-left: 10px;
             }
           }

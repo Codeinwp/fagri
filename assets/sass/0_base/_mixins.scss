@@ -32,14 +32,12 @@
 @mixin front-page-section-title() {
   color: #2c2c2c;
   font-weight: 700;
-  line-height: 42px;
   padding-top: 30px;
   margin-bottom: 30px;
 }
 @mixin front-page-section-subtitle() {
   color: #9A9A9A;
   font-weight: 300;
-  line-height: 30px;
   margin-top: 30px;
   margin-bottom: 15px;
 }
