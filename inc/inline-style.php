@@ -62,6 +62,9 @@ function fagri_inline_style() {
 
 	if ( ! empty( $color_accent ) ) {
 
+		/* Buttons */
+		$custom_css .= '.btn, .button, button, input[type="submit"] { color: ' . esc_html( $color_accent ) . '; }';
+
 		/* Team section, team member function */
 		$custom_css .= '.fagri-team-wrapper .hestia-team .card-profile .col-md-7 .content .category { color: ' . esc_html( $color_accent ) . ' }';
 
