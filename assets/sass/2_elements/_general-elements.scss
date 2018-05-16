@@ -21,3 +21,9 @@ aside .widget a {
 .card-title {
   color: #2c2c2c;
 }
+
+/* Change header min-height on Cart and Checkout pages */
+.woocommerce-cart .header-small,
+.woocommerce-checkout .header-small {
+  min-height: 250px;
+}

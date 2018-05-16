@@ -90,24 +90,24 @@ add_filter( 'hestia_header_gradient_default', 'fagri_gradient_color' );
 /**
  * Enable featured posts section by default, on Blog Page
  *
- * This function checks if there is a category Uncategorized
+ * This function checks if there is a category with the id 1
  * And if it has posts in it
  * and it shows posts from this category by default, instead of disabling section
  */
 function fagri_enable_featured_posts_section() {
 
-	/* Check if category 1 exists */
+	/* Check if a category with id 1 exists */
 	if ( ! term_exists( 1 ) ) {
 		return array( 0 );
 	}
 
-	/* Check if category 1 has posts */
+	/* Check if the category with id 1 has posts */
 	$nb_of_posts_in_category = get_category( 1 )->count;
 	if ( is_numeric( $nb_of_posts_in_category ) && ( $nb_of_posts_in_category <= 0 ) ) {
 		return array( 0 );
 	}
 
-	/* Return category 0 or 1 as default */
+	/* Return the category with id 1 as choice */
 	return array( 1 );
 }
 add_filter( 'hestia_featured_posts_category_default', 'fagri_enable_featured_posts_section' );
@@ -240,7 +240,7 @@ add_filter( 'hestia_blog_post_meta', 'fagri_blog_post_metadata' );
  *
  * @since 1.0.0
  */
-function fagri_get_lite_options() {
+function fagri_import_hestia_options() {
 	$hestia_mods = get_option( 'theme_mods_hestia' );
 	if ( ! empty( $hestia_mods ) ) {
 		foreach ( $hestia_mods as $hestia_mod_k => $hestia_mod_v ) {
@@ -248,7 +248,7 @@ function fagri_get_lite_options() {
 		}
 	}
 }
-add_action( 'after_switch_theme', 'fagri_get_lite_options' );
+add_action( 'after_switch_theme', 'fagri_import_hestia_options' );
 
 /**
  * Change default welcome notice that appears after theme first installed
@@ -264,7 +264,7 @@ function fagri_welcome_notice_filter() {
 
 	$var = '<p>' . sprintf( 'Welcome! Thank you for choosing %1$s! To fully take advantage of the best our theme can offer please make sure you visit our %2$swelcome page%3$s.', $theme_name, '<a href="' . esc_url( admin_url( 'themes.php?page=' . $theme_slug . '-welcome' ) ) . '">', '</a>' ) . '</p><p><a href="' . esc_url( admin_url( 'themes.php?page=' . $theme_slug . '-welcome' ) ) . '" class="button" style="text-decoration: none;">' . sprintf( 'Get started with %s', $theme_name ) . '</a></p>';
 
-	return $var;
+	return wp_kses_post( $var );
 }
 add_filter( 'hestia_welcome_notice_filter', 'fagri_welcome_notice_filter' );
 

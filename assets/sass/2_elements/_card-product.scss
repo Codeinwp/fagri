@@ -112,10 +112,14 @@
 }
 
 /* Remove image box shadow from card-product which has li.product parent */
-.product .card.card-product .card-image {
-  @include no-box-shadow();
-}
-/* Add underline effect on hover */
+.product .card.card-product .card-image,
 .product:hover .card.card-product .card-image {
   @include no-box-shadow();
 }
+/* Add underline effect on hover */
+.hestia-shop .shop-item:hover .card-product .card-title a,
+.product:hover > .card.card-product .content .card-title a {
+  border-color: inherit;
+}
+
+

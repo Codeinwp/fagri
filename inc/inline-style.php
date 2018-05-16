@@ -14,7 +14,6 @@
 function fagri_inline_style() {
 
 	$color_accent              = get_theme_mod( 'accent_color', '#2ca8ff' );
-	$secondary_color           = get_theme_mod( 'secondary_color' );
 	$hestia_features_repeaters = get_theme_mod( 'hestia_features_content' );
 
 	$hestia_features_content = json_decode( $hestia_features_repeaters );
@@ -156,29 +155,6 @@ function fagri_inline_style() {
 			.navbar.navbar-default:not(.full-screen-menu) .nav-cart-icon .nav-cart-content a:hover, 
 			.navbar.navbar-default:not(.navbar-transparent) .hestia-toggle-search:hover {
 				color: ' . esc_html( $color_accent ) . ' !important;
-			}';
-	}
-
-	if ( ! empty( $secondary_color ) ) {
-		/* Card product - title border color */
-		$custom_css .= '.product:hover > .card.card-product .content .card-title a {
-			border-color: ' . esc_html( $secondary_color ) . ';
-		}';
-		/* card product on front page - title border color */
-		$custom_css .= '.hestia-shop .shop-item:hover .card-product .card-title a {
-			border-color: ' . esc_html( $secondary_color ) . ';
-		}';
-
-		/* Blog post */
-		$custom_css .= '.blog .card-blog .card-title a:hover {
-			border-color: ' . esc_html( $secondary_color ) . '; 
-		 }';
-	} else {
-		$custom_css .= '
-			.product:hover > .card.card-product .content .card-title a,
-			.hestia-shop .shop-item:hover .card-product .card-title a,
-			.blog .card-blog .card-title a:hover {
-				border-color: #2c2c2c;
 			}';
 	}
 

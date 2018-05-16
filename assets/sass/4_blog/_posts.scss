@@ -27,6 +27,7 @@
 
       &:hover {
         opacity: initial;
+        border-color: inherit;
       }
     }
     .card-description {
@@ -96,5 +97,4 @@
   .card-blog:nth-of-type(6n+6) .category a {
     color: initial;
   }
-
 }

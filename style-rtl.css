@@ -9,7 +9,7 @@ License:        GNU General Public License v2 or later
 License URI:    http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:    fagri
 Template:       hestia
-Tags: blog, custom-logo, portfolio, e-commerce, rtl-language-support, post-formats, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
+Tags: blog, custom-logo, portfolio, e-commerce, rtl-language-support, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, left-sidebar, right-sidebar, footer-widgets
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -219,17 +219,17 @@ body {
 }
 
 /* Remove image box shadow from card-product which has li.product parent */
-.product .card.card-product .card-image {
+.product .card.card-product .card-image,
+.product:hover .card.card-product .card-image {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
 
 /* Add underline effect on hover */
-.product:hover .card.card-product .card-image {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+.hestia-shop .shop-item:hover .card-product .card-title a,
+.product:hover > .card.card-product .content .card-title a {
+  border-color: inherit;
 }
 
 /*--------------------------------------------------------------
@@ -372,6 +372,12 @@ aside .widget a {
 /* Default color for card title instead of secondary, for Hestia Lite */
 .card-title {
   color: #2c2c2c;
+}
+
+/* Change header min-height on Cart and Checkout pages */
+.woocommerce-cart .header-small,
+.woocommerce-checkout .header-small {
+  min-height: 250px;
 }
 
 /*--------------------------------------------------------------
@@ -1050,6 +1056,16 @@ input[type="submit"]:hover {
 }
 .hestia-blogs .hestia-blog-content .card-blog.card-plain .content .card-title a {
   color: inherit;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: all 150ms ease 0s;
+  -moz-transition: all 150ms;
+  -ms-transition: all 150ms;
+  -o-transition: all 150ms;
+  transition: all 150ms;
+}
+.hestia-blogs .hestia-blog-content .card-blog.card-plain .content .card-title a:hover {
+  opacity: 1;
+  border-color: inherit;
 }
 .hestia-blogs .hestia-blog-content .card-blog.card-plain .content .card-description {
   color: #9A9A9A;
@@ -1086,10 +1102,6 @@ input[type="submit"]:hover {
   -moz-box-shadow: none;
   box-shadow: none;
   transform: unset;
-}
-.hestia-shop.products .shop-item .card-product .card-title a {
-  border-bottom: 2px solid transparent;
-  transition: all 150ms ease 0s;
 }
 
 /*--------------------------------------------------------------
@@ -1129,6 +1141,7 @@ input[type="submit"]:hover {
 }
 .blog .card-blog .card-title a:hover {
   opacity: initial;
+  border-color: inherit;
 }
 .blog .card-blog .card-description {
   color: #9A9A9A;

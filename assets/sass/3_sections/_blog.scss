@@ -47,6 +47,17 @@
 
         a {
           color: inherit;
+          border-bottom: 2px solid transparent;
+          -webkit-transition: all 150ms ease 0s;
+          -moz-transition: all 150ms;
+          -ms-transition: all 150ms;
+          -o-transition: all 150ms;
+          transition: all 150ms;
+
+          &:hover {
+            opacity: 1;
+            border-color: inherit;
+          }
         }
       }
       .card-description {
