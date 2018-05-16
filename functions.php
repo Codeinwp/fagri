@@ -251,17 +251,6 @@ function fagri_get_lite_options() {
 add_action( 'after_switch_theme', 'fagri_get_lite_options' );
 
 /**
- * Change the upgrade to Hestia Pro link
- * This will help us to now from which theme did the user come
- *
- * @since 1.0.0
- */
-function fagri_change_upgrade_link() {
-	return 'https://themeisle.com/themes/hestia-pro/upgrade/?theme=Fagri';
-}
-add_filter( 'hestia_upgrade_link_from_child_theme_filter', 'fagri_change_upgrade_link' );
-
-/**
  * Change default welcome notice that appears after theme first installed
  */
 function fagri_welcome_notice_filter() {
