@@ -1,0 +1,28 @@
+{
+  "name": "codeinwp/fagri",
+  "description": "Fagri by ThemeIsle.",
+  "homepage": "https://themeisle.com/themes/fagri/",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "ThemeIsle Team",
+      "email": "friends@themeisle.com",
+      "homepage": "https://themeisle.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "support": {
+    "issues": "https://github.com/Codeinwp/fagri/issues",
+    "source": "https://github.com/Codeinwp/fagri"
+  },
+  "type": "wordpress-theme",
+  "require": {
+    "codeinwp/themeisle-sdk": "master"
+  },
+  "autoload": {
+    "files": [
+      "vendor/codeinwp/themeisle-sdk/load.php"
+    ]
+  }
+}
