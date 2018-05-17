@@ -176,7 +176,7 @@ add_action( 'after_setup_theme', 'fagri_remove_hestia_actions' );
  * @since 1.0.0
  */
 function fagri_remove_excerpt_more_points() {
-
+	global $post;
 	if ( is_archive() || is_home() ) {
 		return '<a class="moretag" href="' . esc_url( get_permalink( $post->ID ) ) . '"> ' . esc_html__( 'Read more', 'fagri' ) . '</a>';
 	} else {
