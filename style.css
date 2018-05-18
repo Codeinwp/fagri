@@ -4,7 +4,7 @@ Theme URI:      https://themeisle.com/themes/fagri/
 Author:         ThemeIsle
 Author URI:     https://themeisle.com
 Description:    Fagri is a responsive WordPress theme, built to fit all kinds of businesses. Its multipurpose design is great for small businesses, startups, corporate businesses, freelancers, portfolios, WooCommerce, creative agencies, or niche websites (medical, restaurants, sports, fashion). Fagri was created on top of Now UI Kit and displays an elegant one-page layout, complemented by the smooth parallax effect. The theme comes with a clean look, but it also provides subtle hover animations. Moreover, Fagri offers Sendinblue newsletter integration, a flexible interface via Live Customizer, a widgetized footer, full compatibility with Elementor and Beaver Builder, a full-width featured slider, and even more functionality based on the latest WordPress trends. Last but not least, the theme is lightweight and SEO-friendly.
-Version:        1.0.1
+Version:        1.0.2
 License:        GNU General Public License v2 or later
 License URI:    http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:    fagri
@@ -537,7 +537,6 @@ input[type="submit"]:hover {
   font-size: 21px;
   font-weight: 400;
   line-height: 30px;
-  padding: 0 15px;
   margin-top: 10px;
   margin-bottom: 15px;
 }
