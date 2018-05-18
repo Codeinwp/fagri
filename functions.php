@@ -6,7 +6,7 @@
  * @since 1.0.0
  */
 
-define( 'FAGRI_VERSION', '1.0.0' );
+define( 'FAGRI_VERSION', '1.0.1' );
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

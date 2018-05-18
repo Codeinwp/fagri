@@ -37,7 +37,7 @@ Source: http://www.opensource.org/licenses/MIT
 
 License: All mystock.photos images are licensed under the terms of the Creative Commons Zero, http://creativecommons.org/publicdomain/zero/1.0/  
 
-**Images from screenshot:**
+**Images used:**
 - http://mystock.photos/photo/glass-building-2/
 - http://mystock.photos/photo/trump-tower/
 - http://mystock.photos/photo/light-waves/
