@@ -456,8 +456,8 @@ input[type="submit"]:hover {
   font-family: "FontAwesome";
   font-size: 16px;
   position: absolute;
-  top: 17px;
-  left: 10px;
+  top: 6px;
+  left: 11px;
   content: "\f007";
 }
 .pirate_forms_wrap .contact_email_wrap .form-group::before {
@@ -465,8 +465,8 @@ input[type="submit"]:hover {
   font-family: "FontAwesome";
   font-size: 16px;
   position: absolute;
-  top: 17px;
-  left: 10px;
+  top: 6px;
+  left: 11px;
   content: "\f003";
 }
 .pirate_forms_wrap .contact_subject_wrap .form-group::before {
@@ -474,8 +474,8 @@ input[type="submit"]:hover {
   font-family: "FontAwesome";
   font-size: 16px;
   position: absolute;
-  top: 17px;
-  left: 10px;
+  top: 6px;
+  left: 11px;
   content: "\f006";
 }
 .pirate_forms_wrap .form-control:not(textarea):not([type="file"]):not(select) {
@@ -513,11 +513,11 @@ input[type="submit"]:hover {
   display: none;
 }
 
-.widget .pirate_forms_wrap .contact_name_wrap .form-group::before,
-.widget .pirate_forms_wrap .contact_email_wrap .form-group::before,
-.widget .pirate_forms_wrap .contact_subject_wrap .form-group::before {
-  top: 6px;
-  left: 11px;
+.hestia-contact .pirate_forms_wrap .contact_name_wrap .form-group::before,
+.hestia-contact .pirate_forms_wrap .contact_email_wrap .form-group::before,
+.hestia-contact .pirate_forms_wrap .contact_subject_wrap .form-group::before {
+  top: 17px;
+  left: 10px;
 }
 
 /*--------------------------------------------------------------
