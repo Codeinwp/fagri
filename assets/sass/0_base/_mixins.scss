@@ -58,7 +58,7 @@
 
 /* Contact Form icon */
 @mixin icon-in-field-contact() {
-  color: #555555;
+  color: #888888;
   font-family: "FontAwesome";
   font-size: 16px;
   position: absolute;
@@ -89,6 +89,7 @@
 
 /* Icon on before of the input field wrapper */
 @mixin icon-for-field() {
+  color: #888888;
   font-family: "FontAwesome";
   position: absolute;
   left: 20px;

@@ -25,18 +25,13 @@
       }
     }
     .form-group:first-of-type::before {
+      @include icon-for-field();
       content: "\f007";
-      font-family: "FontAwesome";
-      position: absolute;
-      left: 20px;
-      bottom: 10px;
+
     }
     .form-group:nth-of-type(2)::before {
+      @include icon-for-field();
       content: "\f13e";
-      font-family: "FontAwesome";
-      position: absolute;
-      left: 20px;
-      bottom: 10px;
     }
   }
 

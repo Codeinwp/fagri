@@ -452,7 +452,7 @@ input[type="submit"]:hover {
   padding-left: 30px;
 }
 .pirate_forms_wrap .contact_name_wrap .form-group::before {
-  color: #555555;
+  color: #888888;
   font-family: "FontAwesome";
   font-size: 16px;
   position: absolute;
@@ -461,7 +461,7 @@ input[type="submit"]:hover {
   content: "\f007";
 }
 .pirate_forms_wrap .contact_email_wrap .form-group::before {
-  color: #555555;
+  color: #888888;
   font-family: "FontAwesome";
   font-size: 16px;
   position: absolute;
@@ -470,7 +470,7 @@ input[type="submit"]:hover {
   content: "\f003";
 }
 .pirate_forms_wrap .contact_subject_wrap .form-group::before {
-  color: #555555;
+  color: #888888;
   font-family: "FontAwesome";
   font-size: 16px;
   position: absolute;
@@ -1931,18 +1931,20 @@ input[type="submit"]:hover {
   transition: background 0s ease-out;
 }
 .woocommerce-account form.woocommerce-form.woocommerce-form-login .form-group:first-of-type::before {
-  content: "\f007";
+  color: #888888;
   font-family: "FontAwesome";
   position: absolute;
   left: 20px;
   bottom: 10px;
+  content: "\f007";
 }
 .woocommerce-account form.woocommerce-form.woocommerce-form-login .form-group:nth-of-type(2)::before {
-  content: "\f13e";
+  color: #888888;
   font-family: "FontAwesome";
   position: absolute;
   left: 20px;
   bottom: 10px;
+  content: "\f13e";
 }
 .woocommerce-account #rememberme + span {
   font-weight: 400;
@@ -1972,6 +1974,7 @@ input[type="submit"]:hover {
 }
 .woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm p.form-group:nth-of-type(1)::before {
   content: "\f2be";
+  color: #888888;
   font-family: "FontAwesome";
   position: absolute;
   left: 20px;
@@ -1979,6 +1982,7 @@ input[type="submit"]:hover {
 }
 .woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm .form-group:nth-of-type(2)::before {
   content: "\f02b";
+  color: #888888;
   font-family: "FontAwesome";
   position: absolute;
   left: 20px;
@@ -1986,6 +1990,7 @@ input[type="submit"]:hover {
 }
 .woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm .form-group:nth-of-type(3)::before {
   content: "\f0e0";
+  color: #888888;
   font-family: "FontAwesome";
   position: absolute;
   left: 20px;
@@ -1993,6 +1998,7 @@ input[type="submit"]:hover {
 }
 .woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm fieldset .form-group:nth-of-type(1)::before {
   content: "\f084";
+  color: #888888;
   font-family: "FontAwesome";
   position: absolute;
   left: 20px;
@@ -2001,6 +2007,7 @@ input[type="submit"]:hover {
 .woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm fieldset .form-group:nth-of-type(2)::before,
 .woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm fieldset .form-group:nth-of-type(3)::before {
   content: "\f13e";
+  color: #888888;
   font-family: "FontAwesome";
   position: absolute;
   left: 20px;
