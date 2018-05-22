@@ -4,7 +4,7 @@ Theme URI:      https://themeisle.com/themes/fagri/
 Author:         ThemeIsle
 Author URI:     https://themeisle.com
 Description:    Fagri is a responsive WordPress theme, built to fit all kinds of businesses. Its multipurpose design is great for small businesses, startups, corporate businesses, freelancers, portfolios, WooCommerce, creative agencies, or niche websites (medical, restaurants, sports, fashion). Fagri was created on top of Now UI Kit and displays an elegant one-page layout, complemented by the smooth parallax effect. The theme comes with a clean look, but it also provides subtle hover animations. Moreover, Fagri offers Sendinblue newsletter integration, a flexible interface via Live Customizer, a widgetized footer, full compatibility with Elementor and Beaver Builder, a full-width featured slider, and even more functionality based on the latest WordPress trends. Last but not least, the theme is lightweight and SEO-friendly.
-Version:        1.0.2
+Version:        1.0.3
 License:        GNU General Public License v2 or later
 License URI:    http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:    fagri
@@ -452,30 +452,30 @@ input[type="submit"]:hover {
   padding-left: 30px;
 }
 .pirate_forms_wrap .contact_name_wrap .form-group::before {
-  color: #555555;
+  color: #888888;
   font-family: "FontAwesome";
   font-size: 16px;
   position: absolute;
-  top: 17px;
-  left: 10px;
+  top: 6px;
+  left: 11px;
   content: "\f007";
 }
 .pirate_forms_wrap .contact_email_wrap .form-group::before {
-  color: #555555;
+  color: #888888;
   font-family: "FontAwesome";
   font-size: 16px;
   position: absolute;
-  top: 17px;
-  left: 10px;
+  top: 6px;
+  left: 11px;
   content: "\f003";
 }
 .pirate_forms_wrap .contact_subject_wrap .form-group::before {
-  color: #555555;
+  color: #888888;
   font-family: "FontAwesome";
   font-size: 16px;
   position: absolute;
-  top: 17px;
-  left: 10px;
+  top: 6px;
+  left: 11px;
   content: "\f006";
 }
 .pirate_forms_wrap .form-control:not(textarea):not([type="file"]):not(select) {
@@ -513,11 +513,11 @@ input[type="submit"]:hover {
   display: none;
 }
 
-.widget .pirate_forms_wrap .contact_name_wrap .form-group::before,
-.widget .pirate_forms_wrap .contact_email_wrap .form-group::before,
-.widget .pirate_forms_wrap .contact_subject_wrap .form-group::before {
-  top: 6px;
-  left: 11px;
+.hestia-contact .pirate_forms_wrap .contact_name_wrap .form-group::before,
+.hestia-contact .pirate_forms_wrap .contact_email_wrap .form-group::before,
+.hestia-contact .pirate_forms_wrap .contact_subject_wrap .form-group::before {
+  top: 17px;
+  left: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -1931,18 +1931,20 @@ input[type="submit"]:hover {
   transition: background 0s ease-out;
 }
 .woocommerce-account form.woocommerce-form.woocommerce-form-login .form-group:first-of-type::before {
-  content: "\f007";
+  color: #888888;
   font-family: "FontAwesome";
   position: absolute;
   left: 20px;
   bottom: 10px;
+  content: "\f007";
 }
 .woocommerce-account form.woocommerce-form.woocommerce-form-login .form-group:nth-of-type(2)::before {
-  content: "\f13e";
+  color: #888888;
   font-family: "FontAwesome";
   position: absolute;
   left: 20px;
   bottom: 10px;
+  content: "\f13e";
 }
 .woocommerce-account #rememberme + span {
   font-weight: 400;
@@ -1972,6 +1974,7 @@ input[type="submit"]:hover {
 }
 .woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm p.form-group:nth-of-type(1)::before {
   content: "\f2be";
+  color: #888888;
   font-family: "FontAwesome";
   position: absolute;
   left: 20px;
@@ -1979,6 +1982,7 @@ input[type="submit"]:hover {
 }
 .woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm .form-group:nth-of-type(2)::before {
   content: "\f02b";
+  color: #888888;
   font-family: "FontAwesome";
   position: absolute;
   left: 20px;
@@ -1986,6 +1990,7 @@ input[type="submit"]:hover {
 }
 .woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm .form-group:nth-of-type(3)::before {
   content: "\f0e0";
+  color: #888888;
   font-family: "FontAwesome";
   position: absolute;
   left: 20px;
@@ -1993,6 +1998,7 @@ input[type="submit"]:hover {
 }
 .woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm fieldset .form-group:nth-of-type(1)::before {
   content: "\f084";
+  color: #888888;
   font-family: "FontAwesome";
   position: absolute;
   left: 20px;
@@ -2001,6 +2007,7 @@ input[type="submit"]:hover {
 .woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm fieldset .form-group:nth-of-type(2)::before,
 .woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm fieldset .form-group:nth-of-type(3)::before {
   content: "\f13e";
+  color: #888888;
   font-family: "FontAwesome";
   position: absolute;
   left: 20px;

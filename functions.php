@@ -6,15 +6,10 @@
  * @since 1.0.0
  */
 
-define( 'FAGRI_VERSION', '1.0.2' );
+define( 'FAGRI_VERSION', '1.0.3' );
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
-}
-
-$vendor_file = trailingslashit( get_stylesheet_directory() ) . 'vendor/autoload.php';
-if ( is_readable( $vendor_file ) ) {
-	require_once $vendor_file;
 }
 
 if ( ! function_exists( 'fagri_parent_css' ) ) :
@@ -88,7 +83,7 @@ add_filter( 'hestia_accent_color_default', 'fagri_accent_color' );
  * @since 1.0.0
  */
 function fagri_gradient_color() {
-	return '#51bcda';
+	return '#2ca8ff';
 }
 add_filter( 'hestia_header_gradient_default', 'fagri_gradient_color' );
 
