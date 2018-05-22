@@ -1,4 +1,8 @@
 
+ ### v1.0.4 - 2018-05-22 
+ **Changes:** 
+ * Update the screenshot
+ 
  ### v1.0.3 - 2018-05-22 
  **Changes:** 
  * Fixed alignment issues in the contact form
