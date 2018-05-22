@@ -41,3 +41,4 @@ License: All mystock.photos images are licensed under the terms of the Creative 
 - http://mystock.photos/photo/glass-building-2/
 - http://mystock.photos/photo/trump-tower/
 - http://mystock.photos/photo/light-waves/
+- http://mystock.photos/photo/drops-2/
