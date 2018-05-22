@@ -58,12 +58,12 @@
 
 /* Contact Form icon */
 @mixin icon-in-field-contact() {
-  color: #555555;
+  color: #888888;
   font-family: "FontAwesome";
   font-size: 16px;
   position: absolute;
-  top: 17px;
-  left: 10px;
+  top: 6px;
+  left: 11px;
 }
 
 /* Dark overlay for sections with background image option */
@@ -89,6 +89,7 @@
 
 /* Icon on before of the input field wrapper */
 @mixin icon-for-field() {
+  color: #888888;
   font-family: "FontAwesome";
   position: absolute;
   left: 20px;

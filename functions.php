@@ -83,7 +83,7 @@ add_filter( 'hestia_accent_color_default', 'fagri_accent_color' );
  * @since 1.0.0
  */
 function fagri_gradient_color() {
-	return '#51bcda';
+	return '#2ca8ff';
 }
 add_filter( 'hestia_header_gradient_default', 'fagri_gradient_color' );
 
