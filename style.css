@@ -513,6 +513,9 @@ input[type="submit"]:hover {
 .pirate_forms_wrap .contact_message_wrap .form-group.label-floating.is-focused:not(is-empty) label.control-label {
   display: none;
 }
+.pirate_forms_wrap .pirate-forms-submit-button {
+  border-radius: 30px;
+}
 
 .hestia-contact .pirate_forms_wrap .contact_name_wrap .form-group::before,
 .hestia-contact .pirate_forms_wrap .contact_email_wrap .form-group::before,
