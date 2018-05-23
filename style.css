@@ -122,6 +122,7 @@ body {
   padding: 20px 5px;
 }
 .card-product .content .category a {
+  opacity: 0.7;
   font-weight: 700;
   text-transform: none;
 }
@@ -1086,6 +1087,9 @@ input[type="submit"]:hover {
   text-transform: capitalize;
   margin: 0 0 8px;
 }
+.hestia-blogs .hestia-blog-content .card-blog.card-plain .content .category a {
+  opacity: 0.7;
+}
 .hestia-blogs .hestia-blog-content .card-blog.card-plain .content .card-title {
   font-weight: 400;
   line-height: 22px;
@@ -1152,7 +1156,6 @@ input[type="submit"]:hover {
   /* Regular posts style */
   /* End of card blog */
   /* Sticky post */
-  /* Remove random colors from Blog post's categories */
 }
 .blog .card-blog .card-image {
   box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
@@ -1163,6 +1166,9 @@ input[type="submit"]:hover {
   font-weight: 700;
   line-height: 15px;
   text-transform: capitalize;
+}
+.blog .card-blog .category a {
+  opacity: 0.7;
 }
 .blog .card-blog .card-title a {
   font-size: 26px;
@@ -1225,14 +1231,6 @@ input[type="submit"]:hover {
 }
 .blog .card-blog.sticky .card-title::before {
   content: "";
-}
-.blog .card-blog:nth-of-type(6n+1) .category a,
-.blog .card-blog:nth-of-type(6n+2) .category a,
-.blog .card-blog:nth-of-type(6n+3) .category a,
-.blog .card-blog:nth-of-type(6n+4) .category a,
-.blog .card-blog:nth-of-type(6n+5) .category a,
-.blog .card-blog:nth-of-type(6n+6) .category a {
-  color: initial;
 }
 
 /*--------------------------------------------------------------
