@@ -40,6 +40,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.home.blog h1.hestia-title {
+  font-size: 40px;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -1267,13 +1271,6 @@ input[type="submit"]:hover {
   font-size: 17px;
   font-weight: 300;
   line-height: 27px;
-}
-.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card .card-body .category + a + .description {
-  flex: initial;
-}
-.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card .card-body a.btn {
-  align-self: baseline;
-  margin-top: auto;
 }
 .blog .hestia-blog-featured-posts .hestia-blog-featured-card .card.card-background .card-body .card-title,
 .blog .hestia-blog-featured-posts .hestia-blog-featured-card .card.card-background .card-body .card-description {
