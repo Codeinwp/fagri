@@ -156,6 +156,11 @@ function fagri_inline_style() {
 			.navbar.navbar-default:not(.navbar-transparent) .hestia-toggle-search:hover {
 				color: ' . esc_html( $color_accent ) . ' !important;
 			}';
+
+		/* Forms bottom border color */
+		$custom_css .= '.form-group.is-focused .form-control {
+			border-bottom: 1px solid ' . esc_html( $color_accent ) . ' !important;
+		}';
 	}
 
 	wp_add_inline_style( 'fagri_parent', $custom_css );
