@@ -1268,9 +1268,25 @@ input[type="submit"]:hover {
   font-weight: 300;
   line-height: 27px;
 }
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card .card-body .category + a + .description {
+  flex: initial;
+}
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card .card .card-body a.btn {
+  align-self: baseline;
+  margin-top: auto;
+}
 .blog .hestia-blog-featured-posts .hestia-blog-featured-card .card.card-background .card-body .card-title,
 .blog .hestia-blog-featured-posts .hestia-blog-featured-card .card.card-background .card-body .card-description {
   color: #ffffff;
+}
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card.col-md-6 .card-body {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card.col-md-6 .card-body a.btn {
+  align-self: baseline;
+  margin-top: auto;
 }
 
 /*--------------------------------------------------------------
