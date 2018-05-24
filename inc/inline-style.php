@@ -86,19 +86,6 @@ function fagri_inline_style() {
 		/* Blog authors section function color */
 		$custom_css .= '.authors-on-blog .card-profile.card-plain .col-md-7 .content .category { color: ' . esc_html( $color_accent ) . '; }';
 
-		/* Home Blog section, post category color */
-		$custom_css .= '.hestia-blogs .card-blog .content .category { color: ' . esc_html( $color_accent ) . '; }';
-		$custom_css .= '.hestia-blogs article:nth-child(6n+1) .category a { color: ' . esc_html( $color_accent ) . '; }';
-		$custom_css .= '.hestia-blogs article:nth-child(6n+2) .category a { color: ' . esc_html( $color_accent ) . '; }';
-		$custom_css .= '.hestia-blogs article:nth-child(6n+3) .category a { color: ' . esc_html( $color_accent ) . '; }';
-		$custom_css .= '.hestia-blogs article:nth-child(6n+4) .category a { color: ' . esc_html( $color_accent ) . '; }';
-		$custom_css .= '.hestia-blogs article:nth-child(6n+5) .category a { color: ' . esc_html( $color_accent ) . '; }';
-		$custom_css .= '.hestia-blogs article:nth-child(6n+6) .category a { color: ' . esc_html( $color_accent ) . '; }';
-
-		/* Blog page, regular post's categories colors */
-		$custom_css .= '.blog .blog-posts-wrap .card-blog:nth-of-type(2n+1) .category a { color: ' . esc_html( $color_accent ) . '; }';
-		$custom_css .= '.blog .blog-posts-wrap .card-blog:nth-of-type(2n+2) .category a { color: ' . esc_html( $color_accent ) . '; }';
-
 		/* Leave comment logged out */
 		$custom_css .= '#respond.comment-respond .col-md-4 > .form-group.is-focused .form-control { border-color: ' . esc_html( $color_accent ) . '; }';
 
@@ -109,16 +96,6 @@ function fagri_inline_style() {
 		/* Card-product, special price */
 		$custom_css .= '.shop-item .card-product .content .footer .price h4 del + .woocommerce-Price-amount { color: ' . esc_html( $color_accent ) . '; }';
 		$custom_css .= '.product .card-product .content .footer .price h4 del + .woocommerce-Price-amount { color: ' . esc_html( $color_accent ) . '; }';
-
-		/* Shop page, product category color */
-		$custom_css .= '.woocommerce.archive .blog-post .products li.product:nth-child(6n+1) .category a,
-						.woocommerce.archive .blog-post .products li.product:nth-child(6n+2) .category a,
-						.woocommerce.archive .blog-post .products li.product:nth-child(6n+3) .category a,
-						.woocommerce.archive .blog-post .products li.product:nth-child(6n+4) .category a,
-						.woocommerce.archive .blog-post .products li.product:nth-child(6n+5) .category a,
-						.woocommerce.archive .blog-post .products li.product:nth-child(6n+6) .category a {
-                            color: ' . esc_html( $color_accent ) . ';
-                        }';
 
 		/* Rating starts color */
 		$custom_css .= '.star-rating span { color: ' . esc_html( $color_accent ) . ' !important; }';
@@ -156,6 +133,9 @@ function fagri_inline_style() {
 			.navbar.navbar-default:not(.navbar-transparent) .hestia-toggle-search:hover {
 				color: ' . esc_html( $color_accent ) . ' !important;
 			}';
+
+		/* Forms bottom border color */
+		$custom_css .= 'input:focus-within { border-color: ' . esc_html( $color_accent ) . ' !important; }';
 	}
 
 	wp_add_inline_style( 'fagri_parent', $custom_css );

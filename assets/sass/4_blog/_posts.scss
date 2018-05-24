@@ -11,6 +11,10 @@
       font-weight: 700;
       line-height: 15px;
       text-transform: capitalize;
+
+      a {
+        opacity: 0.7;
+      }
     }
     .card-title a {
       font-size: 26px;
@@ -86,15 +90,5 @@
     .card-title::before {
       content: "";
     }
-  }
-
-  /* Remove random colors from Blog post's categories */
-  .card-blog:nth-of-type(6n+1) .category a,
-  .card-blog:nth-of-type(6n+2) .category a,
-  .card-blog:nth-of-type(6n+3) .category a,
-  .card-blog:nth-of-type(6n+4) .category a,
-  .card-blog:nth-of-type(6n+5) .category a,
-  .card-blog:nth-of-type(6n+6) .category a {
-    color: initial;
   }
 }

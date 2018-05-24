@@ -6,7 +6,7 @@
  * @since 1.0.0
  */
 
-define( 'FAGRI_VERSION', '1.0.4' );
+define( 'FAGRI_VERSION', '1.0.5' );
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -26,6 +26,17 @@ if ( ! function_exists( 'fagri_parent_css' ) ) :
 
 endif;
 add_action( 'wp_enqueue_scripts', 'fagri_parent_css', 10 );
+
+/**
+ * Remove functionality from forms
+ *
+ * @since 1.0.6
+ */
+function fagri_remove_materialjs() {
+	wp_dequeue_script( 'jquery-hestia-material' );
+	wp_deregister_script( 'jquery-hestia-material' );
+}
+add_filter( 'wp_enqueue_scripts', 'fagri_remove_materialjs' );
 
 /**
  * Enqueue customizer js
@@ -83,7 +94,7 @@ add_filter( 'hestia_accent_color_default', 'fagri_accent_color' );
  * @since 1.0.0
  */
 function fagri_gradient_color() {
-	return '#2ca8ff';
+	return '#43b1ff';
 }
 add_filter( 'hestia_header_gradient_default', 'fagri_gradient_color' );
 

@@ -38,6 +38,10 @@
         line-height: 15px;
         text-transform: capitalize;
         margin: 0 0 8px;
+
+        a {
+          opacity: 0.7;
+        }
       }
       .card-title {
         font-weight: 400;
