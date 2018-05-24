@@ -1276,14 +1276,22 @@ input[type="submit"]:hover {
 .blog .hestia-blog-featured-posts .hestia-blog-featured-card .card.card-background .card-body .card-description {
   color: #ffffff;
 }
-.blog .hestia-blog-featured-posts .hestia-blog-featured-card.col-md-6 .card-body {
-  min-height: 280px;
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card.col-md-6 {
+  /* Featured post without image */
+  /* Featured post with image */
+}
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card.col-md-6 .card .card-body {
+  min-height: 384px;
   display: flex;
   flex-direction: column;
 }
-.blog .hestia-blog-featured-posts .hestia-blog-featured-card.col-md-6 .card-body a.btn {
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card.col-md-6 .card .card-body a.btn {
   align-self: baseline;
   margin-top: auto;
+}
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card.col-md-6 .card.card-background .card-body a.btn {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*--------------------------------------------------------------
