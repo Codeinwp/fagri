@@ -135,9 +135,7 @@ function fagri_inline_style() {
 			}';
 
 		/* Forms bottom border color */
-		$custom_css .= '.form-group.is-focused .form-control {
-			border-bottom: 1px solid ' . esc_html( $color_accent ) . ' !important;
-		}';
+		$custom_css .= 'input:focus-within { border-color: ' . esc_html( $color_accent ) . ' !important; }';
 	}
 
 	wp_add_inline_style( 'fagri_parent', $custom_css );

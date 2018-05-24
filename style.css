@@ -402,6 +402,7 @@ input[type="submit"] {
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
   transition-delay: initial;
   box-shadow: none !important;
+  border-radius: 30px !important;
 }
 
 .btn:hover,
@@ -411,21 +412,6 @@ button:hover,
 input[type="submit"]:hover {
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
   opacity: 0.9;
-}
-
-/* Pricing section */
-.hestia-pricing .btn,
-.hestia-pricing .button,
-.hestia-pricing button {
-  border-radius: 30px;
-}
-
-/* Contact form */
-.hestia-contact .btn,
-.hestia-contact .button,
-.hestia-contact button,
-.hestia-contact input[type="submit"] {
-  border-radius: 30px;
 }
 
 /*--------------------------------------------------------------
@@ -530,27 +516,28 @@ input[type="submit"]:hover {
 /*--------------------------------------------------------------
 ## Forms
 --------------------------------------------------------------*/
-/* Remove label while typing */
-.form-group.is-focused label {
-  display: none;
-}
-
-/* Keep the label for checkbox fields */
-.form-group.is-focused input[type="checkbox"].form-control ~ label {
-  display: inline !important;
-}
-
-/* Remove bottom loading bar from forms */
-.form-group .form-control,
-.form-group.is-focused .form-control {
+input:not([type="submit"]) {
   background-image: none !important;
-  border-bottom: 1px solid #E3E3E3;
+  border: 1px solid #e3e3e3 !important;
+  border-radius: 30px !important;
+  padding-left: 10px !important;
 }
 
-/* Add border bottom which will be colored based on accent_color */
-.form-group textarea.form-control {
-  background-image: none !important;
-  border-bottom: 1px solid #E3E3E3;
+textarea.form-control,
+input[type="checkbox"],
+input[type="file"] {
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #e3e3e3 !important;
+  padding-left: 0 !important;
+}
+
+input label {
+  margin-left: 10px !important;
+}
+
+input:focus-within label {
+  display: none !important;
 }
 
 /*--------------------------------------------------------------
@@ -572,6 +559,9 @@ input[type="submit"]:hover {
   line-height: 30px;
   margin-top: 10px;
   margin-bottom: 15px;
+}
+.carousel .buttons .btn {
+  border-radius: 0 !important;
 }
 
 /*--------------------------------------------------------------
@@ -1482,8 +1472,6 @@ input[type="submit"]:hover {
   /* Title */
   /* Author's avatar */
   /* Logged in as - message */
-  /* What's on your mind - label */
-  /* Post comment button */
 }
 .logged-in #respond.comment-respond .hestia-title {
   margin: 0;
@@ -1510,87 +1498,13 @@ input[type="submit"]:hover {
   font-weight: 400;
   line-height: 30px;
 }
-.logged-in #respond.comment-respond .form-group.label-floating label.control-label,
-.logged-in #respond.comment-respond .form-group.label-floating.is-focused label.control-label {
-  top: -28px;
-  font-size: 11px;
-  line-height: 14px;
-}
-.logged-in #respond.comment-respond .form-submit input[type="submit"] {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-  transition-property: color, background-color, border-color, box-shadow;
-  transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
-  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
-  transition-delay: initial;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-.logged-in #respond.comment-respond .form-submit input[type="submit"]:hover {
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
-  opacity: 0.9;
-}
 
 /* Leave a reply logged out */
-#respond.comment-respond {
-  /* Remove label ease up effect and font-size transform */
-  /* Show label when the field is empty */
-  /* Hide label if the field doesn't have the class is-empty */
-  /* Remove border-bottom and style rounded border */
-  /* Remove loading underline from the first three input fields */
-  /* Post comment button */
-}
 #respond.comment-respond .pull-left.author {
   margin: -15px 20px 0 0;
 }
 #respond.comment-respond .pull-left.author .avatar {
   box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
-}
-#respond.comment-respond .form-group.label-floating label.control-label {
-  top: -7px;
-}
-#respond.comment-respond .form-group.label-floating.is-focused label.control-label {
-  top: -7px;
-  font-size: inherit;
-  line-height: 18px;
-}
-#respond.comment-respond .col-md-4 > .form-group.is-empty label {
-  display: block;
-}
-#respond.comment-respond .col-md-4 > .form-group label {
-  display: none;
-  margin-left: 10px;
-}
-#respond.comment-respond .col-md-4 > .form-group .form-control {
-  background-image: none;
-  padding-left: 9px;
-  /* cursor left margin */
-  border: 1px solid #E3E3E3;
-  border-radius: 30px;
-  transition: background 0s ease-out;
-}
-#respond.comment-respond .col-md-4 > .form-group.is-focused .form-control {
-  background-image: none;
-}
-#respond.comment-respond .form-submit input[type="submit"] {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-  transition-property: color, background-color, border-color, box-shadow;
-  transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
-  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
-  transition-delay: initial;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-#respond.comment-respond .form-submit input[type="submit"]:hover {
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
-  opacity: 0.9;
 }
 
 /*--------------------------------------------------------------
@@ -1951,114 +1865,6 @@ input[type="submit"]:hover {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-}
-
-/*--------------------------------------------------------------
-## Checkout page
---------------------------------------------------------------*/
-/* Account page logged out */
-.woocommerce-account form.woocommerce-form.woocommerce-form-login {
-  border: none;
-  padding-left: 0;
-  padding-right: 0;
-}
-.woocommerce-account form.woocommerce-form.woocommerce-form-login .form-group label {
-  color: #2c2c2c;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 21px;
-}
-.woocommerce-account form.woocommerce-form.woocommerce-form-login .form-group input {
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-  background-image: none !important;
-  padding-left: 30px;
-  border: 1px solid #E3E3E3;
-  transition: background 0s ease-out;
-}
-.woocommerce-account form.woocommerce-form.woocommerce-form-login .form-group:first-of-type::before {
-  color: #888888;
-  font-family: "FontAwesome";
-  position: absolute;
-  left: 20px;
-  bottom: 10px;
-  content: "\f007";
-}
-.woocommerce-account form.woocommerce-form.woocommerce-form-login .form-group:nth-of-type(2)::before {
-  color: #888888;
-  font-family: "FontAwesome";
-  position: absolute;
-  left: 20px;
-  bottom: 10px;
-  content: "\f13e";
-}
-.woocommerce-account #rememberme + span {
-  font-weight: 400;
-}
-
-/* Account page logged in */
-.woocommerce-account {
-  /* Edit account form */
-}
-.woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm {
-  /* icons */
-}
-.woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm .form-group label {
-  color: #2c2c2c;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 21px;
-}
-.woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm .form-group input {
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-  background-image: none !important;
-  padding-left: 35px;
-  border: 1px solid #E3E3E3;
-  transition: background 0s ease-out;
-}
-.woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm p.form-group:nth-of-type(1)::before {
-  content: "\f2be";
-  color: #888888;
-  font-family: "FontAwesome";
-  position: absolute;
-  left: 20px;
-  bottom: 10px;
-}
-.woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm .form-group:nth-of-type(2)::before {
-  content: "\f02b";
-  color: #888888;
-  font-family: "FontAwesome";
-  position: absolute;
-  left: 20px;
-  bottom: 10px;
-}
-.woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm .form-group:nth-of-type(3)::before {
-  content: "\f0e0";
-  color: #888888;
-  font-family: "FontAwesome";
-  position: absolute;
-  left: 20px;
-  bottom: 10px;
-}
-.woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm fieldset .form-group:nth-of-type(1)::before {
-  content: "\f084";
-  color: #888888;
-  font-family: "FontAwesome";
-  position: absolute;
-  left: 20px;
-  bottom: 10px;
-}
-.woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm fieldset .form-group:nth-of-type(2)::before,
-.woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm fieldset .form-group:nth-of-type(3)::before {
-  content: "\f13e";
-  color: #888888;
-  font-family: "FontAwesome";
-  position: absolute;
-  left: 20px;
-  bottom: 10px;
 }
 
 /*--------------------------------------------------------------

@@ -115,24 +115,6 @@
       line-height: 30px;
     }
   }
-  /* What's on your mind - label */
-  .form-group.label-floating label.control-label,
-  .form-group.label-floating.is-focused label.control-label {
-    top: -28px;
-    font-size: 11px;
-    line-height: 14px;
-  }
-  /* Post comment button */
-  .form-submit {
-    input[type="submit"] {
-      @include default-button();
-      @include no-box-shadow();
-
-      &:hover {
-        @include button-hover();
-      }
-    }
-  }
 }
 
 /* Leave a reply logged out */
@@ -143,50 +125,6 @@
 
     .avatar {
       box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
-    }
-  }
-
-  /* Remove label ease up effect and font-size transform */
-  .form-group.label-floating label.control-label {
-    top: -7px;
-  }
-  .form-group.label-floating.is-focused label.control-label {
-    top: -7px;
-    font-size: inherit;
-    line-height: 18px;
-  }
-
-  /* Show label when the field is empty */
-  .col-md-4 > .form-group.is-empty label {
-    display: block;
-  }
-  /* Hide label if the field doesn't have the class is-empty */
-  .col-md-4 >.form-group label {
-    display: none;
-    margin-left: 10px;
-  }
-  /* Remove border-bottom and style rounded border */
-  .col-md-4 >.form-group .form-control {
-    background-image: none;
-    padding-left: 9px; /* cursor left margin */
-    border: 1px solid #E3E3E3;
-    border-radius: 30px;
-    transition: background 0s ease-out;
-  }
-  /* Remove loading underline from the first three input fields */
-  .col-md-4 >.form-group.is-focused .form-control {
-    background-image: none;
-  }
-
-  /* Post comment button */
-  .form-submit {
-    input[type="submit"] {
-      @include default-button();
-      @include no-box-shadow();
-
-      &:hover {
-        @include button-hover();
-      }
     }
   }
 }

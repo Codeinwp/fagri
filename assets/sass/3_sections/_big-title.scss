@@ -15,4 +15,10 @@
     margin-top: 10px;
     margin-bottom: 15px;
   }
+
+  .buttons {
+    .btn {
+      border-radius: 0 !important;
+    }
+  }
 }

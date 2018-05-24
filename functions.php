@@ -28,6 +28,17 @@ endif;
 add_action( 'wp_enqueue_scripts', 'fagri_parent_css', 10 );
 
 /**
+ * Remove functionality from forms
+ *
+ * @since 1.0.6
+ */
+function fagri_remove_materialjs() {
+	wp_dequeue_script( 'jquery-hestia-material' );
+	wp_deregister_script( 'jquery-hestia-material' );
+}
+add_filter( 'wp_enqueue_scripts', 'fagri_remove_materialjs' );
+
+/**
  * Enqueue customizer js
  */
 function fagri_customizer_preview_js() {

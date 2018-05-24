@@ -1,25 +1,22 @@
-/* Remove label while typing */
-.form-group.is-focused {
-  label {
-    display: none;
-  }
+input:not([type="submit"]) {
+  background-image: none !important;
+  border: 1px solid #e3e3e3 !important;
+  border-radius: 30px !important;
+  padding-left: 10px !important;
 }
-/* Keep the label for checkbox fields */
-.form-group.is-focused {
-  input[type="checkbox"].form-control ~ label {
-    display: inline !important;
-  }
+textarea.form-control,
+input[type="checkbox"],
+input[type="file"] {
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #e3e3e3 !important;
+  padding-left: 0 !important;
 }
 
-/* Remove bottom loading bar from forms */
-.form-group .form-control,
-.form-group.is-focused .form-control {
-  background-image: none !important;
-  border-bottom: 1px solid #E3E3E3;
+input label {
+  margin-left: 10px !important;
 }
 
-/* Add border bottom which will be colored based on accent_color */
-.form-group textarea.form-control {
-  background-image: none !important;
-  border-bottom: 1px solid #E3E3E3;
+input:focus-within label {
+  display: none !important;
 }
