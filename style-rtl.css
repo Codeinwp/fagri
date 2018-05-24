@@ -436,9 +436,8 @@ input[type="submit"]:hover {
   /* Enf of input fields */
   /* Remove bottom loading line animation */
   /* Remove label ease-up transition */
-  /* Hide label when typing */
-  /* Text area */
-  /* End of textarea */
+  /* Hide label when field is not empty */
+  /* Adjust label line-height */
 }
 .pirate_forms_wrap .contact_name_wrap .form-group,
 .pirate_forms_wrap .contact_email_wrap .form-group,
@@ -500,22 +499,22 @@ input[type="submit"]:hover {
 .pirate_forms_wrap .form-control:not(textarea):not(select):not([type="file"]) {
   background-image: none !important;
 }
+.pirate_forms_wrap .form-group.label-floating label.control-label,
 .pirate_forms_wrap .form-group.label-floating.is-focused label.control-label {
   top: 0;
-  right: 30px;
-  /* Move label to make place for the icon */
   font-size: inherit;
   transition: none;
   margin: 11px 0 0;
 }
-.pirate_forms_wrap .form-group.label-floating.is-focused:not(is-empty) label.control-label {
+.pirate_forms_wrap .form-group label.control-label {
   display: none;
 }
-.pirate_forms_wrap .contact_message_wrap {
-  /* Hide label when typing */
+.pirate_forms_wrap .form-group.is-empty label.control-label {
+  display: inline-block;
 }
-.pirate_forms_wrap .contact_message_wrap .form-group.label-floating.is-focused:not(is-empty) label.control-label {
-  display: none;
+.pirate_forms_wrap .form-group label.control-label,
+.pirate_forms_wrap .form-group.is-focused label.control-label {
+  line-height: 1.07143;
 }
 .pirate_forms_wrap .pirate-forms-submit-button {
   border-radius: 30px;

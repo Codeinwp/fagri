@@ -44,24 +44,25 @@
     background-image: none !important;
   }
   /* Remove label ease-up transition */
+  .form-group.label-floating label.control-label,
   .form-group.label-floating.is-focused label.control-label {
     top: 0;
-    left: 30px;/* Move label to make place for the icon */
     font-size: inherit;
     transition: none;
     margin: 11px 0 0;
   }
-  /* Hide label when typing */
-  .form-group.label-floating.is-focused:not(is-empty) label.control-label {
+  /* Hide label when field is not empty */
+  .form-group label.control-label {
     display: none;
   }
-  /* Text area */
-  .contact_message_wrap {
-    /* Hide label when typing */
-    .form-group.label-floating.is-focused:not(is-empty) label.control-label {
-      display: none;
-    }
-  } /* End of textarea */
+  .form-group.is-empty label.control-label {
+    display: inline-block;
+  }
+  /* Adjust label line-height */
+  .form-group label.control-label,
+  .form-group.is-focused label.control-label {
+    line-height: 1.07143;
+  }
 
   .pirate-forms-submit-button {
     border-radius: 30px;
