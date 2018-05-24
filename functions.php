@@ -72,7 +72,7 @@ add_filter( 'hestia_body_font_default', 'fagri_font_default_frontend' );
  * @since 1.0.0
  */
 function fagri_accent_color() {
-	return '#2ca8ff';
+	return '#43b1ff';
 }
 add_filter( 'hestia_accent_color_default', 'fagri_accent_color' );
 
