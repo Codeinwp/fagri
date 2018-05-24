@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Fagri 1.0.4\n"
+"Project-Id-Version: Fagri 1.0.5\n"
 "Report-Msgid-Bugs-To: https://github.com/Codeinwp/fagri/issues\n"
-"POT-Creation-Date: 2018-05-22 15:18:21+00:00\n"
+"POT-Creation-Date: 2018-05-24 20:07:03+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,21 +24,21 @@ msgstr ""
 "X-Poedit-Bookmarks: \n"
 "X-Textdomain-Support: yes\n"
 
-#: functions.php:176
+#: functions.php:187
 msgid "Read more"
 msgstr ""
 
-#: functions.php:222
+#: functions.php:233
 #. translators: %1$s is Author name wrapped, %2$s is Time
 msgid "%1$s %2$s"
 msgstr ""
 
-#: functions.php:282 functions.php:286
+#: functions.php:293 functions.php:297
 #. translators: %1$s is Author name, %2$s is author link
 msgid "About Fagri"
 msgstr ""
 
-#: functions.php:291
+#: functions.php:302
 #. translators: s - theme name
 msgid "Welcome to %s! - Version "
 msgstr ""

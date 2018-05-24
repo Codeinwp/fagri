@@ -1,4 +1,9 @@
 
+ ### v1.0.5 - 2018-05-24 
+ **Changes:** 
+ * Redone the screenshot
+* Fixed compatibility problems with Pirate Forms
+ 
  ### v1.0.4 - 2018-05-22 
  **Changes:** 
  * Update the screenshot
