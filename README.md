@@ -41,4 +41,7 @@ License: All mystock.photos images are licensed under the terms of the Creative 
 - http://mystock.photos/photo/glass-building-2/
 - http://mystock.photos/photo/trump-tower/
 - http://mystock.photos/photo/light-waves/
-- http://mystock.photos/photo/drops-2/
+- https://www.pexels.com/photo/adolescent-casual-cute-elegant-428338/
+- https://www.pexels.com/photo/man-in-red-crew-neck-t-shirt-733505/
+- https://www.pexels.com/photo/woman-in-red-turtle-neck-shirt-touching-her-neck-709808/
+- https://www.pexels.com/photo/woman-in-blue-knit-cable-sweater-holding-green-petaled-flowers-709789/

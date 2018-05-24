@@ -40,6 +40,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.home.blog h1.hestia-title {
+  font-size: 40px;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -122,6 +126,7 @@ body {
   padding: 20px 5px;
 }
 .card-product .content .category a {
+  opacity: 0.7;
   font-weight: 700;
   text-transform: none;
 }
@@ -431,9 +436,8 @@ input[type="submit"]:hover {
   /* Enf of input fields */
   /* Remove bottom loading line animation */
   /* Remove label ease-up transition */
-  /* Hide label when typing */
-  /* Text area */
-  /* End of textarea */
+  /* Hide label when field is not empty */
+  /* Adjust label line-height */
 }
 .pirate_forms_wrap .contact_name_wrap .form-group,
 .pirate_forms_wrap .contact_email_wrap .form-group,
@@ -495,22 +499,25 @@ input[type="submit"]:hover {
 .pirate_forms_wrap .form-control:not(textarea):not(select):not([type="file"]) {
   background-image: none !important;
 }
+.pirate_forms_wrap .form-group.label-floating label.control-label,
 .pirate_forms_wrap .form-group.label-floating.is-focused label.control-label {
   top: 0;
-  left: 30px;
-  /* Move label to make place for the icon */
   font-size: inherit;
   transition: none;
   margin: 11px 0 0;
 }
-.pirate_forms_wrap .form-group.label-floating.is-focused:not(is-empty) label.control-label {
+.pirate_forms_wrap .form-group label.control-label {
   display: none;
 }
-.pirate_forms_wrap .contact_message_wrap {
-  /* Hide label when typing */
+.pirate_forms_wrap .form-group.is-empty label.control-label {
+  display: inline-block;
 }
-.pirate_forms_wrap .contact_message_wrap .form-group.label-floating.is-focused:not(is-empty) label.control-label {
-  display: none;
+.pirate_forms_wrap .form-group label.control-label,
+.pirate_forms_wrap .form-group.is-focused label.control-label {
+  line-height: 1.07143;
+}
+.pirate_forms_wrap .pirate-forms-submit-button {
+  border-radius: 30px;
 }
 
 .hestia-contact .pirate_forms_wrap .contact_name_wrap .form-group::before,
@@ -518,6 +525,32 @@ input[type="submit"]:hover {
 .hestia-contact .pirate_forms_wrap .contact_subject_wrap .form-group::before {
   top: 17px;
   left: 10px;
+}
+
+/*--------------------------------------------------------------
+## Forms
+--------------------------------------------------------------*/
+/* Remove label while typing */
+.form-group.is-focused label {
+  display: none;
+}
+
+/* Keep the label for checkbox fields */
+.form-group.is-focused input[type="checkbox"].form-control ~ label {
+  display: inline !important;
+}
+
+/* Remove bottom loading bar from forms */
+.form-group .form-control,
+.form-group.is-focused .form-control {
+  background-image: none !important;
+  border-bottom: 1px solid #E3E3E3;
+}
+
+/* Add border bottom which will be colored based on accent_color */
+.form-group textarea.form-control {
+  background-image: none !important;
+  border-bottom: 1px solid #E3E3E3;
 }
 
 /*--------------------------------------------------------------
@@ -1060,6 +1093,9 @@ input[type="submit"]:hover {
   text-transform: capitalize;
   margin: 0 0 8px;
 }
+.hestia-blogs .hestia-blog-content .card-blog.card-plain .content .category a {
+  opacity: 0.7;
+}
 .hestia-blogs .hestia-blog-content .card-blog.card-plain .content .card-title {
   font-weight: 400;
   line-height: 22px;
@@ -1126,7 +1162,6 @@ input[type="submit"]:hover {
   /* Regular posts style */
   /* End of card blog */
   /* Sticky post */
-  /* Remove random colors from Blog post's categories */
 }
 .blog .card-blog .card-image {
   box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
@@ -1137,6 +1172,9 @@ input[type="submit"]:hover {
   font-weight: 700;
   line-height: 15px;
   text-transform: capitalize;
+}
+.blog .card-blog .category a {
+  opacity: 0.7;
 }
 .blog .card-blog .card-title a {
   font-size: 26px;
@@ -1200,14 +1238,6 @@ input[type="submit"]:hover {
 .blog .card-blog.sticky .card-title::before {
   content: "";
 }
-.blog .card-blog:nth-of-type(6n+1) .category a,
-.blog .card-blog:nth-of-type(6n+2) .category a,
-.blog .card-blog:nth-of-type(6n+3) .category a,
-.blog .card-blog:nth-of-type(6n+4) .category a,
-.blog .card-blog:nth-of-type(6n+5) .category a,
-.blog .card-blog:nth-of-type(6n+6) .category a {
-  color: initial;
-}
 
 /*--------------------------------------------------------------
 ## Featured posts
@@ -1244,6 +1274,23 @@ input[type="submit"]:hover {
 .blog .hestia-blog-featured-posts .hestia-blog-featured-card .card.card-background .card-body .card-title,
 .blog .hestia-blog-featured-posts .hestia-blog-featured-card .card.card-background .card-body .card-description {
   color: #ffffff;
+}
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card.col-md-6 {
+  /* Featured post without image */
+  /* Featured post with image */
+}
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card.col-md-6 .card .card-body {
+  min-height: 290px;
+  display: flex;
+  flex-direction: column;
+}
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card.col-md-6 .card .card-body a.btn {
+  align-self: baseline;
+  margin-top: auto;
+}
+.blog .hestia-blog-featured-posts .hestia-blog-featured-card.col-md-6 .card.card-background .card-body a.btn {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*--------------------------------------------------------------

@@ -1,0 +1,25 @@
+/* Remove label while typing */
+.form-group.is-focused {
+  label {
+    display: none;
+  }
+}
+/* Keep the label for checkbox fields */
+.form-group.is-focused {
+  input[type="checkbox"].form-control ~ label {
+    display: inline !important;
+  }
+}
+
+/* Remove bottom loading bar from forms */
+.form-group .form-control,
+.form-group.is-focused .form-control {
+  background-image: none !important;
+  border-bottom: 1px solid #E3E3E3;
+}
+
+/* Add border bottom which will be colored based on accent_color */
+.form-group textarea.form-control {
+  background-image: none !important;
+  border-bottom: 1px solid #E3E3E3;
+}

@@ -42,5 +42,29 @@
         }
       }
     }
+    .hestia-blog-featured-card.col-md-6 {
+      /* Featured post without image */
+      .card {
+        .card-body {
+          min-height: 290px;
+          display: flex;
+          flex-direction: column;
+
+          a.btn {
+            align-self: baseline;
+            margin-top: auto;
+          }
+        }
+      }
+      /* Featured post with image */
+      .card.card-background {
+        .card-body {
+          a.btn {
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+    }
   }
 }
