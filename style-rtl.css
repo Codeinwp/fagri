@@ -1281,7 +1281,7 @@ input[type="submit"]:hover {
   /* Featured post with image */
 }
 .blog .hestia-blog-featured-posts .hestia-blog-featured-card.col-md-6 .card .card-body {
-  min-height: 384px;
+  min-height: 290px;
   display: flex;
   flex-direction: column;
 }
