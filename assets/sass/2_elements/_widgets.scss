@@ -9,21 +9,23 @@ aside.shop-sidebar .widget > h5 {
   text-transform: uppercase;
 }
 /* Style search button */
-.blog-sidebar .widget.widget_search .search-form .search-submit {
-  @include no-box-shadow();
-  @include border-radius(50%);
-
-  &:hover {
-    @include button-hover();
-  }
+.widget.widget_search input[type="submit"],
+.widget.widget_product_search button[type="submit"] {
+  border-radius: 50% !important;
+  vertical-align: initial;
+  margin: 0 !important;
+  padding: 0;
+  top: -2px;
+  width: 39px;
+  height: 39px;
 }
-.shop-sidebar .widget .woocommerce-product-search button {
-  @include no-box-shadow();
-  @include border-radius(50%);
-
-  &:hover {
-    @include button-hover();
-  }
+.widget.widget_search .search-form label {
+  padding-right: 5px;
+}
+.widget.widget_search .search-form:after,
+.widget.widget_product_search .woocommerce-product-search:after {
+  top: 4px;
+  right: 11px;
 }
 
 /* === Shop Sidebar === */
@@ -66,18 +68,6 @@ aside.shop-sidebar .widget > h5 {
 /* Footer menu */
 .footer-big .footer-menu li a {
   font-weight: 400;
-}
-/* Search button */
-.footer .widget.widget_search .search-submit {
-  @include no-box-shadow();
-  @include border-radius(50%);
-
-  &:hover {
-    @include button-hover();
-  }
-}
-.footer .widget.widget_product_search button {
-  @include border-radius(50%);
 }
 /* WooCommerce widgets images */
 .footer .widget.woocommerce li:hover a img {

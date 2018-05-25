@@ -135,7 +135,15 @@ function fagri_inline_style() {
 			}';
 
 		/* Forms bottom border color */
-		$custom_css .= 'input:focus-within { border-color: ' . esc_html( $color_accent ) . ' !important; }';
+		$custom_css .= 'input:not([type="submit"]):focus-within { border: 1px solid ' . esc_html( $color_accent ) . ' !important; }';
+		$custom_css .= '
+			textarea.form-control:focus-within,
+			input[type="checkbox"]:focus-within,
+			input[type="file"]:focus-within,
+			select:focus-within { 
+				border: none !important;
+				border-bottom: 1px solid ' . esc_html( $color_accent ) . ' !important; 
+			}';
 	}
 
 	wp_add_inline_style( 'fagri_parent', $custom_css );

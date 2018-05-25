@@ -15,6 +15,14 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
 */
+.home.blog h1.hestia-title {
+  font-size: 40px;
+}
+
+.home.blog .main.main-raised {
+  margin: 0 !important;
+}
+
 /* General */
 /* Font Smooth properties */
 /* Front page title and subtitle */
@@ -38,10 +46,6 @@ div, p, a, span, li, body {
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-
-.home.blog h1.hestia-title {
-  font-size: 40px;
 }
 
 /*--------------------------------------------------------------
@@ -122,6 +126,10 @@ body {
   box-shadow: none;
   margin: 0;
 }
+.card-product .onsale {
+  top: 7px !important;
+  right: 6px !important;
+}
 .card-product .content {
   padding: 20px 5px;
 }
@@ -196,6 +204,9 @@ body {
   opacity: 1;
   transform: translate3d(-75%, 100%, 0);
 }
+.card-product .content .footer .stats a:hover {
+  box-shadow: none !important;
+}
 .card-product .content .footer .stats .hestia-view-cart-wrapper a {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -251,30 +262,25 @@ aside.shop-sidebar .widget > h5 {
 }
 
 /* Style search button */
-.blog-sidebar .widget.widget_search .search-form .search-submit {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-}
-.blog-sidebar .widget.widget_search .search-form .search-submit:hover {
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
-  opacity: 0.9;
+.widget.widget_search input[type="submit"],
+.widget.widget_product_search button[type="submit"] {
+  border-radius: 50% !important;
+  vertical-align: initial;
+  margin: 0 !important;
+  padding: 0;
+  top: -2px;
+  width: 39px;
+  height: 39px;
 }
 
-.shop-sidebar .widget .woocommerce-product-search button {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
+.widget.widget_search .search-form label {
+  padding-right: 5px;
 }
-.shop-sidebar .widget .woocommerce-product-search button:hover {
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
-  opacity: 0.9;
+
+.widget.widget_search .search-form:after,
+.widget.widget_product_search .woocommerce-product-search:after {
+  top: 4px;
+  right: 11px;
 }
 
 /* === Shop Sidebar === */
@@ -324,26 +330,6 @@ aside.shop-sidebar .widget > h5 {
 /* Footer menu */
 .footer-big .footer-menu li a {
   font-weight: 400;
-}
-
-/* Search button */
-.footer .widget.widget_search .search-submit {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-}
-.footer .widget.widget_search .search-submit:hover {
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
-  opacity: 0.9;
-}
-
-.footer .widget.widget_product_search button {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
 }
 
 /* WooCommerce widgets images */
@@ -424,6 +410,9 @@ input[type="submit"]:hover {
   /* Remove label ease-up transition */
   /* Hide label when field is not empty */
   /* Adjust label line-height */
+  /** Remove label floating transition
+   * this code is related to the one in _forms file lines 25-36
+   */
 }
 .pirate_forms_wrap .contact_name_wrap .form-group,
 .pirate_forms_wrap .contact_email_wrap .form-group,
@@ -439,7 +428,7 @@ input[type="submit"]:hover {
 .pirate_forms_wrap .contact_name_wrap .form-group .form-control,
 .pirate_forms_wrap .contact_email_wrap .form-group .form-control,
 .pirate_forms_wrap .contact_subject_wrap .form-group .form-control {
-  padding-left: 30px;
+  padding-left: 30px !important;
 }
 .pirate_forms_wrap .contact_name_wrap .form-group::before {
   color: #888888;
@@ -500,10 +489,13 @@ input[type="submit"]:hover {
 }
 .pirate_forms_wrap .form-group label.control-label,
 .pirate_forms_wrap .form-group.is-focused label.control-label {
-  line-height: 1.07143;
+  line-height: 1.07143 !important;
 }
 .pirate_forms_wrap .pirate-forms-submit-button {
   border-radius: 30px;
+}
+.pirate_forms_wrap .form-group.is-focused label.control-label {
+  top: 0 !important;
 }
 
 .hestia-contact .pirate_forms_wrap .contact_name_wrap .form-group::before,
@@ -525,7 +517,9 @@ input:not([type="submit"]) {
 
 textarea.form-control,
 input[type="checkbox"],
-input[type="file"] {
+input[type="file"],
+select {
+  background-image: none !important;
   border: none !important;
   border-radius: 0 !important;
   border-bottom: 1px solid #e3e3e3 !important;
@@ -538,6 +532,29 @@ input label {
 
 input:focus-within label {
   display: none !important;
+}
+
+/* Remove the label floating transition */
+.form-group label.control-label {
+  font-size: 14px !important;
+  line-height: 1.42857 !important;
+  margin-left: 10px;
+}
+
+.form-group.is-focused label.control-label {
+  top: -7px !important;
+  font-size: 14px !important;
+  line-height: 1.42857 !important;
+  margin-left: 10px;
+}
+
+/* Hide the label while typing */
+.form-group label.control-label {
+  display: none;
+}
+
+.form-group.is-empty label.control-label {
+  display: inline-block;
 }
 
 /*--------------------------------------------------------------
@@ -561,7 +578,7 @@ input:focus-within label {
   margin-bottom: 15px;
 }
 .carousel .buttons .btn {
-  border-radius: 0 !important;
+  border-radius: 4px !important;
 }
 
 /*--------------------------------------------------------------
@@ -1499,6 +1516,21 @@ input:focus-within label {
   line-height: 30px;
 }
 
+@media (max-width: 1199px) {
+  .logged-in #respond.comment-respond .logged-in-as {
+    transform: translateX(-10%);
+  }
+}
+@media (max-width: 991px) {
+  .logged-in #respond.comment-respond .logged-in-as {
+    transform: translateX(-9%);
+  }
+}
+@media (max-width: 768px) {
+  .logged-in #respond.comment-respond .logged-in-as {
+    transform: translateX(0%);
+  }
+}
 /* Leave a reply logged out */
 #respond.comment-respond .pull-left.author {
   margin: -15px 20px 0 0;
@@ -1621,19 +1653,47 @@ input:focus-within label {
 ## Product page
 --------------------------------------------------------------*/
 /* Remove product raised style */
-.woocommerce.single-product .main.main-raised .blog-post .col-md-12 > div[id^=product].product {
+.woocommerce.single-product .main .blog-post .col-md-12 > div[id^=product].product {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
   margin: 0 !important;
   /* Move sale label on the right side of the gallery */
 }
-.woocommerce.single-product .main.main-raised .blog-post .col-md-12 > div[id^=product].product .onsale {
+.woocommerce.single-product .main .blog-post .col-md-12 > div[id^=product].product .onsale {
   -moz-osx-font-smoothing: initial;
   -webkit-font-smoothing: initial;
-  left: 50%;
+  left: auto;
+  right: 52%;
 }
 
+@media (max-width: 992px) {
+  .woocommerce.single-product .main .blog-post .col-md-12 > div[id^=product].product .onsale {
+    left: auto;
+    right: 51%;
+  }
+}
+@media (max-width: 768px) {
+  .woocommerce.single-product .main .blog-post .col-md-12 > div[id^=product].product .onsale {
+    top: 40px;
+    left: 40px;
+    right: auto;
+  }
+}
+@media (max-width: 767px) {
+  .woocommerce.single-product .main .blog-post .col-md-12 > div[id^=product].product .onsale {
+    top: 30px;
+    left: 15px;
+    right: auto;
+  }
+}
+@media (max-width: 480px) {
+  .woocommerce.single-product .main .blog-post .col-md-12 > div[id^=product].product .onsale {
+    top: 30px;
+    left: 15px;
+    right: auto;
+  }
+}
 /* Change Header height */
 .woocommerce.single-product .site-main .page-header {
   min-height: 300px;
@@ -1704,15 +1764,15 @@ input:focus-within label {
 .woocommerce.single-product .main .blog-post .product .summary .cart.form-group .quantity {
   margin-top: 3px;
 }
-.woocommerce.single-product .main .blog-post .product .summary .cart.form-group .quantity input {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  border: none;
+.woocommerce.single-product .main .blog-post .product .summary .cart.form-group .quantity input[type="number"] {
+  border: none !important;
   color: #ffffff;
   background-color: #888888;
   -moz-osx-font-smoothing: initial;
   -webkit-font-smoothing: initial;
+}
+.woocommerce.single-product .main .blog-post .product .summary .cart.form-group .quantity input[type="number"]:focus-within {
+  border-bottom: none !important;
 }
 .woocommerce.single-product .main .blog-post .product .summary .variations label {
   color: #2c2c2c;
@@ -1721,13 +1781,14 @@ input:focus-within label {
   margin-bottom: 8px;
 }
 .woocommerce.single-product .main .blog-post .product .summary .variations select {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  border-radius: 4px !important;
   color: #ffffff;
   background-color: #888888;
   background-image: none;
-  padding-left: 10px;
+  padding-left: 10px !important;
+}
+.woocommerce.single-product .main .blog-post .product .summary .variations select:focus-within {
+  border-bottom: none !important;
 }
 .woocommerce.single-product .main .blog-post .product .woocommerce-tabs .tabs li a {
   font-size: 14px;
@@ -1870,89 +1931,44 @@ input:focus-within label {
 /*--------------------------------------------------------------
 ## Notifications
 --------------------------------------------------------------*/
-/* Notification style */
-.woocommerce-page .woocommerce-message,
-.woocommerce-page .woocommerce-success,
-.woocommerce-page .woocommerce-error,
-.woocommerce-page .woocommerce-info,
-.woocommerce-page .woocommerce-warning {
-  -moz-osx-font-smoothing: initial;
-  -webkit-font-smoothing: initial;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  color: #ffffff;
-  /* Buttons within the notifications */
-}
-.woocommerce-page .woocommerce-message button,
-.woocommerce-page .woocommerce-message .btn,
-.woocommerce-page .woocommerce-message .button,
-.woocommerce-page .woocommerce-success button,
-.woocommerce-page .woocommerce-success .btn,
-.woocommerce-page .woocommerce-success .button,
-.woocommerce-page .woocommerce-error button,
-.woocommerce-page .woocommerce-error .btn,
-.woocommerce-page .woocommerce-error .button,
-.woocommerce-page .woocommerce-info button,
-.woocommerce-page .woocommerce-info .btn,
-.woocommerce-page .woocommerce-info .button,
-.woocommerce-page .woocommerce-warning button,
-.woocommerce-page .woocommerce-warning .btn,
-.woocommerce-page .woocommerce-warning .button {
-  color: #ffffff;
-  background-color: transparent;
-}
-.woocommerce-page .woocommerce-message button:hover,
-.woocommerce-page .woocommerce-message .btn:hover,
-.woocommerce-page .woocommerce-message .button:hover,
-.woocommerce-page .woocommerce-success button:hover,
-.woocommerce-page .woocommerce-success .btn:hover,
-.woocommerce-page .woocommerce-success .button:hover,
-.woocommerce-page .woocommerce-error button:hover,
-.woocommerce-page .woocommerce-error .btn:hover,
-.woocommerce-page .woocommerce-error .button:hover,
-.woocommerce-page .woocommerce-info button:hover,
-.woocommerce-page .woocommerce-info .btn:hover,
-.woocommerce-page .woocommerce-info .button:hover,
-.woocommerce-page .woocommerce-warning button:hover,
-.woocommerce-page .woocommerce-warning .btn:hover,
-.woocommerce-page .woocommerce-warning .button:hover {
-  color: #ffffff;
-  background-color: transparent;
+/* All notifications */
+.woocommerce-message a,
+.woocommerce-message .btn,
+.woocommerce-message .button,
+.woocommerce-message button,
+.woocommerce-error a,
+.woocommerce-error .btn,
+.woocommerce-error .button,
+.woocommerce-error button,
+.woocommerce-info a,
+.woocommerce-info .btn,
+.woocommerce-info .button,
+.woocommerce-info button,
+.woocommerce-success a,
+.woocommerce-success .btn,
+.woocommerce-success .button,
+.woocommerce-success button {
   box-shadow: none !important;
+  background-color: transparent !important;
 }
-.woocommerce-page .woocommerce-message a,
-.woocommerce-page .woocommerce-success a,
-.woocommerce-page .woocommerce-error a,
-.woocommerce-page .woocommerce-info a,
-.woocommerce-page .woocommerce-warning a {
-  color: #ffffff !important;
-}
-
-.woocommerce-page .woocommerce-message::before,
-.woocommerce-page .woocommerce-success::before,
-.woocommerce-page .woocommerce-error::before,
-.woocommerce-page .woocommerce-info::before,
-.woocommerce-page .woocommerce-warning::before {
-  color: #ffffff;
-}
-
-/* Notification background color based on notification type */
-.woocommerce-page .woocommerce-message,
-.woocommerce-page .woocommerce-success {
-  background-color: rgba(24, 206, 15, 0.8);
-}
-
-.woocommerce-page .woocommerce-error {
-  background-color: rgba(255, 54, 54, 0.8);
-}
-
-.woocommerce-page .woocommerce-info {
-  background-color: rgba(44, 168, 255, 0.8);
-}
-
-.woocommerce-page .woocommerce-warning {
-  background-color: rgba(255, 178, 54, 0.8);
+.woocommerce-message a:hover,
+.woocommerce-message .btn:hover,
+.woocommerce-message .button,
+.woocommerce-message button:hover,
+.woocommerce-error a:hover,
+.woocommerce-error .btn:hover,
+.woocommerce-error .button,
+.woocommerce-error button:hover,
+.woocommerce-info a:hover,
+.woocommerce-info .btn:hover,
+.woocommerce-info .button,
+.woocommerce-info button:hover,
+.woocommerce-success a:hover,
+.woocommerce-success .btn:hover,
+.woocommerce-success .button,
+.woocommerce-success button:hover {
+  box-shadow: none !important;
+  background-color: transparent !important;
 }
 
 /* Product Page */
@@ -1960,6 +1976,7 @@ input:focus-within label {
 .woocommerce.single-product .woocommerce-message {
   float: right;
   max-width: 50%;
+  margin-right: 23px;
 }
 .woocommerce.single-product .woocommerce-error a, .woocommerce.single-product .woocommerce-error a:hover,
 .woocommerce.single-product .woocommerce-message a,
