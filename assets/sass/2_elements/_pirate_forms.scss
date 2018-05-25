@@ -10,7 +10,7 @@
       }
       /* Moving the cursor to right to make place for the icon */
       .form-control {
-        padding-left: 30px;
+        padding-left: 30px !important;
       }
     }
   } /* Enf of input fields */
@@ -66,6 +66,13 @@
 
   .pirate-forms-submit-button {
     border-radius: 30px;
+  }
+
+  /** Remove label floating transition
+   * this code is related to the one in _forms file lines 25-36
+   */
+  .form-group.is-focused label.control-label {
+    top: 0 !important;
   }
 }
 

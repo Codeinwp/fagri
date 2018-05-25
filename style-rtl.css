@@ -4,7 +4,7 @@ Theme URI:      https://themeisle.com/themes/fagri/
 Author:         ThemeIsle
 Author URI:     https://themeisle.com
 Description:    Fagri is a responsive WordPress theme, built to fit all kinds of businesses. Its multipurpose design is great for small businesses, startups, corporate businesses, freelancers, portfolios, WooCommerce, creative agencies, or niche websites (medical, restaurants, sports, fashion). Fagri was created on top of Now UI Kit and displays an elegant one-page layout, complemented by the smooth parallax effect. The theme comes with a clean look, but it also provides subtle hover animations. Moreover, Fagri offers Sendinblue newsletter integration, a flexible interface via Live Customizer, a widgetized footer, full compatibility with Elementor and Beaver Builder, a full-width featured slider, and even more functionality based on the latest WordPress trends. Last but not least, the theme is lightweight and SEO-friendly.
-Version:        1.0.4
+Version:        1.0.5
 License:        GNU General Public License v2 or later
 License URI:    http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:    fagri
@@ -424,6 +424,9 @@ input[type="submit"]:hover {
   /* Remove label ease-up transition */
   /* Hide label when field is not empty */
   /* Adjust label line-height */
+  /** Remove label floating transition
+   * this code is related to the one in _forms file lines 25-36
+   */
 }
 .pirate_forms_wrap .contact_name_wrap .form-group,
 .pirate_forms_wrap .contact_email_wrap .form-group,
@@ -439,7 +442,7 @@ input[type="submit"]:hover {
 .pirate_forms_wrap .contact_name_wrap .form-group .form-control,
 .pirate_forms_wrap .contact_email_wrap .form-group .form-control,
 .pirate_forms_wrap .contact_subject_wrap .form-group .form-control {
-  padding-right: 30px;
+  padding-right: 30px !important;
 }
 .pirate_forms_wrap .contact_name_wrap .form-group::before {
   color: #888888;
@@ -505,6 +508,9 @@ input[type="submit"]:hover {
 .pirate_forms_wrap .pirate-forms-submit-button {
   border-radius: 30px;
 }
+.pirate_forms_wrap .form-group.is-focused label.control-label {
+  top: 0 !important;
+}
 
 .hestia-contact .pirate_forms_wrap .contact_name_wrap .form-group::before,
 .hestia-contact .pirate_forms_wrap .contact_email_wrap .form-group::before,
@@ -525,7 +531,9 @@ input:not([type="submit"]) {
 
 textarea.form-control,
 input[type="checkbox"],
-input[type="file"] {
+input[type="file"],
+select {
+  background-image: none !important;
   border: none !important;
   border-radius: 0 !important;
   border-bottom: 1px solid #e3e3e3 !important;
@@ -538,6 +546,29 @@ input label {
 
 input:focus-within label {
   display: none !important;
+}
+
+/* Remove the label floating transition */
+.form-group label.control-label {
+  font-size: 14px !important;
+  line-height: 1.42857 !important;
+  margin-right: 10px;
+}
+
+.form-group.is-focused label.control-label {
+  top: -7px !important;
+  font-size: 14px !important;
+  line-height: 1.42857 !important;
+  margin-right: 10px;
+}
+
+/* Hide the label while typing */
+.form-group label.control-label {
+  display: none;
+}
+
+.form-group.is-empty label.control-label {
+  display: inline-block;
 }
 
 /*--------------------------------------------------------------
