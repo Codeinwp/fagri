@@ -15,6 +15,14 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
 */
+.home.blog h1.hestia-title {
+  font-size: 40px;
+}
+
+.home.blog .main.main-raised {
+  margin: 0 !important;
+}
+
 /* General */
 /* Font Smooth properties */
 /* Front page title and subtitle */
@@ -38,10 +46,6 @@ div, p, a, span, li, body {
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-
-.home.blog h1.hestia-title {
-  font-size: 40px;
 }
 
 /*--------------------------------------------------------------
