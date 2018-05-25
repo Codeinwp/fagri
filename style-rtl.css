@@ -1501,6 +1501,21 @@ input:focus-within label {
   line-height: 30px;
 }
 
+@media (max-width: 1199px) {
+  .logged-in #respond.comment-respond .logged-in-as {
+    transform: translateX(10%);
+  }
+}
+@media (max-width: 991px) {
+  .logged-in #respond.comment-respond .logged-in-as {
+    transform: translateX(9%);
+  }
+}
+@media (max-width: 768px) {
+  .logged-in #respond.comment-respond .logged-in-as {
+    transform: translateX(0%);
+  }
+}
 /* Leave a reply logged out */
 #respond.comment-respond .pull-left.author {
   margin: -15px 0 0 20px;
