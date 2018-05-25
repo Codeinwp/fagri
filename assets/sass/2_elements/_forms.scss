@@ -43,3 +43,23 @@ input:focus-within label {
 .form-group.is-empty label.control-label {
   display: inline-block;
 }
+
+/* Search page */
+.search.search-no-results {
+  input.search-submit {
+    border-radius: 50% !important;
+    vertical-align: initial;
+    margin: 0 !important;
+    padding: 0;
+    top: -2px;
+    width: 39px;
+    height: 39px;
+  }
+  .search-form::after {
+    top: 4px;
+    right: 12px;
+  }
+  .search-form label {
+    padding-right: 5px;
+  }
+}
