@@ -1,3 +1,25 @@
+/* All notifications */
+.woocommerce-message,
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-success {
+  a,
+  .btn,
+  .button,
+  button {
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+
+  a:hover,
+  .btn:hover,
+  .button,
+  button:hover {
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+}
+
 /* Product Page */
 .woocommerce.single-product .woocommerce-error,
 .woocommerce.single-product .woocommerce-message {

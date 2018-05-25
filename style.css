@@ -1891,6 +1891,46 @@ input:focus-within label {
 /*--------------------------------------------------------------
 ## Notifications
 --------------------------------------------------------------*/
+/* All notifications */
+.woocommerce-message a,
+.woocommerce-message .btn,
+.woocommerce-message .button,
+.woocommerce-message button,
+.woocommerce-error a,
+.woocommerce-error .btn,
+.woocommerce-error .button,
+.woocommerce-error button,
+.woocommerce-info a,
+.woocommerce-info .btn,
+.woocommerce-info .button,
+.woocommerce-info button,
+.woocommerce-success a,
+.woocommerce-success .btn,
+.woocommerce-success .button,
+.woocommerce-success button {
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+.woocommerce-message a:hover,
+.woocommerce-message .btn:hover,
+.woocommerce-message .button,
+.woocommerce-message button:hover,
+.woocommerce-error a:hover,
+.woocommerce-error .btn:hover,
+.woocommerce-error .button,
+.woocommerce-error button:hover,
+.woocommerce-info a:hover,
+.woocommerce-info .btn:hover,
+.woocommerce-info .button,
+.woocommerce-info button:hover,
+.woocommerce-success a:hover,
+.woocommerce-success .btn:hover,
+.woocommerce-success .button,
+.woocommerce-success button:hover {
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
 /* Product Page */
 .woocommerce.single-product .woocommerce-error,
 .woocommerce.single-product .woocommerce-message {
