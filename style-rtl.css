@@ -1742,13 +1742,14 @@ input:focus-within label {
   margin-bottom: 8px;
 }
 .woocommerce.single-product .main .blog-post .product .summary .variations select {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  border-radius: 4px !important;
   color: #ffffff;
   background-color: #888888;
   background-image: none;
-  padding-right: 10px;
+  padding-right: 10px !important;
+}
+.woocommerce.single-product .main .blog-post .product .summary .variations select:focus-within {
+  border-bottom: none !important;
 }
 .woocommerce.single-product .main .blog-post .product .woocommerce-tabs .tabs li a {
   font-size: 14px;
