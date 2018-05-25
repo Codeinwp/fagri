@@ -85,6 +85,9 @@
             transform: translate3d(-75%,100%,0);
           }
         }
+        a:hover {
+          box-shadow: none !important;
+        }
         .hestia-view-cart-wrapper a {
           @include default-button();
           color: #ffffff;

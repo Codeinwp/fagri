@@ -196,6 +196,9 @@ body {
   opacity: 1;
   transform: translate3d(-75%, 100%, 0);
 }
+.card-product .content .footer .stats a:hover {
+  box-shadow: none !important;
+}
 .card-product .content .footer .stats .hestia-view-cart-wrapper a {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
