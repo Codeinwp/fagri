@@ -563,7 +563,7 @@ input:focus-within label {
   margin-bottom: 15px;
 }
 .carousel .buttons .btn {
-  border-radius: 0 !important;
+  border-radius: 4px !important;
 }
 
 /*--------------------------------------------------------------
