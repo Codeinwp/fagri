@@ -6,6 +6,10 @@
     box-shadow: none;
     margin: 0;
   }
+  .onsale {
+    top: 7px !important;
+    right: 6px !important;
+  }
   .content {
 
     padding: 20px 5px;
@@ -84,6 +88,9 @@
             opacity: 1;
             transform: translate3d(-75%,100%,0);
           }
+        }
+        a:hover {
+          box-shadow: none !important;
         }
         .hestia-view-cart-wrapper a {
           @include default-button();

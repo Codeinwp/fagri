@@ -9,9 +9,3 @@ div, p, a, span, li, body {
 body {
   @include font-smooth();
 }
-
-.home.blog {
-  h1.hestia-title {
-    font-size: 40px;
-  }
-}
