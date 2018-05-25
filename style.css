@@ -1186,25 +1186,21 @@ input:focus-within label {
 /*--------------------------------------------------------------
 ## Blog posts
 --------------------------------------------------------------*/
-.blog {
-  /* Regular posts style */
-  /* End of card blog */
-  /* Sticky post */
-}
-.blog .card-blog .card-image {
+/* Regular posts style */
+.card-blog .card-image {
   box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
 }
-.blog .card-blog .category {
+.card-blog .category {
   color: #9A9A9A;
   font-size: 13px;
   font-weight: 700;
   line-height: 15px;
   text-transform: capitalize;
 }
-.blog .card-blog .category a {
+.card-blog .category a {
   opacity: 0.7;
 }
-.blog .card-blog .card-title a {
+.card-blog .card-title a {
   font-size: 26px;
   font-weight: 400;
   line-height: 31px;
@@ -1217,18 +1213,18 @@ input:focus-within label {
   -o-transition: all 150ms;
   transition: all 150ms;
 }
-.blog .card-blog .card-title a:hover {
+.card-blog .card-title a:hover {
   opacity: initial;
   border-color: inherit;
 }
-.blog .card-blog .card-description {
+.card-blog .card-description {
   color: #9A9A9A;
   font-size: 17px;
   font-weight: 300;
   line-height: 27px;
   margin-bottom: 16px;
 }
-.blog .card-blog .card-description .moretag {
+.card-blog .card-description .moretag {
   color: #444444;
   border-bottom: 2px solid transparent;
   -webkit-transition: all 150ms ease 0s;
@@ -1237,33 +1233,36 @@ input:focus-within label {
   -o-transition: all 150ms;
   transition: all 150ms;
 }
-.blog .card-blog .card-description .moretag:hover {
+.card-blog .card-description .moretag:hover {
   opacity: initial;
   color: #444444;
   border-color: #444444;
 }
-.blog .card-blog .author .author-avatar img {
+.card-blog .author .author-avatar img {
   box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
 }
-.blog .card-blog .author .vcard.author {
+.card-blog .author .vcard.author {
   color: #9A9A9A;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
 }
-.blog .card-blog .author .vcard.author strong {
+.card-blog .author .vcard.author strong {
   font-weight: 400;
 }
-.blog .card-blog .author .vcard.author:not(.btn):hover {
+.card-blog .author .vcard.author:not(.btn):hover {
   opacity: initial;
 }
-.blog .card-blog.sticky {
+
+/* End of card blog */
+/* Sticky post */
+.card-blog.sticky {
   box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
 }
-.blog .card-blog.sticky .card-image {
+.card-blog.sticky .card-image {
   margin-top: 0;
 }
-.blog .card-blog.sticky .card-title::before {
+.card-blog.sticky .card-title::before {
   content: "";
 }
 
