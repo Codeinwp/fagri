@@ -122,6 +122,10 @@ body {
   box-shadow: none;
   margin: 0;
 }
+.card-product .onsale {
+  top: 7px !important;
+  left: 6px !important;
+}
 .card-product .content {
   padding: 20px 5px;
 }
