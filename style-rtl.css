@@ -262,6 +262,10 @@ aside.shop-sidebar .widget > h5 {
   height: 39px;
 }
 
+.widget.widget_search .search-form label {
+  padding-left: 5px;
+}
+
 .widget.widget_search .search-form:after,
 .widget.widget_product_search .woocommerce-product-search:after {
   top: 4px;
@@ -474,7 +478,7 @@ input[type="submit"]:hover {
 }
 .pirate_forms_wrap .form-group label.control-label,
 .pirate_forms_wrap .form-group.is-focused label.control-label {
-  line-height: 1.07143;
+  line-height: 1.07143 !important;
 }
 .pirate_forms_wrap .pirate-forms-submit-button {
   border-radius: 30px;

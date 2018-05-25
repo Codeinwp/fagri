@@ -19,6 +19,9 @@ aside.shop-sidebar .widget > h5 {
   width: 39px;
   height: 39px;
 }
+.widget.widget_search .search-form label {
+  padding-right: 5px;
+}
 .widget.widget_search .search-form:after,
 .widget.widget_product_search .woocommerce-product-search:after {
   top: 4px;

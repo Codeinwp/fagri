@@ -61,7 +61,7 @@
   /* Adjust label line-height */
   .form-group label.control-label,
   .form-group.is-focused label.control-label {
-    line-height: 1.07143;
+    line-height: 1.07143 !important;
   }
 
   .pirate-forms-submit-button {
