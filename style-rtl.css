@@ -344,6 +344,9 @@ aside.shop-sidebar .widget > h5 {
 .navbar {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
 }
+.navbar .navbar-toggle:hover {
+  box-shadow: none !important;
+}
 
 /* Social icons on Single Post Page */
 .btn.btn-just-icon {
