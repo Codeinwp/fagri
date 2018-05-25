@@ -251,30 +251,21 @@ aside.shop-sidebar .widget > h5 {
 }
 
 /* Style search button */
-.blog-sidebar .widget.widget_search .search-form .search-submit {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-}
-.blog-sidebar .widget.widget_search .search-form .search-submit:hover {
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
-  opacity: 0.9;
+.widget.widget_search input[type="submit"],
+.widget.widget_product_search button[type="submit"] {
+  border-radius: 50% !important;
+  vertical-align: initial;
+  margin: 0 !important;
+  padding: 0;
+  top: -2px;
+  width: 39px;
+  height: 39px;
 }
 
-.shop-sidebar .widget .woocommerce-product-search button {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-}
-.shop-sidebar .widget .woocommerce-product-search button:hover {
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
-  opacity: 0.9;
+.widget.widget_search .search-form:after,
+.widget.widget_product_search .woocommerce-product-search:after {
+  top: 4px;
+  left: 11px;
 }
 
 /* === Shop Sidebar === */
@@ -324,26 +315,6 @@ aside.shop-sidebar .widget > h5 {
 /* Footer menu */
 .footer-big .footer-menu li a {
   font-weight: 400;
-}
-
-/* Search button */
-.footer .widget.widget_search .search-submit {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-}
-.footer .widget.widget_search .search-submit:hover {
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
-  opacity: 0.9;
-}
-
-.footer .widget.widget_product_search button {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
 }
 
 /* WooCommerce widgets images */
